@@ -1,0 +1,8 @@
+**/build
+**/STM32F4-Discovery
+**/Drivers
+#for MDK-ARM IDE generated user files 
+*.uvgui*
+*.o*
+*.d*
+*.crf*
