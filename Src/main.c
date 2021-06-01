@@ -48,13 +48,28 @@ TIM_HandleTypeDef htim7;
 void Delay(uint32_t delay) {
     while (delay--);
 }
-
+/* USER CODE BEGIN Includes */
+#include <stdio.h>
+#include "DTMF.h"
 /* Private functions ---------------------------------------------------------*/
 /**
   * @brief  Main program
   * @param  None
   * @retval None
   */
+uint32_t main_loop_cnt;
+
+#define BUFLEN 4
+volatile uint16_t aResultDMA[BUFLEN];
+
+/*  DTMF Digit encoding */
+static char DTMFchar[16] = {
+  '1', '2', '3', 'A', 
+  '4', '5', '6', 'B', 
+  '7', '8', '9', 'C', 
+  '*', '0', '#', 'D', 
+};
+char decoded_char;
 int main(void)
 {
 
@@ -84,11 +99,56 @@ int main(void)
   /* Infinite loop */
   while (1)
   {
-				HAL_GPIO_TogglePin(GPIOD,GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_14|GPIO_PIN_15);
-				HAL_Delay(500);
+//				HAL_GPIO_TogglePin(GPIOD,GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_14|GPIO_PIN_15);
+//				HAL_Delay(500);
+//			main_loop_cnt++;
+		
+				/* run DTMF decoder */
+		if (dail1.AIindex >= dail1.AIcheck)  {
+			DTMF_Detect (&dail1);
+		} 
+
+		if (dail1.early)
+			HAL_GPIO_WritePin(GPIOD, GPIO_PIN_13, GPIO_PIN_SET);
+		else
+			HAL_GPIO_WritePin(GPIOD, GPIO_PIN_13, GPIO_PIN_RESET);
+
+		if (dail1.new){
+			decoded_char = DTMFchar[dail1.digit & 0x0F];
+			printf ("%c ", DTMFchar[dail1.digit & 0x0F]);
+		//	actuateOutput(DTMFchar[dail1.digit & 0x0F]);
+			dail1.new = 0;
+		}
+		
   }
 }
 
+uint32_t db_count;
+uint16_t dtmf_adc_val;
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+	int err;
+	db_count++;
+#ifdef USE_DMA
+	dail1.AInput[dail1.AIindex & (DTMFsz-1)] = aResultDMA[0];
+#else
+
+	err = HAL_ADC_Start(&hadc1);
+	if(err != HAL_OK)
+		while(1);
+
+	err = HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
+	dtmf_adc_val= HAL_ADC_GetValue(&hadc1);
+	dail1.AInput[dail1.AIindex & (DTMFsz-1)] = dtmf_adc_val;
+	dail1.AIindex++;
+
+	err = HAL_ADC_Stop(&hadc1);
+	if(err != HAL_OK)
+		while(1);
+#endif
+	
+	//HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_4);
+}
 /**
   * @brief  System Clock Configuration
   *         The system Clock is configured as follow : 

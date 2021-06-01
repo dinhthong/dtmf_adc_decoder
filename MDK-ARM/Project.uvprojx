@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F407xx,USE_STM32F4_DISCO</Define>
               <Undefine></Undefine>
-              <IncludePath>..\Inc;..\Drivers\CMSIS\Device\ST\STM32F4xx\Include;..\Drivers\STM32F4xx_HAL_Driver\Inc;..\Drivers\BSP\STM32F4-Discovery;..\..\..\..\Utilities\Log;..\..\..\..\Utilities\CPU</IncludePath>
+              <IncludePath>..\Inc;..\Drivers\CMSIS\Device\ST\STM32F4xx\Include;..\Drivers\STM32F4xx_HAL_Driver\Inc;..\Drivers\BSP\STM32F4-Discovery;..\..\..\..\Utilities\Log;..\..\..\..\Utilities\CPU;..\DTMF</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -417,6 +417,11 @@
               <FileName>stm32f4xx_it.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Src\stm32f4xx_it.c</FilePath>
+            </File>
+            <File>
+              <FileName>DTMF.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\DTMF\DTMF.c</FilePath>
             </File>
           </Files>
         </Group>
