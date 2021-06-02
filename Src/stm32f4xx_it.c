@@ -26,7 +26,7 @@
 
 extern DMA_HandleTypeDef hdma_adc1;
 extern TIM_HandleTypeDef htim7;
-
+uint32_t fault_detect;
 /** @addtogroup STM32F4xx_HAL_Examples
   * @{
   */
@@ -54,6 +54,7 @@ extern TIM_HandleTypeDef htim7;
   */
 void NMI_Handler(void)
 {
+	fault_detect++;
 }
 
 /**
@@ -63,6 +64,7 @@ void NMI_Handler(void)
   */
 void HardFault_Handler(void)
 {
+	fault_detect++;
   /* Go to infinite loop when Hard Fault exception occurs */
   while (1)
   {
@@ -76,6 +78,7 @@ void HardFault_Handler(void)
   */
 void MemManage_Handler(void)
 {
+	fault_detect++;
   /* Go to infinite loop when Memory Manage exception occurs */
   while (1)
   {
@@ -89,6 +92,7 @@ void MemManage_Handler(void)
   */
 void BusFault_Handler(void)
 {
+	fault_detect++;
   /* Go to infinite loop when Bus Fault exception occurs */
   while (1)
   {
@@ -102,6 +106,7 @@ void BusFault_Handler(void)
   */
 void UsageFault_Handler(void)
 {
+	fault_detect++;
   /* Go to infinite loop when Usage Fault exception occurs */
   while (1)
   {
@@ -115,6 +120,7 @@ void UsageFault_Handler(void)
   */
 void SVC_Handler(void)
 {
+	fault_detect++;
 }
 
 /**
@@ -124,6 +130,7 @@ void SVC_Handler(void)
   */
 void DebugMon_Handler(void)
 {
+	fault_detect++;
 }
 
 /**
@@ -133,6 +140,7 @@ void DebugMon_Handler(void)
   */
 void PendSV_Handler(void)
 {
+	fault_detect++;
 }
 
 /**

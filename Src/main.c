@@ -101,15 +101,16 @@ int main(void)
   {
 		
 		/* run DTMF decoder */
-		DTMF_Detect (&dail1);
+		DTMF_Detect(&dail1);
 		if (dail1.early)
 			HAL_GPIO_WritePin(GPIOD, GPIO_PIN_13, GPIO_PIN_SET);
 		else
 			HAL_GPIO_WritePin(GPIOD, GPIO_PIN_13, GPIO_PIN_RESET);
-
+	
 		if (dail1.new){
 			decoded_char = DTMFchar[dail1.digit & 0x0F];
-			printf ("%c ", DTMFchar[decoded_char & 0x0F]);
+			//printf ("%c ", DTMFchar[decoded_char & 0x0F]);
+			//HAL_ADC_Stop(&hadc1);
 		//	actuateOutput(DTMFchar[dail1.digit & 0x0F]);
 			dail1.new = 0;
 		}
@@ -129,6 +130,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 		tim7_fre = tim7_cnt-pre_tim7_cnt;
 		pre_tim7_cnt = tim7_cnt;
 		pre_sys_tick = HAL_GetTick();
+		HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_14);
 	}
 	
 #ifdef USE_DMA
