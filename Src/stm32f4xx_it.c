@@ -134,7 +134,7 @@ void DebugMon_Handler(void)
 void PendSV_Handler(void)
 {
 }
-
+extern uint32_t db_count;
 /**
   * @brief  This function handles SysTick Handler.
   * @param  None
@@ -143,6 +143,7 @@ void PendSV_Handler(void)
 void SysTick_Handler(void)
 {
   HAL_IncTick();
+	//if (HAL_GetTick()
 }
 
 void TIM7_IRQHandler(void)

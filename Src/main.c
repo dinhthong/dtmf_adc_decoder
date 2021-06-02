@@ -115,7 +115,7 @@ int main(void)
 
 		if (dail1.new){
 			decoded_char = DTMFchar[dail1.digit & 0x0F];
-			printf ("%c ", DTMFchar[dail1.digit & 0x0F]);
+			printf ("%c ", DTMFchar[decoded_char & 0x0F]);
 		//	actuateOutput(DTMFchar[dail1.digit & 0x0F]);
 			dail1.new = 0;
 		}
@@ -123,12 +123,20 @@ int main(void)
   }
 }
 
-uint32_t db_count;
+
 uint16_t dtmf_adc_val;
+uint16_t tim7_fre;
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
+	static uint32_t pre_sys_tick, pre_tim7_cnt, tim7_cnt;
 	int err;
-	db_count++;
+	tim7_cnt++;
+	if(HAL_GetTick()-pre_sys_tick>1000) {
+		tim7_fre = tim7_cnt-pre_tim7_cnt;
+		pre_tim7_cnt = tim7_cnt;
+		pre_sys_tick = HAL_GetTick();
+	}
+	
 #ifdef USE_DMA
 	dail1.AInput[dail1.AIindex & (DTMFsz-1)] = aResultDMA[0];
 #else
@@ -313,9 +321,9 @@ static void MX_TIM7_Init(void)
 
   /* USER CODE END TIM7_Init 1 */
   htim7.Instance = TIM7;
-  htim7.Init.Prescaler = 5;
+  htim7.Init.Prescaler = 20;
   htim7.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim7.Init.Period = 999;
+  htim7.Init.Period = 499;
   htim7.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim7) != HAL_OK)
   {
