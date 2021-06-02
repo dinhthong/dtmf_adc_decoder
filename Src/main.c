@@ -99,15 +99,9 @@ int main(void)
   /* Infinite loop */
   while (1)
   {
-//				HAL_GPIO_TogglePin(GPIOD,GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_14|GPIO_PIN_15);
-//				HAL_Delay(500);
-//			main_loop_cnt++;
 		
-				/* run DTMF decoder */
-		if (dail1.AIindex >= dail1.AIcheck)  {
-			DTMF_Detect (&dail1);
-		} 
-
+		/* run DTMF decoder */
+		DTMF_Detect (&dail1);
 		if (dail1.early)
 			HAL_GPIO_WritePin(GPIOD, GPIO_PIN_13, GPIO_PIN_SET);
 		else
