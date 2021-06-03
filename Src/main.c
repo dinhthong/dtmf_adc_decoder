@@ -57,7 +57,7 @@ void Delay(uint32_t delay) {
   * @param  None
   * @retval None
   */
-uint32_t main_loop_cnt;
+uint32_t main_loop_cnt, r_cnt;
 
 #define BUFLEN 4
 volatile uint16_t aResultDMA[BUFLEN];
@@ -70,6 +70,7 @@ static char DTMFchar[16] = {
   '*', '0', '#', 'D', 
 };
 char decoded_char;
+char dtmf_result[10];
 int main(void)
 {
 
@@ -108,7 +109,11 @@ int main(void)
 			HAL_GPIO_WritePin(GPIOD, GPIO_PIN_13, GPIO_PIN_RESET);
 	
 		if (dail1.new){
+			
+			
 			decoded_char = DTMFchar[dail1.digit & 0x0F];
+			if (r_cnt==10) r_cnt = 0;
+			dtmf_result[r_cnt++] = decoded_char;
 			//printf ("%c ", DTMFchar[decoded_char & 0x0F]);
 			//HAL_ADC_Stop(&hadc1);
 		//	actuateOutput(DTMFchar[dail1.digit & 0x0F]);
