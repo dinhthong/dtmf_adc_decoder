@@ -45,14 +45,14 @@
 #define DTMFsz  256               // DTMF Input Buffer
 
 typedef struct DTMF  {
-  unsigned int   AIindex;         // Input Data Index
-  unsigned int   AIcheck;         // Index Window Trigger for DTMF check
-  unsigned char  digit;           // detected digit
-  unsigned char  early;           // early detected digit
-  unsigned char  new;             // set to 1 when new digit detected
-  unsigned char  d[4];			  // last four detected digits
-  unsigned int   d_i;             // index
-  unsigned short AInput[DTMFsz];  // A/D Input Data
+  uint32_t   AIindex;         // Input Data Index
+  uint32_t   AIcheck;         // Index Window Trigger for DTMF check
+  uint8_t  digit;           // detected digit
+  uint8_t  early;           // early detected digit
+  uint8_t  new;             // set to 1 when new digit detected
+  uint8_t  d[4];			  // last four detected digits
+  uint32_t   d_i;             // index
+  uint16_t AInput[DTMFsz];  // A/D Input Data
 } DTMF;
 
 

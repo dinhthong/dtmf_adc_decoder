@@ -60,7 +60,7 @@
 #define DTMF_3266Hz -27472
 
 #define N  114                    // Input Data deep
-static  short DTMFin[N];          // Input Data of the AD-Converter
+static  int16_t DTMFin[N];          // Input Data of the AD-Converter
 
 struct DTMF dail1 = { 0, N, 0 };  // DTMF info of one input
 
@@ -69,12 +69,12 @@ struct DTMF dail1 = { 0, N, 0 };  // DTMF info of one input
 /*------------------------------------------------------------------------------
   Calculate Power of Signal
  *------------------------------------------------------------------------------*/
-static unsigned int Goertzel (int cos_fact)  {
-  short *x;
-  long  v0, v1, v2; 
-  int  pwr;
-  int p1, p2, p01;
-  unsigned int  i;
+static uint32_t Goertzel (int32_t cos_fact)  {
+  int16_t *x;
+  int32_t  v0, v1, v2; 
+  int32_t  pwr;
+  int32_t p1, p2, p01;
+  uint32_t  i;
 
   v1  = 0;
   v2  = 0;
@@ -103,11 +103,11 @@ static unsigned int Goertzel (int cos_fact)  {
   Check Input Signal and Copy it to the DTMF Input Buffer
  *------------------------------------------------------------------------------*/
 static void GainControl (DTMF *t)  {
-  unsigned int  v;
-  unsigned int  avg;
-  unsigned int  min, max;
-  unsigned int  idx;
-  short *d;
+  uint32_t  v;
+  uint32_t  avg;
+  uint32_t  min, max;
+  uint32_t  idx;
+  int16_t *d;
 
   min = 0xFFFF;
   max = 0;
@@ -140,7 +140,7 @@ static void GainControl (DTMF *t)  {
 
   v -= 7;
   for (d = &DTMFin[0]; d != &DTMFin[N]; )  {
-    *d++ = ((int) (*d - avg)) << v;
+    *d++ = ((int32_t) (*d - avg)) << v;
   }
 }
 
@@ -150,9 +150,9 @@ static void GainControl (DTMF *t)  {
   Check if remaining powers are outside 
     return 0 if invalid power values detected
  *------------------------------------------------------------------------------*/
-static int chk_valid (unsigned int p[4],     // power results
-                      unsigned int d,        // maximum power
-                      unsigned int pref)  {  // power reference
+static int32_t chk_valid (uint32_t p[4],     // power results
+                      uint32_t d,        // maximum power
+                      uint32_t pref)  {  // power reference
 
   if (d == 0)  return 0;                     // no digit
   pref /= 8;
@@ -168,10 +168,10 @@ static int chk_valid (unsigned int p[4],     // power results
   DTMF Digit:  Checks for valid DTMF digit
       return  digit+0x10  or 0 for invalid digit
  *------------------------------------------------------------------------------*/
-static unsigned char DTMF_digit (void)  {
-  unsigned int f, rampl, campl;
-  unsigned int row, col;
-  unsigned int p[4];
+static uint8_t DTMF_digit (void)  {
+  uint32_t f, rampl, campl;
+  uint32_t row, col;
+  uint32_t p[4];
 
 //--- Check Row Frequency -------------------------------------
   p[0] = Goertzel (DTMF_697Hz);
@@ -265,8 +265,8 @@ invalid:
   DTMF Detect
  *------------------------------------------------------------------------------*/
 void DTMF_Detect (DTMF *t)  {
-  unsigned char d;
-  unsigned int  cnt;
+  uint8_t d;
+  uint32_t  cnt;
 
   if (t->AIindex >= t->AIcheck)  {
     GainControl (t);                       // Copy AD Input to DTMF Buffer

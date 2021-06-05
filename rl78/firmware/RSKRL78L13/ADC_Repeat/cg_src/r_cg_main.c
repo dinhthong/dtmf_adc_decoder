@@ -69,14 +69,14 @@ void R_MAIN_UserInit(void);
 * Arguments    : None
 * Return Value : None
 ***********************************************************************************************************************/
-static char DTMFchar[16] = {
+static uint8_t DTMFchar[16] = {
   '1', '2', '3', 'A', 
   '4', '5', '6', 'B', 
   '7', '8', '9', 'C', 
   '*', '0', '#', 'D', 
 };
-char decoded_char;
-char dtmf_result[5];
+uint8_t decoded_char;
+uint8_t dtmf_result[5];
 uint8_t main_loop_cnt, r_cnt;
 void main(void)
 {
