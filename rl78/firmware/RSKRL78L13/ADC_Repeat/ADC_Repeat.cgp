@@ -330,7 +330,7 @@
         </DataElement>
       </SerializableData>
       <SerializableData name="PinNumber_78">
-        <DataElement key="InusedAs" value="">
+        <DataElement key="InusedAs" value="ADC##ANI16">
         </DataElement>
       </SerializableData>
       <SerializableData name="PinNumber_79">
@@ -48661,7 +48661,7 @@
           </SerializableData>
         </SerializableData>
         <SerializableData name="chkANI16">
-          <DataElement key="Checked" value="False">
+          <DataElement key="Checked" value="True">
           </DataElement>
         </SerializableData>
         <SerializableData name="chkANI17">
@@ -48703,7 +48703,7 @@
         <SerializableData name="cmbADChannel">
           <DataElement key="ContentItemCount" value="14">
           </DataElement>
-          <DataElement key="SelectedContentItem" value="ANI0">
+          <DataElement key="SelectedContentItem" value="ANI16">
           </DataElement>
           <SerializableData name="ContentItem1">
             <DataElement key="Pin" value="">
@@ -48766,7 +48766,7 @@
             </DataElement>
             <DataElement key="MutexType" value="NoMutex">
             </DataElement>
-            <DataElement key="Visible" value="False">
+            <DataElement key="Visible" value="True">
             </DataElement>
             <DataElement key="CustomValid" value="Valid">
             </DataElement>
@@ -50467,7 +50467,7 @@
         <SerializableData name="CustomData">
           <DataElement key="ConvertionModeErrorTrigger" value="lblADchannels">
           </DataElement>
-          <DataElement key="ConvertionTimeErrorTrigger" value="lblConvTiMode">
+          <DataElement key="ConvertionTimeErrorTrigger" value="lblADchannels">
           </DataElement>
         </SerializableData>
       </SerializableData>

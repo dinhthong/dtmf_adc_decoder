@@ -23,11 +23,11 @@
 ***********************************************************************************************************************/
 
 /***********************************************************************************************************************
-* File Name    : r_cg_adc.c
+* File Name    : r_cg_main.c
 * Version      : Applilet4 for RL78/L13 V1.00.00.02 [10 May 2013]
 * Device(s)    : R5F10WMG
 * Tool-Chain   : CA78K0R
-* Description  : This file implements device driver for ADC module.
+* Description  : This file implements main function.
 * Creation Date: 05-Jun-21
 ***********************************************************************************************************************/
 
@@ -41,100 +41,77 @@ Pragma directive
 Includes
 ***********************************************************************************************************************/
 #include "r_cg_macrodriver.h"
+#include "r_cg_cgc.h"
+#include "r_cg_port.h"
+#include "r_cg_tau.h"
 #include "r_cg_adc.h"
+#include "r_cg_intp.h"
 /* Start user code for include. Do not edit comment generated here */
+#include "lcd_panel.h"
+#include "rskrl78l13def.h"
 /* End user code. Do not edit comment generated here */
 #include "r_cg_userdefine.h"
-
+#include "DTMF.h"
 /***********************************************************************************************************************
 Global variables and functions
 ***********************************************************************************************************************/
 /* Start user code for global. Do not edit comment generated here */
+
+/* Some of the code in this file is generated using "Application Leading Tool (Applilet)" */
+/* Warnings exist in this module. */
+
 /* End user code. Do not edit comment generated here */
 
+void R_MAIN_UserInit(void);
 /***********************************************************************************************************************
-* Function Name: R_ADC_Create
-* Description  : This function initializes the AD converter.
+* Function Name: main
+* Description  : This function implements main function.
 * Arguments    : None
 * Return Value : None
 ***********************************************************************************************************************/
-void R_ADC_Create(void)
+void main(void)
 {
-    ADCEN = 1U;  /* supply AD clock */
-    ADM0 = _00_AD_ADM0_INITIALVALUE;  /* disable AD conversion and clear ADM0 register */
-    ADMK = 1U;  /* disable INTAD interrupt */
-    ADIF = 0U;  /* clear INTAD interrupt flag */
-    /* Set INTAD low priority */
-    ADPR1 = 1U;
-    ADPR0 = 1U;
-    /* Set ANI0 - ANI1 pin */
-    PM2 |= 0x03U;
-    /* Set ANI16 pin */
-    PFSEG3 |= 0x40U;
-    PMC2 |= 0x04U;
-    PM2 |= 0x04U;
-    ADM0 = _08_AD_CONVERSION_CLOCK_32 | _00_AD_TIME_MODE_NORMAL_1;
-    ADM1 = _00_AD_TRIGGER_SOFTWARE | _00_AD_CONVMODE_CONSELECT;
-    ADM2 = _00_AD_POSITIVE_VDD | _00_AD_NEGATIVE_VSS | _00_AD_AREA_MODE_1 | _00_AD_RESOLUTION_10BIT;
-    ADUL = _FF_AD_ADUL_VALUE;
-    ADLL = _00_AD_ADLL_VALUE;
-    ADS = _10_AD_INPUT_CHANNEL_16;
-    ADCE = 1U;  /* enable AD comparator */
+    R_MAIN_UserInit();
+    /* Start user code. Do not edit comment generated here */
+   /* Enable and configure LCD display */
+    Init_Display_Panel();
+    
+    /* Display the sample name and an initial ADC value on the LCD */
+    Display_Panel_String(PANEL_LCD_LINE1, " AD R");
+    Display_Panel_String(PANEL_LCD_LINE3, "000");
+    
+    /* Start ADC operations */
+    R_ADC_Start();
+
+    /* Start timer TM02 operations */
+    R_TAU0_Channel2_Start();
+    
+    /* This function must not exit */
+    while (1)
+    {
+	/* run DTMF decoder */
+	DTMF_Detect(&dail1);
+
+	if (dail1.new){
+	decoded_char = DTMFchar[dail1.digit & 0x0F];
+	if (r_cnt==5) r_cnt = 0;
+	dtmf_result[r_cnt++] = decoded_char;
+	dail1.new = 0;
+	}
+    }
+    /* End user code. Do not edit comment generated here */
 }
 /***********************************************************************************************************************
-* Function Name: R_ADC_Start
-* Description  : This function starts the AD converter.
+* Function Name: R_MAIN_UserInit
+* Description  : This function adds user code before implementing main function.
 * Arguments    : None
 * Return Value : None
 ***********************************************************************************************************************/
-void R_ADC_Start(void)
+void R_MAIN_UserInit(void)
 {
-    ADIF = 0U;  /* clear INTAD interrupt flag */
-    ADMK = 0U;  /* enable INTAD interrupt */
-    ADCS = 1U;  /* enable AD conversion */
-}
-/***********************************************************************************************************************
-* Function Name: R_ADC_Stop
-* Description  : This function stops the AD converter.
-* Arguments    : None
-* Return Value : None
-***********************************************************************************************************************/
-void R_ADC_Stop(void)
-{
-    ADCS = 0U;  /* disable AD conversion */
-    ADMK = 1U;  /* disable INTAD interrupt */
-    ADIF = 0U;  /* clear INTAD interrupt flag */
-}
-/***********************************************************************************************************************
-* Function Name: R_ADC_Set_OperationOn
-* Description  : This function enables comparator operation.
-* Arguments    : None
-* Return Value : None
-***********************************************************************************************************************/
-void R_ADC_Set_OperationOn(void)
-{
-    ADCE = 1U;  /* enable AD comparator */
-}
-/***********************************************************************************************************************
-* Function Name: R_ADC_Set_OperationOff
-* Description  : This function stops comparator operation.
-* Arguments    : None
-* Return Value : None
-***********************************************************************************************************************/
-void R_ADC_Set_OperationOff(void)
-{
-    ADCE = 0U;  /* disable AD comparator */
-}
-/***********************************************************************************************************************
-* Function Name: R_ADC_Get_Result
-* Description  : This function returns the conversion result in the buffer.
-* Arguments    : buffer -
-*                    the address where to write the conversion result
-* Return Value : None
-***********************************************************************************************************************/
-void R_ADC_Get_Result(uint16_t * const buffer)
-{
-    *buffer = (uint16_t)(ADCR >> 6U);
+    /* Start user code. Do not edit comment generated here */
+    EI();
+    /* End user code. Do not edit comment generated here */
 }
 
 /* Start user code for adding. Do not edit comment generated here */
