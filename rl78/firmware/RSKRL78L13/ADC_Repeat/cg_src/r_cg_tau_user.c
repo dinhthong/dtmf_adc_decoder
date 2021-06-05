@@ -60,6 +60,7 @@ Includes
 /* Platform related defines */
 #include "rskrl78l13def.h"
 
+#include "DTMF.h"
 /* End user code. Do not edit comment generated here */
 #include "r_cg_userdefine.h"
 
@@ -113,6 +114,7 @@ __interrupt static void r_tau0_channel1_interrupt(void)
 * Arguments    : None
 * Return Value : None
 ***********************************************************************************************************************/
+
 uint32_t cnt_tm2_int;
 __interrupt static void r_tau0_channel2_interrupt(void)
 {
@@ -120,7 +122,14 @@ __interrupt static void r_tau0_channel2_interrupt(void)
     /*
     g_adc_result
     */
-    cnt_tm2_int++;
+    	cnt_tm2_int++;
+	//err = HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
+	//dtmf_adc_val= HAL_ADC_GetValue(&hadc1);
+	dail1.AInput[dail1.AIindex & (DTMFsz-1)] = g_adc_result;
+	dail1.AIindex++;
+
+	//err = HAL_ADC_Stop(&hadc1);
+
 
     /* Clear TM02 interrupt flag */
     TMIF02 = 0;

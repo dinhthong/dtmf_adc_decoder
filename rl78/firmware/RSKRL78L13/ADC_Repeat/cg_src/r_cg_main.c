@@ -51,7 +51,7 @@ Includes
 #include "rskrl78l13def.h"
 /* End user code. Do not edit comment generated here */
 #include "r_cg_userdefine.h"
-
+#include "DTMF.h"
 /***********************************************************************************************************************
 Global variables and functions
 ***********************************************************************************************************************/
@@ -69,7 +69,15 @@ void R_MAIN_UserInit(void);
 * Arguments    : None
 * Return Value : None
 ***********************************************************************************************************************/
-unsigned int t;
+static char DTMFchar[16] = {
+  '1', '2', '3', 'A', 
+  '4', '5', '6', 'B', 
+  '7', '8', '9', 'C', 
+  '*', '0', '#', 'D', 
+};
+char decoded_char;
+char dtmf_result[5];
+uint8_t main_loop_cnt, r_cnt;
 void main(void)
 {
     R_MAIN_UserInit();
@@ -90,7 +98,15 @@ void main(void)
     /* This function must not exit */
     while (1)
     {
-        /* Do Nothing */
+	/* run DTMF decoder */
+	DTMF_Detect(&dail1);
+
+	if (dail1.new){
+	decoded_char = DTMFchar[dail1.digit & 0x0F];
+	if (r_cnt==5) r_cnt = 0;
+	dtmf_result[r_cnt++] = decoded_char;
+	dail1.new = 0;
+	}
     }
     /* End user code. Do not edit comment generated here */
 }
