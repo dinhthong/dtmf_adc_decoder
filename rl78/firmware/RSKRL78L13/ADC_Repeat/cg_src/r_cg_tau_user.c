@@ -117,11 +117,9 @@ uint32_t cnt_tm2_int;
 __interrupt static void r_tau0_channel2_interrupt(void)
 {
     /* Start user code. Do not edit comment generated here */
-     /* Declare a temporary variable */
-    uint8_t a;
-
-    /* Declare temporary character string */
-    char    lcd_buffer[] = "000";
+    /*
+    g_adc_result
+    */
     cnt_tm2_int++;
 
     /* Clear TM02 interrupt flag */

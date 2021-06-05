@@ -69,6 +69,7 @@ void R_MAIN_UserInit(void);
 * Arguments    : None
 * Return Value : None
 ***********************************************************************************************************************/
+unsigned int t;
 void main(void)
 {
     R_MAIN_UserInit();
