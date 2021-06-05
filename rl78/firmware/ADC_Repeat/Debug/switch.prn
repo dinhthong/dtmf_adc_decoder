@@ -1,0 +1,2295 @@
+
+
+
+78K0R Assembler V1.80                                                                                    Date: 5 Jun 2021 Page:   1
+
+
+
+Command:  -cf10wmg -yC:\Program Files (x86)\Renesas Electronics\CubeSuite+\Device\RL78\Devicefile Debug\switch.asm -_msgoff -pDebug
+          -oDebug -zs
+Para-file:
+In-file:  Debug\switch.asm
+Obj-file: Debug\switch.rel
+Prn-file: Debug\switch.prn
+
+      Assemble list
+
+ ALNO  STNO ADRS   OBJECT   M I  SOURCE STATEMENT
+
+    1     1                      ; 78K0R C Compiler V2.60 Assembler Source        Date: 5 Jun 2021 Time:10:38:24
+    2     2                      
+    3     3                      ; Command   : -cf10wmg -yC:\Program Files (x86)\Renesas Electronics\CubeSuite+\
+    4     4                      ;             Device\RL78\Devicefile ..\RSKRL78L13\ADC_Repeat\cg_src\switch.c -
+    5     5                      ;             oDebug -_msgoff -nq -i..\RSKRL78L13\ADC_Repeat\cg_src -v -w2 -zps
+    6     6                      ;              -mm -mi0 -saDebug -li -no -g2
+    7     7                      ; In-file   : ..\RSKRL78L13\ADC_Repeat\cg_src\switch.c
+    8     8                      ; Asm-file  : Debug\switch.asm
+    9     9                      ; Para-file : 
+   10    10                      
+   11    11                      $PROCESSOR(F10WMG)
+   12    12                      $DEBUG
+   13    13                      $NODEBUGA
+   14    14                      $KANJICODE SJIS
+   15    15                      $TOL_INF        03FH, 0260H, 02H, 04000H, 00H, 00H, 00H
+   16    16                      
+   17    17                      $DGS    FIL_NAM, .file,         086H,   0FFFEH, 03FH,   067H,   01H,    00H
+   18    18                      $DGS    AUX_FIL, switch.c
+   19    19                      $DGS    MOD_NAM, switch,        00H,    0FFFEH, 00H,    077H,   00H,    00H
+   20    20                      $DGS    SEC_NAM, @@BITS,        U,      U,      00H,    078H,   00H,    00H
+   21    21                      $DGS    SEC_NAM, @@CNST,        U,      U,      00H,    078H,   00H,    00H
+   22    22                      $DGS    SEC_NAM, @@R_INIT,      U,      U,      00H,    078H,   00H,    00H
+   23    23                      $DGS    SEC_NAM, @@INIT,        U,      U,      00H,    078H,   00H,    00H
+   24    24                      $DGS    SEC_NAM, @@DATA,        U,      U,      00H,    078H,   00H,    00H
+   25    25                      $DGS    SEC_NAM, @@R_INIS,      U,      U,      00H,    078H,   00H,    00H
+   26    26                      $DGS    SEC_NAM, @@INIS,        U,      U,      00H,    078H,   00H,    00H
+   27    27                      $DGS    SEC_NAM, @@DATS,        U,      U,      00H,    078H,   00H,    00H
+   28    28                      $DGS    SEC_NAM, @@CNSTL,       U,      U,      00H,    078H,   00H,    00H
+   29    29                      $DGS    SEC_NAM, @@RLINIT,      U,      U,      00H,    078H,   00H,    00H
+   30    30                      $DGS    SEC_NAM, @@INITL,       U,      U,      00H,    078H,   00H,    00H
+   31    31                      $DGS    SEC_NAM, @@DATAL,       U,      U,      00H,    078H,   00H,    00H
+   32    32                      $DGS    SEC_NAM, @@CALT,        U,      U,      00H,    078H,   00H,    00H
+   33    33                      $DGS    SEC_NAM, @@CODE,        U,      U,      00H,    078H,   00H,    00H
+   34    34                      $DGS    SEC_NAM, @@CODEL,       U,      U,      00H,    078H,   00H,    00H
+   35    35                      $DGS    SEC_NAM, @@BASE,        U,      U,      00H,    078H,   00H,    00H
+   36    36                      $DGS    GLV_SYM, _Switch_Init,  U,      U,      01H,    026H,   01H,    02H
+   37    37                      $DGS    AUX_FUN, 00H,           U,      U,      019H,   01H,    00H
+   38    38                      $DGS    BEG_FUN, ??bf_Switch_Init,      U,      U,      00H,    065H,   01H,    00H
+   39    39                      $DGS    AUX_BEG, 053H,          00H,    019H
+   40    40                      $DGS    END_FUN, ??ef_Switch_Init,      U,      U,      00H,    065H,   01H,    00H
+   41    41                      $DGS    AUX_END, 04H
+   42    42                      $DGS    GLV_SYM, _SetSwitchPressCallback,       U,      U,      01H,    026H,   01H,    02H
+   43    43                      $DGS    AUX_FUN, 00H,           U,      U,      021H,   01H,    00H
+   44    44                      $DGS    BEG_FUN, ??bf_SetSwitchPressCallback,   U,      U,      00H,    065H,   01H,    00H
+   45    45                      $DGS    AUX_BEG, 064H,          04H,    021H
+   46    46                      $DGS    FUN_ARG, _callback,     00H,    0FFFFH, 05001H, 09H,    01H,    09H
+   47    47                      $DGS    AUX_STR, 00H,           00H,    04H,    00H,    00H,    00H,    00H,    02H
+   48    48                      $DGS    END_FUN, ??ef_SetSwitchPressCallback,   U,      U,      00H,    065H,   01H,    00H
+   49    49                      $DGS    AUX_END, 04H
+   50    50                      $DGS    GLV_SYM, _SetSwitchReleaseCallback,     U,      U,      01H,    026H,   01H,    02H
+   51    51                      $DGS    AUX_FUN, 00H,           U,      U,      029H,   01H,    00H
+   52    52                      $DGS    BEG_FUN, ??bf_SetSwitchReleaseCallback, U,      U,      00H,    065H,   01H,    00H
+   53    53                      $DGS    AUX_BEG, 076H,          04H,    029H
+   54    54                      $DGS    FUN_ARG, _callback,     00H,    0FFFFH, 05001H, 09H,    01H,    09H
+   55    55                      $DGS    AUX_STR, 00H,           00H,    04H,    00H,    00H,    00H,    00H,    02H
+   56    56                      $DGS    END_FUN, ??ef_SetSwitchReleaseCallback, U,      U,      00H,    065H,   01H,    00H
+   57    57                      $DGS    AUX_END, 04H
+   58    58                      $DGS    GLV_SYM, _Switch1IsrCallback,   U,      U,      01H,    026H,   01H,    02H
+   59    59                      $DGS    AUX_FUN, 00H,           U,      U,      03BH,   01H,    00H
+   60    60                      $DGS    BEG_FUN, ??bf_Switch1IsrCallback,       U,      U,      00H,    065H,   01H,    00H
+   61    61                      $DGS    AUX_BEG, 088H,          00H,    02DH
+   62    62                      $DGS    BEG_BLK, ??bb00_Switch1IsrCallback,     U,      U,      00H,    064H,   01H,    00H
+   63    63                      $DGS    AUX_BEG, 07H,           00H,    031H
+   64    64                      $DGS    END_BLK, ??eb00_Switch1IsrCallback,     U,      U,      00H,    064H,   01H,    00H
+   65    65                      $DGS    AUX_END, 011H
+   66    66                      $DGS    BEG_BLK, ??bb01_Switch1IsrCallback,     U,      U,      00H,    064H,   01H,    00H
+   67    67                      $DGS    AUX_BEG, 013H,          00H,    033H
+   68    68                      $DGS    BEG_BLK, ??bb02_Switch1IsrCallback,     U,      U,      00H,    064H,   01H,    00H
+   69    69                      $DGS    AUX_BEG, 025H,          00H,    00H
+   70    70                      $DGS    END_BLK, ??eb02_Switch1IsrCallback,     U,      U,      00H,    064H,   01H,    00H
+   71    71                      $DGS    AUX_END, 028H
+   72    72                      $DGS    END_BLK, ??eb01_Switch1IsrCallback,     U,      U,      00H,    064H,   01H,    00H
+   73    73                      $DGS    AUX_END, 029H
+   74    74                      $DGS    END_FUN, ??ef_Switch1IsrCallback,       U,      U,      00H,    065H,   01H,    00H
+   75    75                      $DGS    AUX_END, 02AH
+   76    76                      $DGS    GLV_SYM, _Switch3IsrCallback,   U,      U,      01H,    026H,   01H,    02H
+   77    77                      $DGS    AUX_FUN, 00H,           U,      U,      04DH,   01H,    00H
+   78    78                      $DGS    BEG_FUN, ??bf_Switch3IsrCallback,       U,      U,      00H,    065H,   01H,    00H
+   79    79                      $DGS    AUX_BEG, 0BFH,          00H,    03FH
+   80    80                      $DGS    BEG_BLK, ??bb00_Switch3IsrCallback,     U,      U,      00H,    064H,   01H,    00H
+   81    81                      $DGS    AUX_BEG, 07H,           00H,    043H
+   82    82                      $DGS    END_BLK, ??eb00_Switch3IsrCallback,     U,      U,      00H,    064H,   01H,    00H
+   83    83                      $DGS    AUX_END, 011H
+   84    84                      $DGS    BEG_BLK, ??bb01_Switch3IsrCallback,     U,      U,      00H,    064H,   01H,    00H
+   85    85                      $DGS    AUX_BEG, 013H,          00H,    045H
+   86    86                      $DGS    BEG_BLK, ??bb02_Switch3IsrCallback,     U,      U,      00H,    064H,   01H,    00H
+   87    87                      $DGS    AUX_BEG, 025H,          00H,    00H
+   88    88                      $DGS    END_BLK, ??eb02_Switch3IsrCallback,     U,      U,      00H,    064H,   01H,    00H
+   89    89                      $DGS    AUX_END, 028H
+   90    90                      $DGS    END_BLK, ??eb01_Switch3IsrCallback,     U,      U,      00H,    064H,   01H,    00H
+   91    91                      $DGS    AUX_END, 029H
+   92    92                      $DGS    END_FUN, ??ef_Switch3IsrCallback,       U,      U,      00H,    065H,   01H,    00H
+   93    93                      $DGS    AUX_END, 02AH
+   94    94                      $DGS    GLV_SYM, _SwitchDebounceIsrCallback,    U,      U,      01H,    026H,   01H,    02H
+   95    95                      $DGS    AUX_FUN, 00H,           U,      U,      05BH,   01H,    00H
+   96    96                      $DGS    BEG_FUN, ??bf_SwitchDebounceIsrCallback,        U,      U,      00H,    065H,   01H,    00H
+   97    97                      $DGS    AUX_BEG, 0F9H,          00H,    051H
+   98    98                      $DGS    BEG_BLK, ??bb00_SwitchDebounceIsrCallback,      U,      U,      00H,    064H,   01H,    00H
+   99    99                      $DGS    AUX_BEG, 0AH,           00H,    053H
+  100   100                      $DGS    BEG_BLK, ??bb01_SwitchDebounceIsrCallback,      U,      U,      00H,    064H,   01H,    00H
+  101   101                      $DGS    AUX_BEG, 0DH,           00H,    00H
+  102   102                      $DGS    END_BLK, ??eb01_SwitchDebounceIsrCallback,      U,      U,      00H,    064H,   01H,    00H
+  103   103                      $DGS    AUX_END, 010H
+  104   104                      $DGS    END_BLK, ??eb00_SwitchDebounceIsrCallback,      U,      U,      00H,    064H,   01H,    00H
+  105   105                      $DGS    AUX_END, 011H
+  106   106                      $DGS    END_FUN, ??ef_SwitchDebounceIsrCallback,        U,      U,      00H,    065H,   01H,    00H
+  107   107                      $DGS    AUX_END, 014H
+  108   108                      $DGS    GLV_SYM, _ControlSwitchInterrupts,      U,      U,      01H,    026H,   01H,    02H
+  109   109                      $DGS    AUX_FUN, 00H,           U,      U,      06AH,   01H,    00H
+  110   110                      $DGS    BEG_FUN, ??bf_ControlSwitchInterrupts,  U,      U,      00H,    065H,   01H,    00H
+  111   111                      $DGS    AUX_BEG, 011AH,         02H,    060H
+  112   112                      $DGS    FUN_ARG, _control,      00H,    0FFFFH, 0500CH, 09H,    00H,    00H
+  113   113                      $DGS    BEG_BLK, ??bb00_ControlSwitchInterrupts,        U,      U,      00H,    064H,   01H,    00H
+  114   114                      $DGS    AUX_BEG, 04H,           00H,    064H
+  115   115                      $DGS    END_BLK, ??eb00_ControlSwitchInterrupts,        U,      U,      00H,    064H,   01H,    00H
+  116   116                      $DGS    AUX_END, 0AH
+  117   117                      $DGS    BEG_BLK, ??bb01_ControlSwitchInterrupts,        U,      U,      00H,    064H,   01H,    00H
+  118   118                      $DGS    AUX_BEG, 0CH,           00H,    00H
+  119   119                      $DGS    END_BLK, ??eb01_ControlSwitchInterrupts,        U,      U,      00H,    064H,   01H,    00H
+  120   120                      $DGS    AUX_END, 013H
+  121   121                      $DGS    END_FUN, ??ef_ControlSwitchInterrupts,  U,      U,      00H,    065H,   01H,    00H
+  122   122                      $DGS    AUX_END, 014H
+  123   123                      $DGS    GLV_SYM, _Switch2_Poll, U,      U,      0CH,    026H,   01H,    02H
+  124   124                      $DGS    AUX_FUN, 00H,           U,      U,      086H,   01H,    00H
+  125   125                      $DGS    BEG_FUN, ??bf_Switch2_Poll,     U,      U,      00H,    065H,   01H,    00H
+  126   126                      $DGS    AUX_BEG, 013BH,         04H,    070H
+  127   127                      $DGS    FUN_ARG, _switch_flag,  02H,    0FFFFH, 0500CH, 09H,    00H,    00H
+  128   128                      $DGS    AUT_VAR, _event_occurred,       01H,    0FFFFH, 0CH,    01H,    00H,    00H
+  129   129                      $DGS    BEG_BLK, ??bb00_Switch2_Poll,   U,      U,      00H,    064H,   01H,    00H
+  130   130                      $DGS    AUX_BEG, 06H,           00H,    072H
+  131   131                      $DGS    BEG_BLK, ??bb01_Switch2_Poll,   U,      U,      00H,    064H,   01H,    00H
+  132   132                      $DGS    AUX_BEG, 09H,           00H,    074H
+  133   133                      $DGS    BEG_BLK, ??bb02_Switch2_Poll,   U,      U,      00H,    064H,   01H,    00H
+  134   134                      $DGS    AUX_BEG, 0BH,           00H,    07AH
+  135   135                      $DGS    END_BLK, ??eb02_Switch2_Poll,   U,      U,      00H,    064H,   01H,    00H
+  136   136                      $DGS    AUX_END, 0DH
+  137   137                      $DGS    END_BLK, ??eb01_Switch2_Poll,   U,      U,      00H,    064H,   01H,    00H
+  138   138                      $DGS    AUX_END, 010H
+  139   139                      $DGS    BEG_BLK, ??bb03_Switch2_Poll,   U,      U,      00H,    064H,   01H,    00H
+  140   140                      $DGS    AUX_BEG, 012H,          00H,    07EH
+  141   141                      $DGS    END_BLK, ??eb03_Switch2_Poll,   U,      U,      00H,    064H,   01H,    00H
+  142   142                      $DGS    AUX_END, 015H
+  143   143                      $DGS    BEG_BLK, ??bb04_Switch2_Poll,   U,      U,      00H,    064H,   01H,    00H
+  144   144                      $DGS    AUX_BEG, 017H,          00H,    00H
+  145   145                      $DGS    END_BLK, ??eb04_Switch2_Poll,   U,      U,      00H,    064H,   01H,    00H
+  146   146                      $DGS    AUX_END, 019H
+  147   147                      $DGS    END_BLK, ??eb00_Switch2_Poll,   U,      U,      00H,    064H,   01H,    00H
+  148   148                      $DGS    AUX_END, 01DH
+  149   149                      $DGS    END_FUN, ??ef_Switch2_Poll,     U,      U,      00H,    065H,   01H,    00H
+  150   150                      $DGS    AUX_END, 020H
+  151   151                      $DGS    GLV_SYM, _g_switch_flag,        U,      U,      0100CH, 026H,   00H,    00H
+  152   152                      $DGS    GLV_SYM, _g_switch_faults_detected,     U,      U,      0100DH, 026H,   00H,    00H
+  153   153                      $DGS    GLV_SYM, _g_switch_press_callback_func, U,      U,      01H,    026H,   01H,    09H
+  154   154                      $DGS    AUX_STR, 00H,           00H,    04H,    00H,    00H,    00H,    00H,    02H
+  155   155                      $DGS    GLV_SYM, _g_switch_release_callback_func,       U,      U,      01H,    026H,   01H,    09H
+  156   156                      $DGS    AUX_STR, 00H,           00H,    04H,    00H,    00H,    00H,    00H,    02H
+  157   157                      $DGS    GLV_SYM, _R_INTC0_Stop, U,      U,      01H,    02H,    01H,    02H
+  158   158                      $DGS    AUX_FUN, 00H,           U,      U,      00H,    01H,    00H
+  159   159                      $DGS    GLV_SYM, _R_INTC0_IsFallingEdge,        U,      U,      0CH,    02H,    01H,    02H
+  160   160                      $DGS    AUX_FUN, 00H,           U,      U,      00H,    01H,    00H
+  161   161                      $DGS    GLV_SYM, _R_TAU0_Channel0_Start,        U,      U,      01H,    02H,    01H,    02H
+  162   162                      $DGS    AUX_FUN, 00H,           U,      U,      00H,    01H,    00H
+  163   163                      $DGS    GLV_SYM, _R_INTC0_SetFallingEdge,       U,      U,      01H,    02H,    01H,    02H
+  164   164                      $DGS    AUX_FUN, 00H,           U,      U,      00H,    01H,    00H
+  165   165                      $DGS    GLV_SYM, _R_INTC0_SetRisingEdge,        U,      U,      01H,    02H,    01H,    02H
+  166   166                      $DGS    AUX_FUN, 00H,           U,      U,      00H,    01H,    00H
+  167   167                      $DGS    GLV_SYM, _R_TAU0_Channel1_Start,        U,      U,      01H,    02H,    01H,    02H
+  168   168                      $DGS    AUX_FUN, 00H,           U,      U,      00H,    01H,    00H
+  169   169                      $DGS    GLV_SYM, _R_INTC7_Stop, U,      U,      01H,    02H,    01H,    02H
+  170   170                      $DGS    AUX_FUN, 00H,           U,      U,      00H,    01H,    00H
+  171   171                      $DGS    GLV_SYM, _R_INTC7_IsFallingEdge,        U,      U,      0CH,    02H,    01H,    02H
+  172   172                      $DGS    AUX_FUN, 00H,           U,      U,      00H,    01H,    00H
+  173   173                      $DGS    GLV_SYM, _R_INTC7_SetFallingEdge,       U,      U,      01H,    02H,    01H,    02H
+  174   174                      $DGS    AUX_FUN, 00H,           U,      U,      00H,    01H,    00H
+  175   175                      $DGS    GLV_SYM, _R_INTC7_SetRisingEdge,        U,      U,      01H,    02H,    01H,    02H
+  176   176                      $DGS    AUX_FUN, 00H,           U,      U,      00H,    01H,    00H
+  177   177                      $DGS    GLV_SYM, _R_INTC0_Start,        U,      U,      01H,    02H,    01H,    02H
+  178   178                      $DGS    AUX_FUN, 00H,           U,      U,      00H,    01H,    00H
+  179   179                      $DGS    GLV_SYM, _R_INTC7_Start,        U,      U,      01H,    02H,    01H,    02H
+  180   180                      $DGS    AUX_FUN, 00H,           U,      U,      00H,    01H,    00H
+  181   181                      $DGS    GLV_SYM, _R_TAU_MsDelay,        U,      U,      01H,    02H,    01H,    02H
+  182   182                      $DGS    AUX_FUN, 00H,           U,      U,      00H,    01H,    00H
+  183   183                      
+  184   184                              EXTRN   _R_INTC0_Stop
+  185   185                              EXTRN   _R_INTC0_IsFallingEdge
+  186   186                              EXTRN   _R_TAU0_Channel0_Start
+  187   187                              EXTRN   _R_INTC0_SetFallingEdge
+  188   188                              EXTRN   _R_INTC0_SetRisingEdge
+  189   189                              EXTRN   _R_TAU0_Channel1_Start
+  190   190                              EXTRN   _R_INTC7_Stop
+  191   191                              EXTRN   _R_INTC7_IsFallingEdge
+  192   192                              EXTRN   _R_INTC7_SetFallingEdge
+  193   193                              EXTRN   _R_INTC7_SetRisingEdge
+  194   194                              EXTRN   _R_INTC0_Start
+  195   195                              EXTRN   _R_INTC7_Start
+  196   196                              EXTRN   _R_TAU_MsDelay
+  197   197                              PUBLIC  _g_switch_flag
+  198   198                              PUBLIC  _g_switch_faults_detected
+  199   199                              PUBLIC  _g_switch_press_callback_func
+  200   200                              PUBLIC  _g_switch_release_callback_func
+  201   201                              PUBLIC  _Switch_Init
+  202   202                              PUBLIC  _SetSwitchPressCallback
+  203   203                              PUBLIC  _SetSwitchReleaseCallback
+  204   204                              PUBLIC  _Switch1IsrCallback
+  205   205                              PUBLIC  _Switch3IsrCallback
+  206   206                              PUBLIC  _SwitchDebounceIsrCallback
+  207   207                              PUBLIC  _ControlSwitchInterrupts
+  208   208                              PUBLIC  _Switch2_Poll
+  209   209                      
+  210   210 -----                @@BITS  BSEG
+  211   211                      
+  212   212 -----                @@CNST  CSEG    MIRRORP
+  213   213                      
+  214   214 -----                @@R_INIT        CSEG    UNIT64KP
+  215   215 00000  00                    DB      00H     ; 0
+  216   216 00001  00                    DB      (1)
+  217   217 00002  0000                  DW      00H     ; 0
+  218   218 00004  00000000              DW      00000H,00000H   ; 0
+  219   219 00008  00000000              DW      00000H,00000H   ; 0
+  220   220                      
+  221   221 -----                @@INIT  DSEG    BASEP
+  222   222 00000                _g_switch_flag: DS      (1)
+  223   223 00001                        DS      (1)
+  224   224 00002                _g_switch_faults_detected:      DS      (2)
+  225   225 00004                _g_switch_press_callback_func:  DS      (4)
+  226   226 00008                _g_switch_release_callback_func:        DS      (4)
+  227   227                      
+  228   228 -----                @@DATA  DSEG    BASEP
+  229   229                      
+  230   230 -----                @@R_INIS        CSEG    UNIT64KP
+  231   231                      
+  232   232 -----                @@INIS  DSEG    SADDRP
+  233   233                      
+  234   234 -----                @@DATS  DSEG    SADDRP
+  235   235                      
+  236   236 -----                @@CNSTL CSEG    PAGE64KP
+  237   237                      
+  238   238 -----                @@RLINIT        CSEG    UNIT64KP
+  239   239                      
+  240   240 -----                @@INITL DSEG    UNIT64KP
+  241   241                      
+  242   242 -----                @@DATAL DSEG    UNIT64KP
+  243   243                      
+  244   244 -----                @@CALT  CSEG    CALLT0
+  245   245                      
+  246   246                      ; line     1 : /***************************************************************
+  247   247                      ;              ********************************************************
+  248   248                      ; line     2 : * DISCLAIMER
+  249   249                      ; line     3 : * This software is supplied by Renesas Electronics Corporation a
+  250   250                      ;              nd is only 
+  251   251                      ; line     4 : * intended for use with Renesas products. No other uses are auth
+  252   252                      ;              orized. This 
+  253   253                      ; line     5 : * software is owned by Renesas Electronics Corporation and is pr
+  254   254                      ;              otected under 
+  255   255                      ; line     6 : * all applicable laws, including copyright laws.
+  256   256                      ; line     7 : * THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANT
+  257   257                      ;              IES REGARDING 
+  258   258                      ; line     8 : * THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDIN
+  259   259                      ;              G BUT NOT 
+  260   260                      ; line     9 : * LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTIC
+  261   261                      ;              ULAR PURPOSE 
+  262   262                      ; line    10 : * AND NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCL
+  263   263                      ;              AIMED.
+  264   264                      ; line    11 : * TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER
+  265   265                      ;               RENESAS 
+  266   266                      ; line    12 : * ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SH
+  267   267                      ;              ALL BE LIABLE 
+  268   268                      ; line    13 : * FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL
+  269   269                      ;               DAMAGES FOR 
+  270   270                      ; line    14 : * ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AF
+  271   271                      ;              FILIATES HAVE 
+  272   272                      ; line    15 : * BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+  273   273                      ; line    16 : * Renesas reserves the right, without notice, to make changes to
+  274   274                      ;               this software 
+  275   275                      ; line    17 : * and to discontinue the availability of this software.  By usin
+  276   276                      ;              g this software, 
+  277   277                      ; line    18 : * you agree to the additional terms and conditions found by acce
+  278   278                      ;              ssing the 
+  279   279                      ; line    19 : * following link:
+  280   280                      ; line    20 : * http://www.renesas.com/disclaimer
+  281   281                      ; line    21 : *
+  282   282                      ; line    22 : * Copyright (C) 2013 Renesas Electronics Corporation. All rights
+  283   283                      ;               reserved.
+  284   284                      ; line    23 : ****************************************************************
+  285   285                      ;              *******************************************************/
+  286   286                      ; line    24 : 
+  287   287                      ; line    25 : /***************************************************************
+  288   288                      ;              ********************************************************
+  289   289                      ; line    26 : * File Name    : r_cg_macrodriver.h
+  290   290                      ; line    27 : * Version      : Applilet4 for RL78/L13 V1.00.00.02 [10 May 2013
+  291   291                      ;              ]
+  292   292                      ; line    28 : * Device(s)    : R5F10WMG
+  293   293                      ; line    29 : * Tool-Chain   : CA78K0R
+  294   294                      ; line    30 : * Description  : This file implements general head file.
+  295   295                      ; line    31 : * Creation Date: 05-Jun-21
+  296   296                      ; line    32 : ****************************************************************
+  297   297                      ;              *******************************************************/
+  298   298                      ; line    33 : #ifndef MODULEID_H
+  299   299                      ; line    34 : #define MODULEID_H
+  300   300                      ; line    35 : /***************************************************************
+  301   301                      ;              ********************************************************
+  302   302                      ; line    36 : Includes
+  303   303                      ; line    37 : ****************************************************************
+  304   304                      ;              *******************************************************/
+  305   305                      ; line    38 : #pragma sfr
+  306   306                      ; line    39 : #pragma DI
+  307   307                      ; line    40 : #pragma EI
+  308   308                      ; line    41 : #pragma NOP
+  309   309                      ; line    42 : #pragma HALT
+  310   310                      ; line    43 : #pragma STOP
+  311   311                      ; line    44 : 
+  312   312                      ; line    45 : /***************************************************************
+  313   313                      ;              ********************************************************
+  314   314                      ; line    46 : Macro definitions (Register bit)
+  315   315                      ; line    47 : ****************************************************************
+  316   316                      ;              *******************************************************/
+  317   317                      ; line    48 : 
+  318   318                      ; line    49 : /***************************************************************
+  319   319                      ;              ********************************************************
+  320   320                      ; line    50 : Macro definitions
+  321   321                      ; line    51 : ****************************************************************
+  322   322                      ;              *******************************************************/
+  323   323                      ; line    52 : #ifndef __TYPEDEF__
+  324   324                      ; line    53 : /* Status list definition */
+  325   325                      ; line    54 : #define MD_STATUSBASE        (0x00U)
+  326   326                      ; line    55 : #define MD_OK                (MD_STATUSBASE + 0x00U) /* register
+  327   327                      ;               setting OK */
+  328   328                      ; line    56 : #define MD_SPT               (MD_STATUSBASE + 0x01U) /* IIC stop
+  329   329                      ;               */
+  330   330                      ; line    57 : #define MD_NACK              (MD_STATUSBASE + 0x02U) /* IIC no A
+  331   331                      ;              CK */
+  332   332                      ; line    58 : #define MD_BUSY1             (MD_STATUSBASE + 0x03U) /* busy 1 *
+  333   333                      ;              /
+  334   334                      ; line    59 : #define MD_BUSY2             (MD_STATUSBASE + 0x04U) /* busy 2 *
+  335   335                      ;              /
+  336   336                      ; line    60 : 
+  337   337                      ; line    61 : /* Error list definition */
+  338   338                      ; line    62 : #define MD_ERRORBASE         (0x80U)
+  339   339                      ; line    63 : #define MD_ERROR             (MD_ERRORBASE + 0x00U)  /* error */
+  340   340                      ; line    64 : #define MD_ARGERROR          (MD_ERRORBASE + 0x01U)  /* error ag
+  341   341                      ;              rument input error */
+  342   342                      ; line    65 : #define MD_ERROR1            (MD_ERRORBASE + 0x02U)  /* error 1 
+  343   343                      ;              */
+  344   344                      ; line    66 : #define MD_ERROR2            (MD_ERRORBASE + 0x03U)  /* error 2 
+  345   345                      ;              */
+  346   346                      ; line    67 : #define MD_ERROR3            (MD_ERRORBASE + 0x04U)  /* error 3 
+  347   347                      ;              */
+  348   348                      ; line    68 : #define MD_ERROR4            (MD_ERRORBASE + 0x05U)  /* error 4 
+  349   349                      ;              */
+  350   350                      ; line    69 : #define MD_ERROR5            (MD_ERRORBASE + 0x06U)  /* error 5 
+  351   351                      ;              */
+  352   352                      ; line    70 : #endif
+  353   353                      ; line    71 : 
+  354   354                      ; line    72 : /***************************************************************
+  355   355                      ;              ********************************************************
+  356   356                      ; line    73 : Typedef definitions
+  357   357                      ; line    74 : ****************************************************************
+  358   358                      ;              *******************************************************/
+  359   359                      ; line    75 : #ifndef __TYPEDEF__
+  360   360                      ; line    76 : typedef signed char         int8_t;
+  361   361                      ; line    77 : typedef unsigned char       uint8_t;
+  362   362                      ; line    78 : typedef signed short        int16_t;
+  363   363                      ; line    79 : typedef unsigned short      uint16_t;
+  364   364                      ; line    80 : typedef signed long         int32_t;
+  365   365                      ; line    81 : typedef unsigned long       uint32_t;
+  366   366                      ; line    82 : typedef unsigned short      MD_STATUS;
+  367   367                      ; line     1 : /***************************************************************
+  368   368                      ;              ****************
+  369   369                      ; line     2 : * DISCLAIMER
+  370   370                      ; line     3 : * This software is supplied by Renesas Electronics Corporation a
+  371   371                      ;              nd is only
+  372   372                      ; line     4 : * intended for use with Renesas products. No other uses are auth
+  373   373                      ;              orized. This
+  374   374                      ; line     5 : * software is owned by Renesas Electronics Corporation and is pr
+  375   375                      ;              otected under
+  376   376                      ; line     6 : * all applicable laws, including copyright laws.
+  377   377                      ; line     7 : * THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANT
+  378   378                      ;              IES REGARDING
+  379   379                      ; line     8 : * THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDIN
+  380   380                      ;              G BUT NOT
+  381   381                      ; line     9 : * LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTIC
+  382   382                      ;              ULAR PURPOSE
+  383   383                      ; line    10 : * AND NON-INFRINGEMENT. ALL SUCH WARRANTIES ARE EXPRESSLY DISCLA
+  384   384                      ;              IMED.
+  385   385                      ; line    11 : * TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER
+  386   386                      ;               RENESAS
+  387   387                      ; line    12 : * ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SH
+  388   388                      ;              ALL BE LIABLE
+  389   389                      ; line    13 : * FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL
+  390   390                      ;               DAMAGES FOR
+  391   391                      ; line    14 : * ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AF
+  392   392                      ;              FILIATES HAVE
+  393   393                      ; line    15 : * BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+  394   394                      ; line    16 : * Renesas reserves the right, without notice, to make changes to
+  395   395                      ;               this software
+  396   396                      ; line    17 : * and to discontinue the availability of this software. By using
+  397   397                      ;               this software,
+  398   398                      ; line    18 : * you agree to the additional terms and conditions found by acce
+  399   399                      ;              ssing the
+  400   400                      ; line    19 : * following link:
+  401   401                      ; line    20 : * http://www.renesas.com/disclaimer
+  402   402                      ; line    21 : ****************************************************************
+  403   403                      ;              ***************/
+  404   404                      ; line    22 : /* Copyright (C) 2013 Renesas Electronics Corporation. All right
+  405   405                      ;              s reserved.   */
+  406   406                      ; line    23 : /***************************************************************
+  407   407                      ;              ****************
+  408   408                      ; line    24 : * File Name     : switch.h
+  409   409                      ; line    25 : * Version       : 1.00
+  410   410                      ; line    26 : * Device(s)     : R5F10WMG
+  411   411                      ; line    27 : * Tool-Chain    : CA78K0R
+  412   412                      ; line    28 : * H/W Platform  : RSKRL78L13
+  413   413                      ; line    29 : * Description   : Provides declarations of functions defined in 
+  414   414                      ;              switch.c
+  415   415                      ; line    30 : ****************************************************************
+  416   416                      ;              ***************/
+  417   417                      ; line    31 : /***************************************************************
+  418   418                      ;              ****************
+  419   419                      ; line    32 : * History       : 08/10/2013  Ver. 1.00 First Release
+  420   420                      ; line    33 : ****************************************************************
+  421   421                      ;              ***************/
+  422   422                      ; line    34 : /* Multiple inclusion prevention macro */
+  423   423                      ; line    35 : #ifndef SWITCH_H
+  424   424                      ; line    36 : #define SWITCH_H
+  425   425                      ; line    37 : 
+  426   426                      ; line    38 : /***************************************************************
+  427   427                      ;              ****************
+  428   428                      ; line    39 : * Project Includes
+  429   429                      ; line    40 : ****************************************************************
+  430   430                      ;              ***************/
+  431   431                      ; line    41 : #include "r_cg_macrodriver.h"
+  432   432                      ; line    42 : /***************************************************************
+  433   433                      ;              ****************
+  434   434                      ; line    43 : * Macro Definitions
+  435   435                      ; line    44 : ****************************************************************
+  436   436                      ;              ***************/
+  437   437                      ; line    45 : 
+  438   438                      ; line    46 : /* Switch 1 pressed flag mask */
+  439   439                      ; line    47 : #define SWITCHPRESS_1       0x80u
+  440   440                      ; line    48 : 
+  441   441                      ; line    49 : /* Switch 1 held down flag mask */
+  442   442                      ; line    50 : #define SWITCHHOLD_1        0x08u
+  443   443                      ; line    51 : 
+  444   444                      ; line    52 : /* Switch 2 pressed flag mask */
+  445   445                      ; line    53 : #define SWITCHPRESS_2       0x40u
+  446   446                      ; line    54 : 
+  447   447                      ; line    55 : /* Switch 2 held down flag mask */
+  448   448                      ; line    56 : #define SWITCHHOLD_2        0x04u
+  449   449                      ; line    57 : 
+  450   450                      ; line    58 : /* Switch 3 pressed flag mask */
+  451   451                      ; line    59 : #define SWITCHPRESS_3       0x20u
+  452   452                      ; line    60 : 
+  453   453                      ; line    61 : /* Switch 3 held down flag mask */
+  454   454                      ; line    62 : #define SWITCHHOLD_3        0x02u
+  455   455                      ; line    63 : 
+  456   456                      ; line    64 : /* Any switch pressed flag mask */
+  457   457                      ; line    65 : #define SWITCHPRESS_ALL     0xE0u
+  458   458                      ; line    66 : 
+  459   459                      ; line    67 : /* Any switch held down flag mask */
+  460   460                      ; line    68 : #define SWITCHHOLD_ALL      0x0Eu
+  461   461                      ; line    69 : 
+  462   462                      ; line    70 : /***************************************************************
+  463   463                      ;              ****************
+  464   464                      ; line    71 : * Global Variables
+  465   465                      ; line    72 : ****************************************************************
+  466   466                      ;              ***************/
+  467   467                      ; line    73 : 
+  468   468                      ; line    74 : /* Switch flag global variable. Switch status bits:
+  469   469                      ; line    75 :         b7 : Switch 1 press complete flag*
+  470   470                      ; line    76 :         b6 : Switch 2 press complete flag*
+  471   471                      ; line    77 :         b5 : Switch 3 press complete flag*
+  472   472                      ; line    78 :         b4 : Unused
+  473   473                      ; line    79 :         b3 : Switch 1 held-down status flag
+  474   474                      ; line    80 :         b2 : Switch 2 held-down status flag
+  475   475                      ; line    81 :         b1 : Switch 3 held-down status flag
+  476   476                      ; line    82 :         b0 : Unused 
+  477   477                      ; line    83 :          * Switch press complete flags must be cleared manually 
+  478   478                      ;              */
+  479   479                      ; line    84 : extern volatile uint8_t g_switch_flag;
+  480   480                      ; line    85 : 
+  481   481                      ; line    86 : /***************************************************************
+  482   482                      ;              ****************
+  483   483                      ; line    87 : * Global Function Prototypes
+  484   484                      ; line    88 : ****************************************************************
+  485   485                      ;              ***************/
+  486   486                      ; line    89 : /* Switch initialisation function */
+  487   487                      ; line    90 : void Switch_Init(void);
+  488   488                      ; line    91 : 
+  489   489                      ; line    92 : /* Switch 1 interrupt callback function */
+  490   490                      ; line    93 : void Switch1IsrCallback(void);
+  491   491                      ; line    94 : 
+  492   492                      ; line    95 : /* Switch 2 interrupt callback function */
+  493   493                      ; line    96 : void Switch2IsrCallback(void);
+  494   494                      ; line     1 : /***************************************************************
+  495   495                      ;              ********************************************************
+  496   496                      ; line     2 : * DISCLAIMER
+  497   497                      ; line     3 : * This software is supplied by Renesas Electronics Corporation a
+  498   498                      ;              nd is only 
+  499   499                      ; line     4 : * intended for use with Renesas products. No other uses are auth
+  500   500                      ;              orized. This 
+  501   501                      ; line     5 : * software is owned by Renesas Electronics Corporation and is pr
+  502   502                      ;              otected under 
+  503   503                      ; line     6 : * all applicable laws, including copyright laws.
+  504   504                      ; line     7 : * THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANT
+  505   505                      ;              IES REGARDING 
+  506   506                      ; line     8 : * THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDIN
+  507   507                      ;              G BUT NOT 
+  508   508                      ; line     9 : * LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTIC
+  509   509                      ;              ULAR PURPOSE 
+  510   510                      ; line    10 : * AND NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCL
+  511   511                      ;              AIMED.
+  512   512                      ; line    11 : * TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER
+  513   513                      ;               RENESAS 
+  514   514                      ; line    12 : * ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SH
+  515   515                      ;              ALL BE LIABLE 
+  516   516                      ; line    13 : * FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL
+  517   517                      ;               DAMAGES FOR 
+  518   518                      ; line    14 : * ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AF
+  519   519                      ;              FILIATES HAVE 
+  520   520                      ; line    15 : * BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+  521   521                      ; line    16 : * Renesas reserves the right, without notice, to make changes to
+  522   522                      ;               this software 
+  523   523                      ; line    17 : * and to discontinue the availability of this software.  By usin
+  524   524                      ;              g this software, 
+  525   525                      ; line    18 : * you agree to the additional terms and conditions found by acce
+  526   526                      ;              ssing the 
+  527   527                      ; line    19 : * following link:
+  528   528                      ; line    20 : * http://www.renesas.com/disclaimer
+  529   529                      ; line    21 : *
+  530   530                      ; line    22 : * Copyright (C) 2013 Renesas Electronics Corporation. All rights
+  531   531                      ;               reserved.
+  532   532                      ; line    23 : ****************************************************************
+  533   533                      ;              *******************************************************/
+  534   534                      ; line    24 : 
+  535   535                      ; line    25 : /***************************************************************
+  536   536                      ;              ********************************************************
+  537   537                      ; line    26 : * File Name    : r_cg_intp.h
+  538   538                      ; line    27 : * Version      : Applilet4 for RL78/L13 V1.00.00.02 [10 May 2013
+  539   539                      ;              ]
+  540   540                      ; line    28 : * Device(s)    : R5F10WMG
+  541   541                      ; line    29 : * Tool-Chain   : CA78K0R
+  542   542                      ; line    30 : * Description  : This file implements device driver for INTP mod
+  543   543                      ;              ule.
+  544   544                      ; line    31 : * Creation Date: 05-Jun-21
+  545   545                      ; line    32 : ****************************************************************
+  546   546                      ;              *******************************************************/
+  547   547                      ; line    33 : #ifndef INTP_H
+  548   548                      ; line    34 : #define INTP_H
+  549   549                      ; line    35 : 
+  550   550                      ; line    36 : /***************************************************************
+  551   551                      ;              ********************************************************
+  552   552                      ; line    37 : Macro definitions (Register bit)
+  553   553                      ; line    38 : ****************************************************************
+  554   554                      ;              *******************************************************/
+  555   555                      ; line    39 : /*
+  556   556                      ; line    40 :     External Interrupt Rising Edge Enable Register 0 (EGP0)
+  557   557                      ; line    41 : */
+  558   558                      ; line    42 : /* INTPn pin valid edge selection (EGPn) */
+  559   559                      ; line    43 : #define _01_INTP0_EDGE_RISING_SEL       (0x01U) /* rising edge s
+  560   560                      ;              elected for INTP0 pin */
+  561   561                      ; line    44 : #define _00_INTP0_EDGE_RISING_UNSEL     (0x00U) /* rising edge n
+  562   562                      ;              ot selected for INTP0 pin */
+  563   563                      ; line    45 : #define _02_INTP1_EDGE_RISING_SEL       (0x02U) /* rising edge s
+  564   564                      ;              elected for INTP1 pin */
+  565   565                      ; line    46 : #define _00_INTP1_EDGE_RISING_UNSEL     (0x00U) /* rising edge n
+  566   566                      ;              ot selected for INTP1 pin */
+  567   567                      ; line    47 : #define _04_INTP2_EDGE_RISING_SEL       (0x04U) /* rising edge s
+  568   568                      ;              elected for INTP2 pin */
+  569   569                      ; line    48 : #define _00_INTP2_EDGE_RISING_UNSEL     (0x00U) /* rising edge n
+  570   570                      ;              ot selected for INTP2 pin */
+  571   571                      ; line    49 : #define _08_INTP3_EDGE_RISING_SEL       (0x08U) /* rising edge s
+  572   572                      ;              elected for INTP3 pin */
+  573   573                      ; line    50 : #define _00_INTP3_EDGE_RISING_UNSEL     (0x00U) /* rising edge n
+  574   574                      ;              ot selected for INTP3 pin */
+  575   575                      ; line    51 : #define _10_INTP4_EDGE_RISING_SEL       (0x10U) /* rising edge s
+  576   576                      ;              elected for INTP4 pin */
+  577   577                      ; line    52 : #define _00_INTP4_EDGE_RISING_UNSEL     (0x00U) /* rising edge n
+  578   578                      ;              ot selected for INTP4 pin */
+  579   579                      ; line    53 : #define _20_INTP5_EDGE_RISING_SEL       (0x20U) /* rising edge s
+  580   580                      ;              elected for INTP5 pin */
+  581   581                      ; line    54 : #define _00_INTP5_EDGE_RISING_UNSEL     (0x00U) /* rising edge n
+  582   582                      ;              ot selected for INTP5 pin */
+  583   583                      ; line    55 : #define _40_INTP6_EDGE_RISING_SEL       (0x40U) /* rising edge s
+  584   584                      ;              elected for INTP6 pin */
+  585   585                      ; line    56 : #define _00_INTP6_EDGE_RISING_UNSEL     (0x00U) /* rising edge n
+  586   586                      ;              ot selected for INTP6 pin */
+  587   587                      ; line    57 : #define _80_INTP7_EDGE_RISING_SEL       (0x80U) /* rising edge s
+  588   588                      ;              elected for INTP7 pin */
+  589   589                      ; line    58 : #define _00_INTP7_EDGE_RISING_UNSEL     (0x00U) /* rising edge n
+  590   590                      ;              ot selected for INTP7 pin */
+  591   591                      ; line    59 : 
+  592   592                      ; line    60 : /*
+  593   593                      ; line    61 :     External Interrupt Falling Edge Enable Register 0 (EGN0)
+  594   594                      ; line    62 : */
+  595   595                      ; line    63 : /* INTPn pin valid edge selection (EGNn) */
+  596   596                      ; line    64 : #define _01_INTP0_EDGE_FALLING_SEL      (0x01U) /* falling edge 
+  597   597                      ;              selected for INTP0 pin */
+  598   598                      ; line    65 : #define _00_INTP0_EDGE_FALLING_UNSEL    (0x00U) /* falling edge 
+  599   599                      ;              not selected for INTP0 pin */
+  600   600                      ; line    66 : #define _02_INTP1_EDGE_FALLING_SEL      (0x02U) /* falling edge 
+  601   601                      ;              selected for INTP1 pin */
+  602   602                      ; line    67 : #define _00_INTP1_EDGE_FALLING_UNSEL    (0x00U) /* falling edge 
+  603   603                      ;              not selected for INTP1 pin */
+  604   604                      ; line    68 : #define _04_INTP2_EDGE_FALLING_SEL      (0x04U) /* falling edge 
+  605   605                      ;              selected for INTP2 pin */
+  606   606                      ; line    69 : #define _00_INTP2_EDGE_FALLING_UNSEL    (0x00U) /* falling edge 
+  607   607                      ;              not selected for INTP2 pin */
+  608   608                      ; line    70 : #define _08_INTP3_EDGE_FALLING_SEL      (0x08U) /* falling edge 
+  609   609                      ;              selected for INTP3 pin */
+  610   610                      ; line    71 : #define _00_INTP3_EDGE_FALLING_UNSEL    (0x00U) /* falling edge 
+  611   611                      ;              not selected for INTP3 pin */
+  612   612                      ; line    72 : #define _10_INTP4_EDGE_FALLING_SEL      (0x10U) /* falling edge 
+  613   613                      ;              selected for INTP4 pin */
+  614   614                      ; line    73 : #define _00_INTP4_EDGE_FALLING_UNSEL    (0x00U) /* falling edge 
+  615   615                      ;              not selected for INTP4 pin */
+  616   616                      ; line    74 : #define _20_INTP5_EDGE_FALLING_SEL      (0x20U) /* falling edge 
+  617   617                      ;              selected for INTP5 pin */
+  618   618                      ; line    75 : #define _00_INTP5_EDGE_FALLING_UNSEL    (0x00U) /* falling edge 
+  619   619                      ;              not selected for INTP5 pin */
+  620   620                      ; line    76 : #define _40_INTP6_EDGE_FALLING_SEL      (0x40U) /* falling edge 
+  621   621                      ;              selected for INTP6 pin */
+  622   622                      ; line    77 : #define _00_INTP6_EDGE_FALLING_UNSEL    (0x00U) /* falling edge 
+  623   623                      ;              not selected for INTP6 pin */
+  624   624                      ; line    78 : #define _80_INTP7_EDGE_FALLING_SEL      (0x80U) /* falling edge 
+  625   625                      ;              selected for INTP7 pin */
+  626   626                      ; line    79 : #define _00_INTP7_EDGE_FALLING_UNSEL    (0x00U) /* falling edge 
+  627   627                      ;              not selected for INTP7 pin */
+  628   628                      ; line    80 : 
+  629   629                      ; line    81 : /***************************************************************
+  630   630                      ;              ********************************************************
+  631   631                      ; line    82 : Macro definitions
+  632   632                      ; line    83 : ****************************************************************
+  633   633                      ;              *******************************************************/
+  634   634                      ; line    84 : 
+  635   635                      ; line    85 : /***************************************************************
+  636   636                      ;              ********************************************************
+  637   637                      ; line    86 : Typedef definitions
+  638   638                      ; line    87 : ****************************************************************
+  639   639                      ;              *******************************************************/
+  640   640                      ; line    88 : 
+  641   641                      ; line    89 : /***************************************************************
+  642   642                      ;              ********************************************************
+  643   643                      ; line    90 : Global functions
+  644   644                      ; line    91 : ****************************************************************
+  645   645                      ;              *******************************************************/
+  646   646                      ; line    92 : void R_INTC_Create(void);
+  647   647                      ; line    93 : void R_INTC0_Start(void);
+  648   648                      ; line    94 : void R_INTC0_Stop(void);
+  649   649                      ; line    95 : void R_INTC7_Start(void);
+  650   650                      ; line    96 : void R_INTC7_Stop(void);
+  651   651                      ; line    97 : 
+  652   652                      ; line    98 : /* Start user code for function. Do not edit comment generated h
+  653   653                      ;              ere */
+  654   654                      ; line    99 : 
+  655   655                      ; line   100 : /* Function prototypes for detecting and setting the edge trigge
+  656   656                      ;              r of INTP0 */
+  657   657                      ; line   101 : uint8_t R_INTC0_IsFallingEdge(void);
+  658   658                      ; line   102 : void R_INTC0_SetFallingEdge(const uint8_t set_f_edge);
+  659   659                      ; line   103 : void R_INTC0_SetRisingEdge(const uint8_t set_r_edge);
+  660   660                      ; line   104 : 
+  661   661                      ; line   105 : /* Function prototypes for detecting and setting the edge trigge
+  662   662                      ;              r of INTP7 */
+  663   663                      ; line   106 : uint8_t R_INTC7_IsFallingEdge(void);
+  664   664                      ; line   107 : void R_INTC7_SetFallingEdge(const uint8_t set_f_edge);
+  665   665                      ; line   108 : void R_INTC7_SetRisingEdge(const uint8_t set_r_edge);
+  666   666                      ; line     1 : /***************************************************************
+  667   667                      ;              ********************************************************
+  668   668                      ; line     2 : * DISCLAIMER
+  669   669                      ; line     3 : * This software is supplied by Renesas Electronics Corporation a
+  670   670                      ;              nd is only 
+  671   671                      ; line     4 : * intended for use with Renesas products. No other uses are auth
+  672   672                      ;              orized. This 
+  673   673                      ; line     5 : * software is owned by Renesas Electronics Corporation and is pr
+  674   674                      ;              otected under 
+  675   675                      ; line     6 : * all applicable laws, including copyright laws.
+  676   676                      ; line     7 : * THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANT
+  677   677                      ;              IES REGARDING 
+  678   678                      ; line     8 : * THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDIN
+  679   679                      ;              G BUT NOT 
+  680   680                      ; line     9 : * LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTIC
+  681   681                      ;              ULAR PURPOSE 
+  682   682                      ; line    10 : * AND NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCL
+  683   683                      ;              AIMED.
+  684   684                      ; line    11 : * TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER
+  685   685                      ;               RENESAS 
+  686   686                      ; line    12 : * ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SH
+  687   687                      ;              ALL BE LIABLE 
+  688   688                      ; line    13 : * FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL
+  689   689                      ;               DAMAGES FOR 
+  690   690                      ; line    14 : * ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AF
+  691   691                      ;              FILIATES HAVE 
+  692   692                      ; line    15 : * BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+  693   693                      ; line    16 : * Renesas reserves the right, without notice, to make changes to
+  694   694                      ;               this software 
+  695   695                      ; line    17 : * and to discontinue the availability of this software.  By usin
+  696   696                      ;              g this software, 
+  697   697                      ; line    18 : * you agree to the additional terms and conditions found by acce
+  698   698                      ;              ssing the 
+  699   699                      ; line    19 : * following link:
+  700   700                      ; line    20 : * http://www.renesas.com/disclaimer
+  701   701                      ; line    21 : *
+  702   702                      ; line    22 : * Copyright (C) 2013 Renesas Electronics Corporation. All rights
+  703   703                      ;               reserved.
+  704   704                      ; line    23 : ****************************************************************
+  705   705                      ;              *******************************************************/
+  706   706                      ; line    24 : 
+  707   707                      ; line    25 : /***************************************************************
+  708   708                      ;              ********************************************************
+  709   709                      ; line    26 : * File Name    : r_cg_tau.h
+  710   710                      ; line    27 : * Version      : Applilet4 for RL78/L13 V1.00.00.02 [10 May 2013
+  711   711                      ;              ]
+  712   712                      ; line    28 : * Device(s)    : R5F10WMG
+  713   713                      ; line    29 : * Tool-Chain   : CA78K0R
+  714   714                      ; line    30 : * Description  : This file implements device driver for TAU modu
+  715   715                      ;              le.
+  716   716                      ; line    31 : * Creation Date: 05-Jun-21
+  717   717                      ; line    32 : ****************************************************************
+  718   718                      ;              *******************************************************/
+  719   719                      ; line    33 : #ifndef TAU_H
+  720   720                      ; line    34 : #define TAU_H
+  721   721                      ; line    35 : 
+  722   722                      ; line    36 : /***************************************************************
+  723   723                      ;              ********************************************************
+  724   724                      ; line    37 : Macro definitions (Register bit)
+  725   725                      ; line    38 : ****************************************************************
+  726   726                      ;              *******************************************************/
+  727   727                      ; line    39 : /*
+  728   728                      ; line    40 :     Peripheral Enable Register 0 (PER0)
+  729   729                      ; line    41 : */
+  730   730                      ; line    42 : /* Control of timer array unit 0 input clock (TAU0EN) */
+  731   731                      ; line    43 : #define _00_TAU0_CLOCK_STOP                     (0x00U) /* stops
+  732   732                      ;               supply of input clock */
+  733   733                      ; line    44 : #define _01_TAU0_CLOCK_SUPPLY                   (0x01U) /* suppl
+  734   734                      ;              ies input clock */
+  735   735                      ; line    45 : 
+  736   736                      ; line    46 : /*
+  737   737                      ; line    47 :     Timer Clock Select Register m (TPSm)
+  738   738                      ; line    48 : */
+  739   739                      ; line    49 : /* Operating mode and clear mode selection (PRSm03 - PRSm00) */
+  740   740                      ; line    50 : #define _0000_TAU_CKM0_fCLK_0                   (0x0000U) /* ckm
+  741   741                      ;              0 - fCLK */
+  742   742                      ; line    51 : #define _0001_TAU_CKM0_fCLK_1                   (0x0001U) /* ckm
+  743   743                      ;              0 - fCLK/2^1 */
+  744   744                      ; line    52 : #define _0002_TAU_CKM0_fCLK_2                   (0x0002U) /* ckm
+  745   745                      ;              0 - fCLK/2^2 */
+  746   746                      ; line    53 : #define _0003_TAU_CKM0_fCLK_3                   (0x0003U) /* ckm
+  747   747                      ;              0 - fCLK/2^3 */
+  748   748                      ; line    54 : #define _0004_TAU_CKM0_fCLK_4                   (0x0004U) /* ckm
+  749   749                      ;              0 - fCLK/2^4 */
+  750   750                      ; line    55 : #define _0005_TAU_CKM0_fCLK_5                   (0x0005U) /* ckm
+  751   751                      ;              0 - fCLK/2^5 */
+  752   752                      ; line    56 : #define _0006_TAU_CKM0_fCLK_6                   (0x0006U) /* ckm
+  753   753                      ;              0 - fCLK/2^6 */
+  754   754                      ; line    57 : #define _0007_TAU_CKM0_fCLK_7                   (0x0007U) /* ckm
+  755   755                      ;              0 - fCLK/2^7 */
+  756   756                      ; line    58 : #define _0008_TAU_CKM0_fCLK_8                   (0x0008U) /* ckm
+  757   757                      ;              0 - fCLK/2^8 */
+  758   758                      ; line    59 : #define _0009_TAU_CKM0_fCLK_9                   (0x0009U) /* ckm
+  759   759                      ;              0 - fCLK/2^9 */
+  760   760                      ; line    60 : #define _000A_TAU_CKM0_fCLK_10                  (0x000AU) /* ckm
+  761   761                      ;              0 - fCLK/2^10 */
+  762   762                      ; line    61 : #define _000B_TAU_CKM0_fCLK_11                  (0x000BU) /* ckm
+  763   763                      ;              0 - fCLK/2^11 */
+  764   764                      ; line    62 : #define _000C_TAU_CKM0_fCLK_12                  (0x000CU) /* ckm
+  765   765                      ;              0 - fCLK/2^12 */
+  766   766                      ; line    63 : #define _000D_TAU_CKM0_fCLK_13                  (0x000DU) /* ckm
+  767   767                      ;              0 - fCLK/2^13 */
+  768   768                      ; line    64 : #define _000E_TAU_CKM0_fCLK_14                  (0x000EU) /* ckm
+  769   769                      ;              0 - fCLK/2^14 */
+  770   770                      ; line    65 : #define _000F_TAU_CKM0_fCLK_15                  (0x000FU) /* ckm
+  771   771                      ;              0 - fCLK/2^15 */
+  772   772                      ; line    66 : /* Operating mode and clear mode selection (PRSm13 - PRSm10) */
+  773   773                      ; line    67 : #define _0000_TAU_CKM1_fCLK_0                   (0x0000U) /* ckm
+  774   774                      ;              1 - fCLK */
+  775   775                      ; line    68 : #define _0010_TAU_CKM1_fCLK_1                   (0x0010U) /* ckm
+  776   776                      ;              1 - fCLK/2^1 */
+  777   777                      ; line    69 : #define _0020_TAU_CKM1_fCLK_2                   (0x0020U) /* ckm
+  778   778                      ;              1 - fCLK/2^2 */
+  779   779                      ; line    70 : #define _0030_TAU_CKM1_fCLK_3                   (0x0030U) /* ckm
+  780   780                      ;              1 - fCLK/2^3 */
+  781   781                      ; line    71 : #define _0040_TAU_CKM1_fCLK_4                   (0x0040U) /* ckm
+  782   782                      ;              1 - fCLK/2^4 */
+  783   783                      ; line    72 : #define _0050_TAU_CKM1_fCLK_5                   (0x0050U) /* ckm
+  784   784                      ;              1 - fCLK/2^5 */
+  785   785                      ; line    73 : #define _0060_TAU_CKM1_fCLK_6                   (0x0060U) /* ckm
+  786   786                      ;              1 - fCLK/2^6 */
+  787   787                      ; line    74 : #define _0070_TAU_CKM1_fCLK_7                   (0x0070U) /* ckm
+  788   788                      ;              1 - fCLK/2^7 */
+  789   789                      ; line    75 : #define _0080_TAU_CKM1_fCLK_8                   (0x0080U) /* ckm
+  790   790                      ;              1 - fCLK/2^8 */
+  791   791                      ; line    76 : #define _0090_TAU_CKM1_fCLK_9                   (0x0090U) /* ckm
+  792   792                      ;              1 - fCLK/2^9 */
+  793   793                      ; line    77 : #define _00A0_TAU_CKM1_fCLK_10                  (0x00A0U) /* ckm
+  794   794                      ;              1 - fCLK/2^10 */
+  795   795                      ; line    78 : #define _00B0_TAU_CKM1_fCLK_11                  (0x00B0U) /* ckm
+  796   796                      ;              1 - fCLK/2^11 */
+  797   797                      ; line    79 : #define _00C0_TAU_CKM1_fCLK_12                  (0x00C0U) /* ckm
+  798   798                      ;              1 - fCLK/2^12 */
+  799   799                      ; line    80 : #define _00D0_TAU_CKM1_fCLK_13                  (0x00D0U) /* ckm
+  800   800                      ;              1 - fCLK/2^13 */
+  801   801                      ; line    81 : #define _00E0_TAU_CKM1_fCLK_14                  (0x00E0U) /* ckm
+  802   802                      ;              1 - fCLK/2^14 */
+  803   803                      ; line    82 : #define _00F0_TAU_CKM1_fCLK_15                  (0x00F0U) /* ckm
+  804   804                      ;              1 - fCLK/2^15 */
+  805   805                      ; line    83 : /* Operating mode and clear mode selection (PRSm21 - PRSm20) */
+  806   806                      ; line    84 : #define _0000_TAU_CKM2_fCLK_1                   (0x0000U) /* ckm
+  807   807                      ;              2 - fCLK/2^1 */
+  808   808                      ; line    85 : #define _0100_TAU_CKM2_fCLK_2                   (0x0100U) /* ckm
+  809   809                      ;              2 - fCLK/2^2 */
+  810   810                      ; line    86 : #define _0200_TAU_CKM2_fCLK_4                   (0x0200U) /* ckm
+  811   811                      ;              2 - fCLK/2^4 */
+  812   812                      ; line    87 : #define _0300_TAU_CKM2_fCLK_6                   (0x0300U) /* ckm
+  813   813                      ;              2 - fCLK/2^6 */
+  814   814                      ; line    88 : /* Operating mode and clear mode selection (PRSm31 - PRSm30) */
+  815   815                      ; line    89 : #define _0000_TAU_CKM3_fCLK_8                   (0x0000U) /* ckm
+  816   816                      ;              3 - fCLK/2^8 */
+  817   817                      ; line    90 : #define _1000_TAU_CKM3_fCLK_10                  (0x1000U) /* ckm
+  818   818                      ;              3 - fCLK/2^10 */
+  819   819                      ; line    91 : #define _2000_TAU_CKM3_fCLK_12                  (0x2000U) /* ckm
+  820   820                      ;              3 - fCLK/2^12 */
+  821   821                      ; line    92 : #define _3000_TAU_CKM3_fCLK_14                  (0x3000U) /* ckm
+  822   822                      ;              3 - fCLK/2^14 */
+  823   823                      ; line    93 : 
+  824   824                      ; line    94 : /*
+  825   825                      ; line    95 :     Timer Mode Register mn (TMRmn)
+  826   826                      ; line    96 : */
+  827   827                      ; line    97 : /* Selection of macro clock (MCK) of channel n (CKSmn1 - CKSmn0)
+  828   828                      ;               */
+  829   829                      ; line    98 : #define _0000_TAU_CLOCK_SELECT_CKM0             (0x0000U) /* ope
+  830   830                      ;              ration clock CK0 set by PRS register */ 
+  831   831                      ; line    99 : #define _8000_TAU_CLOCK_SELECT_CKM1             (0x8000U) /* ope
+  832   832                      ;              ration clock CK1 set by PRS register */
+  833   833                      ; line   100 : #define _4000_TAU_CLOCK_SELECT_CKM2             (0x4000U) /* ope
+  834   834                      ;              ration clock CK2 set by PRS register */
+  835   835                      ; line   101 : #define _C000_TAU_CLOCK_SELECT_CKM3             (0xC000U) /* ope
+  836   836                      ;              ration clock CK3 set by PRS register */
+  837   837                      ; line   102 : /* Selection of count clock (CCK) of channel n (CCSmn) */
+  838   838                      ; line   103 : #define _0000_TAU_CLOCK_MODE_CKS                (0x0000U) /* mac
+  839   839                      ;              ro clock MCK specified by CKSmn bit */  
+  840   840                      ; line   104 : #define _1000_TAU_CLOCK_MODE_TIMN               (0x1000U) /* val
+  841   841                      ;              id edge of input signal input from TImn pin */
+  842   842                      ; line   105 : /* Selection of slave/master of channel n (MASTERmn) */
+  843   843                      ; line   106 : #define _0000_TAU_COMBINATION_SLAVE             (0x0000U) /* ope
+  844   844                      ;              rates as slave channel */
+  845   845                      ; line   107 : #define _0800_TAU_COMBINATION_MASTER            (0x0800U) /* ope
+  846   846                      ;              rates as master channel */
+  847   847                      ; line   108 : /* Operation explanation of channel 1 or 3 (SPLIT) */
+  848   848                      ; line   109 : #define _0000_TAU_16BITS_MODE                   (0x0000U) /* ope
+  849   849                      ;              rates as 16 bits timer */  
+  850   850                      ; line   110 : #define _0800_TAU_8BITS_MODE                    (0x0800U) /* ope
+  851   851                      ;              rates as 8 bits timer */
+  852   852                      ; line   111 : /* Setting of start trigger or capture trigger of channel n (STS
+  853   853                      ;              mn2 - STSmn0) */
+  854   854                      ; line   112 : #define _0000_TAU_TRIGGER_SOFTWARE              (0x0000U) /* onl
+  855   855                      ;              y software trigger start is valid */
+  856   856                      ; line   113 : #define _0100_TAU_TRIGGER_TIMN_VALID            (0x0100U) /* TIm
+  857   857                      ;              n input edge is used as a start/capture trigger */
+  858   858                      ; line   114 : #define _0200_TAU_TRIGGER_TIMN_BOTH             (0x0200U) /* TIm
+  859   859                      ;              n input edges are used as a start/capture trigger */
+  860   860                      ; line   115 : #define _0400_TAU_TRIGGER_MASTER_INT            (0x0400U) /* int
+  861   861                      ;              errupt signal of the master channel is used */
+  862   862                      ; line   116 : /* Selection of TImn pin input valid edge (CISmn1 - CISmn0) */
+  863   863                      ; line   117 : #define _0000_TAU_TIMN_EDGE_FALLING             (0x0000U) /* fal
+  864   864                      ;              ling edge */
+  865   865                      ; line   118 : #define _0040_TAU_TIMN_EDGE_RISING              (0x0040U) /* ris
+  866   866                      ;              ing edge */
+  867   867                      ; line   119 : #define _0080_TAU_TIMN_EDGE_BOTH_LOW            (0x0080U) /* bot
+  868   868                      ;              h edges (when low-level width is measured) */
+  869   869                      ; line   120 : #define _00C0_TAU_TIMN_EDGE_BOTH_HIGH           (0x00C0U) /* bot
+  870   870                      ;              h edges (when high-level width is measured) */
+  871   871                      ; line   121 : /* Operation mode of channel n (MDmn3 - MDmn0) */
+  872   872                      ; line   122 : #define _0000_TAU_MODE_INTERVAL_TIMER           (0x0000U) /* int
+  873   873                      ;              erval timer mode */
+  874   874                      ; line   123 : #define _0004_TAU_MODE_CAPTURE                  (0x0004U) /* cap
+  875   875                      ;              ture mode */
+  876   876                      ; line   124 : #define _0006_TAU_MODE_EVENT_COUNT              (0x0006U) /* eve
+  877   877                      ;              nt counter mode */
+  878   878                      ; line   125 : #define _0008_TAU_MODE_ONE_COUNT                (0x0008U) /* one
+  879   879                      ;               count mode */
+  880   880                      ; line   126 : #define _000C_TAU_MODE_HIGHLOW_MEASURE          (0x000CU) /* hig
+  881   881                      ;              h-/low-level width measurement mode */
+  882   882                      ; line   127 : #define _0001_TAU_MODE_PWM_MASTER               (0x0001U) /* PWM
+  883   883                      ;               function (master channel) mode */
+  884   884                      ; line   128 : #define _0009_TAU_MODE_PWM_SLAVE                (0x0009U) /* PWM
+  885   885                      ;               function (slave channel) mode */
+  886   886                      ; line   129 : #define _0008_TAU_MODE_ONESHOT                  (0x0008U) /* one
+  887   887                      ;              -shot pulse output mode */
+  888   888                      ; line   130 : /* Setting of starting counting and interrupt (MDmn0) */
+  889   889                      ; line   131 : #define _0000_TAU_START_INT_UNUSED              (0x0000U) /* int
+  890   890                      ;              errupt is not generated when counting is started */
+  891   891                      ; line   132 : #define _0001_TAU_START_INT_USED                (0x0001U) /* int
+  892   892                      ;              errupt is generated when counting is started */
+  893   893                      ; line   133 : 
+  894   894                      ; line   134 : /*
+  895   895                      ; line   135 :     Timer Status Register mn (TSRmn)
+  896   896                      ; line   136 : */
+  897   897                      ; line   137 : /* Counter overflow status of channel n (OVF) */
+  898   898                      ; line   138 : #define _0000_TAU_OVERFLOW_NOT_OCCURS           (0x0000U) /* ove
+  899   899                      ;              rflow does not occur */
+  900   900                      ; line   139 : #define _0001_TAU_OVERFLOW_OCCURS               (0x0001U) /* ove
+  901   901                      ;              rflow occurs */
+  902   902                      ; line   140 : 
+  903   903                      ; line   141 : /*
+  904   904                      ; line   142 :     Timer Channel Enable Status Register m (TEm)
+  905   905                      ; line   143 : */
+  906   906                      ; line   144 : /* Indication of operation enable/stop status of channel 0 (TEm0
+  907   907                      ;              ) */
+  908   908                      ; line   145 : #define _0000_TAU_CH0_OPERATION_STOP            (0x0000U) /* ope
+  909   909                      ;              ration is stopped */
+  910   910                      ; line   146 : #define _0001_TAU_CH0_OPERATION_ENABLE          (0x0001U) /* ope
+  911   911                      ;              ration is enabled */
+  912   912                      ; line   147 : /* Indication of operation enable/stop status of channel 1 (TEm1
+  913   913                      ;              ) */
+  914   914                      ; line   148 : #define _0000_TAU_CH1_OPERATION_STOP            (0x0000U) /* ope
+  915   915                      ;              ration is stopped */
+  916   916                      ; line   149 : #define _0002_TAU_CH1_OPERATION_ENABLE          (0x0002U) /* ope
+  917   917                      ;              ration is enabled */
+  918   918                      ; line   150 : /* Indication of operation enable/stop status of channel 2 (TEm2
+  919   919                      ;              ) */
+  920   920                      ; line   151 : #define _0000_TAU_CH2_OPERATION_STOP            (0x0000U) /* ope
+  921   921                      ;              ration is stopped */
+  922   922                      ; line   152 : #define _0004_TAU_CH2_OPERATION_ENABLE          (0x0004U) /* ope
+  923   923                      ;              ration is enabled */
+  924   924                      ; line   153 : /* Indication of operation enable/stop status of channel 3 (TEm3
+  925   925                      ;              ) */
+  926   926                      ; line   154 : #define _0000_TAU_CH3_OPERATION_STOP            (0x0000U) /* ope
+  927   927                      ;              ration is stopped */
+  928   928                      ; line   155 : #define _0008_TAU_CH3_OPERATION_ENABLE          (0x0008U) /* ope
+  929   929                      ;              ration is enabled */
+  930   930                      ; line   156 : /* Indication of operation enable/stop status of channel 4 (TEm4
+  931   931                      ;              ) */
+  932   932                      ; line   157 : #define _0000_TAU_CH4_OPERATION_STOP            (0x0000U) /* ope
+  933   933                      ;              ration is stopped */
+  934   934                      ; line   158 : #define _0010_TAU_CH4_OPERATION_ENABLE          (0x0010U) /* ope
+  935   935                      ;              ration is enabled */
+  936   936                      ; line   159 : /* Indication of operation enable/stop status of channel 5 (TEm5
+  937   937                      ;              ) */
+  938   938                      ; line   160 : #define _0000_TAU_CH5_OPERATION_STOP            (0x0000U) /* ope
+  939   939                      ;              ration is stopped */
+  940   940                      ; line   161 : #define _0020_TAU_CH5_OPERATION_ENABLE          (0x0020U) /* ope
+  941   941                      ;              ration is enabled */
+  942   942                      ; line   162 : /* Indication of operation enable/stop status of channel 6 (TEm6
+  943   943                      ;              ) */
+  944   944                      ; line   163 : #define _0000_TAU_CH6_OPERATION_STOP            (0x0000U) /* ope
+  945   945                      ;              ration is stopped */
+  946   946                      ; line   164 : #define _0040_TAU_CH6_OPERATION_ENABLE          (0x0040U) /* ope
+  947   947                      ;              ration is enabled */
+  948   948                      ; line   165 : /* Indication of operation enable/stop status of channel 7 (TEm7
+  949   949                      ;              ) */
+  950   950                      ; line   166 : #define _0000_TAU_CH7_OPERATION_STOP            (0x0000U) /* ope
+  951   951                      ;              ration is stopped */
+  952   952                      ; line   167 : #define _0080_TAU_CH7_OPERATION_ENABLE          (0x0080U) /* ope
+  953   953                      ;              ration is enabled */
+  954   954                      ; line   168 : /* Indication of operation enable/stop status of channel 1 highe
+  955   955                      ;              r 8 bits (TEHm1) */
+  956   956                      ; line   169 : #define _0000_TAU_CH1_H8_OPERATION_STOP         (0x0000U) /* ope
+  957   957                      ;              ration is stopped */
+  958   958                      ; line   170 : #define _0200_TAU_CH1_H8_OPERATION_ENABLE       (0x0200U) /* ope
+  959   959                      ;              ration is enabled */
+  960   960                      ; line   171 : /* Indication of operation enable/stop status of channel 3 highe
+  961   961                      ;              r 8 bits (TEHm3) */
+  962   962                      ; line   172 : #define _0000_TAU_CH3_H8_OPERATION_STOP         (0x0000U) /* ope
+  963   963                      ;              ration is stopped */
+  964   964                      ; line   173 : #define _0800_TAU_CH3_H8_OPERATION_ENABLE       (0x0800U) /* ope
+  965   965                      ;              ration is enabled */
+  966   966                      ; line   174 : 
+  967   967                      ; line   175 : /*
+  968   968                      ; line   176 :     Timer Channel Start Register m (TSm)
+  969   969                      ; line   177 : */
+  970   970                      ; line   178 : /* Operation enable (start) trigger of channel 0 (TSm0) */
+  971   971                      ; line   179 : #define _0000_TAU_CH0_START_TRG_OFF             (0x0000U) /* no 
+  972   972                      ;              trigger operation */
+  973   973                      ; line   180 : #define _0001_TAU_CH0_START_TRG_ON              (0x0001U) /* ope
+  974   974                      ;              ration is enabled (start trigger is generated) */
+  975   975                      ; line   181 : /* Operation enable (start) trigger of channel 1 (TSm1) */
+  976   976                      ; line   182 : #define _0000_TAU_CH1_START_TRG_OFF             (0x0000U) /* no 
+  977   977                      ;              trigger operation */
+  978   978                      ; line   183 : #define _0002_TAU_CH1_START_TRG_ON              (0x0002U) /* ope
+  979   979                      ;              ration is enabled (start trigger is generated) */
+  980   980                      ; line   184 : /* Operation enable (start) trigger of channel 2 (TSm2) */
+  981   981                      ; line   185 : #define _0000_TAU_CH2_START_TRG_OFF             (0x0000U) /* no 
+  982   982                      ;              trigger operation */
+  983   983                      ; line   186 : #define _0004_TAU_CH2_START_TRG_ON              (0x0004U) /* ope
+  984   984                      ;              ration is enabled (start trigger is generated) */
+  985   985                      ; line   187 : /* Operation enable (start) trigger of channel 3 (TSm3) */
+  986   986                      ; line   188 : #define _0000_TAU_CH3_START_TRG_OFF             (0x0000U) /* no 
+  987   987                      ;              trigger operation */
+  988   988                      ; line   189 : #define _0008_TAU_CH3_START_TRG_ON              (0x0008U) /* ope
+  989   989                      ;              ration is enabled (start trigger is generated) */
+  990   990                      ; line   190 : /* Operation enable (start) trigger of channel 4 (TSm4) */
+  991   991                      ; line   191 : #define _0000_TAU_CH4_START_TRG_OFF             (0x0000U) /* no 
+  992   992                      ;              trigger operation */
+  993   993                      ; line   192 : #define _0010_TAU_CH4_START_TRG_ON              (0x0010U) /* ope
+  994   994                      ;              ration is enabled (start trigger is generated) */
+  995   995                      ; line   193 : /* Operation enable (start) trigger of channel 5 (TSm5) */
+  996   996                      ; line   194 : #define _0000_TAU_CH5_START_TRG_OFF             (0x0000U) /* no 
+  997   997                      ;              trigger operation */
+  998   998                      ; line   195 : #define _0020_TAU_CH5_START_TRG_ON              (0x0020U) /* ope
+  999   999                      ;              ration is enabled (start trigger is generated) */
+ 1000  1000                      ; line   196 : /* Operation enable (start) trigger of channel 6 (TSm6) */
+ 1001  1001                      ; line   197 : #define _0000_TAU_CH6_START_TRG_OFF             (0x0000U) /* no 
+ 1002  1002                      ;              trigger operation */
+ 1003  1003                      ; line   198 : #define _0040_TAU_CH6_START_TRG_ON              (0x0040U) /* ope
+ 1004  1004                      ;              ration is enabled (start trigger is generated) */
+ 1005  1005                      ; line   199 : /* Operation enable (start) trigger of channel 7 (TSm7) */
+ 1006  1006                      ; line   200 : #define _0000_TAU_CH7_START_TRG_OFF             (0x0000U) /* no 
+ 1007  1007                      ;              trigger operation */
+ 1008  1008                      ; line   201 : #define _0080_TAU_CH7_START_TRG_ON              (0x0080U) /* ope
+ 1009  1009                      ;              ration is enabled (start trigger is generated) */
+ 1010  1010                      ; line   202 : /* Operation enable (start) trigger of channel 1 higher 8 bits (
+ 1011  1011                      ;              TSHm1) */
+ 1012  1012                      ; line   203 : #define _0000_TAU_CH1_H8_START_TRG_OFF          (0x0000U) /* no 
+ 1013  1013                      ;              trigger operation */
+ 1014  1014                      ; line   204 : #define _0200_TAU_CH1_H8_START_TRG_ON           (0x0200U) /* ope
+ 1015  1015                      ;              ration is enabled (start trigger is generated) */
+ 1016  1016                      ; line   205 : /* Operation enable (start) trigger of channel 3 higher 8 bits (
+ 1017  1017                      ;              TSHm3) */
+ 1018  1018                      ; line   206 : #define _0000_TAU_CH3_H8_START_TRG_OFF          (0x0000U) /* no 
+ 1019  1019                      ;              trigger operation */
+ 1020  1020                      ; line   207 : #define _0800_TAU_CH3_H8_START_TRG_ON           (0x0800U) /* ope
+ 1021  1021                      ;              ration is enabled (start trigger is generated) */
+ 1022  1022                      ; line   208 : 
+ 1023  1023                      ; line   209 : /*
+ 1024  1024                      ; line   210 :     Timer Channel Stop Register m (TTm)
+ 1025  1025                      ; line   211 : */
+ 1026  1026                      ; line   212 : /* Operation stop trigger of channel 0 (TTm0) */
+ 1027  1027                      ; line   213 : #define _0000_TAU_CH0_STOP_TRG_OFF              (0x0000U) /* no 
+ 1028  1028                      ;              trigger operation */
+ 1029  1029                      ; line   214 : #define _0001_TAU_CH0_STOP_TRG_ON               (0x0001U) /* ope
+ 1030  1030                      ;              ration is stopped (stop trigger is generated) */
+ 1031  1031                      ; line   215 : /* Operation stop trigger of channel 1 (TTm1) */
+ 1032  1032                      ; line   216 : #define _0000_TAU_CH1_STOP_TRG_OFF              (0x0000U) /* no 
+ 1033  1033                      ;              trigger operation */
+ 1034  1034                      ; line   217 : #define _0002_TAU_CH1_STOP_TRG_ON               (0x0002U) /* ope
+ 1035  1035                      ;              ration is stopped (stop trigger is generated) */
+ 1036  1036                      ; line   218 : /* Operation stop trigger of channel 2 (TTm2) */
+ 1037  1037                      ; line   219 : #define _0000_TAU_CH2_STOP_TRG_OFF              (0x0000U) /* no 
+ 1038  1038                      ;              trigger operation */
+ 1039  1039                      ; line   220 : #define _0004_TAU_CH2_STOP_TRG_ON               (0x0004U) /* ope
+ 1040  1040                      ;              ration is stopped (stop trigger is generated) */
+ 1041  1041                      ; line   221 : /* Operation stop trigger of channel 3 (TTm3) */
+ 1042  1042                      ; line   222 : #define _0000_TAU_CH3_STOP_TRG_OFF              (0x0000U) /* no 
+ 1043  1043                      ;              trigger operation */
+ 1044  1044                      ; line   223 : #define _0008_TAU_CH3_STOP_TRG_ON               (0x0008U) /* ope
+ 1045  1045                      ;              ration is stopped (stop trigger is generated) */
+ 1046  1046                      ; line   224 : /* Operation stop trigger of channel 4 (TTm4) */
+ 1047  1047                      ; line   225 : #define _0000_TAU_CH4_STOP_TRG_OFF              (0x0000U) /* no 
+ 1048  1048                      ;              trigger operation */
+ 1049  1049                      ; line   226 : #define _0010_TAU_CH4_STOP_TRG_ON               (0x0010U) /* ope
+ 1050  1050                      ;              ration is stopped (stop trigger is generated) */
+ 1051  1051                      ; line   227 : /* Operation stop trigger of channel 5 (TTm5) */
+ 1052  1052                      ; line   228 : #define _0000_TAU_CH5_STOP_TRG_OFF              (0x0000U) /* no 
+ 1053  1053                      ;              trigger operation */
+ 1054  1054                      ; line   229 : #define _0020_TAU_CH5_STOP_TRG_ON               (0x0020U) /* ope
+ 1055  1055                      ;              ration is stopped (stop trigger is generated) */
+ 1056  1056                      ; line   230 : /* Operation stop trigger of channel 6 (TTm6) */
+ 1057  1057                      ; line   231 : #define _0000_TAU_CH6_STOP_TRG_OFF              (0x0000U) /* no 
+ 1058  1058                      ;              trigger operation */
+ 1059  1059                      ; line   232 : #define _0040_TAU_CH6_STOP_TRG_ON               (0x0040U) /* ope
+ 1060  1060                      ;              ration is stopped (stop trigger is generated) */
+ 1061  1061                      ; line   233 : /* Operation stop trigger of channel 7 (TTm7) */
+ 1062  1062                      ; line   234 : #define _0000_TAU_CH7_STOP_TRG_OFF              (0x0000U) /* no 
+ 1063  1063                      ;              trigger operation */
+ 1064  1064                      ; line   235 : #define _0080_TAU_CH7_STOP_TRG_ON               (0x0080U) /* ope
+ 1065  1065                      ;              ration is stopped (stop trigger is generated) */
+ 1066  1066                      ; line   236 : /* Operation stop trigger of channel 1 higher 8 bits (TTHm1) */
+ 1067  1067                      ; line   237 : #define _0000_TAU_CH1_H8_STOP_TRG_OFF           (0x0000U) /* no 
+ 1068  1068                      ;              trigger operation */
+ 1069  1069                      ; line   238 : #define _0200_TAU_CH1_H8_STOP_TRG_ON            (0x0200U) /* ope
+ 1070  1070                      ;              ration is stopped (stop trigger is generated) */
+ 1071  1071                      ; line   239 : /* Operation stop trigger of channel 3 higher 8 bits (TTHm3) */
+ 1072  1072                      ; line   240 : #define _0000_TAU_CH3_H8_STOP_TRG_OFF           (0x0000U) /* no 
+ 1073  1073                      ;              trigger operation */
+ 1074  1074                      ; line   241 : #define _0800_TAU_CH3_H8_STOP_TRG_ON            (0x0800U) /* ope
+ 1075  1075                      ;              ration is stopped (stop trigger is generated) */
+ 1076  1076                      ; line   242 : 
+ 1077  1077                      ; line   243 : /*
+ 1078  1078                      ; line   244 :     Timer Input Select Register m (TIS0)
+ 1079  1079                      ; line   245 : */
+ 1080  1080                      ; line   246 : /* Selection of timer input used with channel 1 (TIS02 - TIS00) 
+ 1081  1081                      ;              */
+ 1082  1082                      ; line   247 : #define _00_TAU_CH1_INPUT_TI01                  (0x00U) /* input
+ 1083  1083                      ;               signal of timer input pin (TI01) */
+ 1084  1084                      ; line   248 : #define _04_TAU_CH1_INPUT_fIL                   (0x04U) /* low-s
+ 1085  1085                      ;              peed on-chip oscillator clock (fIL) */
+ 1086  1086                      ; line   249 : #define _05_TAU_CH1_INPUT_fSUB                  (0x05U) /* subsy
+ 1087  1087                      ;              stem clock (fSUB) */
+ 1088  1088                      ; line   250 : 
+ 1089  1089                      ; line   251 : /*
+ 1090  1090                      ; line   252 :     A timer array unit and an output selection register (TOS)
+ 1091  1091                      ; line   253 : */
+ 1092  1092                      ; line   254 : /* Remote control carrier power output selection */
+ 1093  1093                      ; line   255 : #define _00_TAU_REMOTE_CONTROL_UNUSED           (0x00U) /* remot
+ 1094  1094                      ;              e control carrier power output invalidity */
+ 1095  1095                      ; line   256 : #define _01_TAU_REMOTE_CONTROL_USED             (0x01U) /* remot
+ 1096  1096                      ;              e control carrier power output effective */
+ 1097  1097                      ; line   257 : 
+ 1098  1098                      ; line   258 : /*
+ 1099  1099                      ; line   259 :     Timer Output Enable Register m (TOEm)
+ 1100  1100                      ; line   260 : */
+ 1101  1101                      ; line   261 : /* Timer output enable/disable of channel 0 (TOEm0) */
+ 1102  1102                      ; line   262 : #define _0001_TAU_CH0_OUTPUT_ENABLE             (0x0001U) /* the
+ 1103  1103                      ;               TOm0 operation enabled by count operation */
+ 1104  1104                      ; line   263 : #define _0000_TAU_CH0_OUTPUT_DISABLE            (0x0000U) /* the
+ 1105  1105                      ;               TOm0 operation stopped by count operation */
+ 1106  1106                      ; line   264 : /* Timer output enable/disable of channel 1 (TOEm1) */
+ 1107  1107                      ; line   265 : #define _0002_TAU_CH1_OUTPUT_ENABLE             (0x0002U) /* the
+ 1108  1108                      ;               TOm1 operation enabled by count operation */
+ 1109  1109                      ; line   266 : #define _0000_TAU_CH1_OUTPUT_DISABLE            (0x0000U) /* the
+ 1110  1110                      ;               TOm1 operation stopped by count operation */
+ 1111  1111                      ; line   267 : /* Timer output enable/disable of channel 2 (TOEm2) */
+ 1112  1112                      ; line   268 : #define _0004_TAU_CH2_OUTPUT_ENABLE             (0x0004U) /* the
+ 1113  1113                      ;               TOm2 operation enabled by count operation */
+ 1114  1114                      ; line   269 : #define _0000_TAU_CH2_OUTPUT_DISABLE            (0x0000U) /* the
+ 1115  1115                      ;               TOm2 operation stopped by count operation */
+ 1116  1116                      ; line   270 : /* Timer output enable/disable of channel 3 (TOEm3) */
+ 1117  1117                      ; line   271 : #define _0008_TAU_CH3_OUTPUT_ENABLE             (0x0008U) /* the
+ 1118  1118                      ;               TOm3 operation enabled by count operation */
+ 1119  1119                      ; line   272 : #define _0000_TAU_CH3_OUTPUT_DISABLE            (0x0000U) /* the
+ 1120  1120                      ;               TOm3 operation stopped by count operation */
+ 1121  1121                      ; line   273 : /* Timer output enable/disable of channel 4 (TOEm4) */
+ 1122  1122                      ; line   274 : #define _0010_TAU_CH4_OUTPUT_ENABLE             (0x0010U) /* the
+ 1123  1123                      ;               TOm4 operation enabled by count operation */
+ 1124  1124                      ; line   275 : #define _0000_TAU_CH4_OUTPUT_DISABLE            (0x0000U) /* the
+ 1125  1125                      ;               TOm4 operation stopped by count operation */
+ 1126  1126                      ; line   276 : /* Timer output enable/disable of channel 5 (TOEm5) */
+ 1127  1127                      ; line   277 : #define _0020_TAU_CH5_OUTPUT_ENABLE             (0x0020U) /* the
+ 1128  1128                      ;               TOm5 operation enabled by count operation */
+ 1129  1129                      ; line   278 : #define _0000_TAU_CH5_OUTPUT_DISABLE            (0x0000U) /* the
+ 1130  1130                      ;               TOm5 operation stopped by count operation */
+ 1131  1131                      ; line   279 : /* Timer output enable/disable of channel 6 (TOEm6) */
+ 1132  1132                      ; line   280 : #define _0040_TAU_CH6_OUTPUT_ENABLE             (0x0040U) /* the
+ 1133  1133                      ;               TOm6 operation enabled by count operation */
+ 1134  1134                      ; line   281 : #define _0000_TAU_CH6_OUTPUT_DISABLE            (0x0000U) /* the
+ 1135  1135                      ;               TOm6 operation stopped by count operation */
+ 1136  1136                      ; line   282 : /* Timer output enable/disable of channel 7 (TOEm7) */
+ 1137  1137                      ; line   283 : #define _0080_TAU_CH7_OUTPUT_ENABLE             (0x0080U) /* the
+ 1138  1138                      ;               TOm7 operation enabled by count operation */
+ 1139  1139                      ; line   284 : #define _0000_TAU_CH7_OUTPUT_DISABLE            (0x0000U) /* the
+ 1140  1140                      ;               TOm7 operation stopped by count operation */
+ 1141  1141                      ; line   285 : 
+ 1142  1142                      ; line   286 : /*
+ 1143  1143                      ; line   287 :     Timer Output Register m (TOm)
+ 1144  1144                      ; line   288 : */
+ 1145  1145                      ; line   289 : /* Timer output of channel 0 (TOm0) */
+ 1146  1146                      ; line   290 : #define _0000_TAU_CH0_OUTPUT_VALUE_0            (0x0000U) /* tim
+ 1147  1147                      ;              er output value is "0" */
+ 1148  1148                      ; line   291 : #define _0001_TAU_CH0_OUTPUT_VALUE_1            (0x0001U) /* tim
+ 1149  1149                      ;              er output value is "1" */
+ 1150  1150                      ; line   292 : /* Timer output of channel 1 (TOm1) */
+ 1151  1151                      ; line   293 : #define _0000_TAU_CH1_OUTPUT_VALUE_0            (0x0000U) /* tim
+ 1152  1152                      ;              er output value is "0" */
+ 1153  1153                      ; line   294 : #define _0002_TAU_CH1_OUTPUT_VALUE_1            (0x0002U) /* tim
+ 1154  1154                      ;              er output value is "1" */
+ 1155  1155                      ; line   295 : /* Timer output of channel 2 (TOm2) */
+ 1156  1156                      ; line   296 : #define _0000_TAU_CH2_OUTPUT_VALUE_0            (0x0000U) /* tim
+ 1157  1157                      ;              er output value is "0" */
+ 1158  1158                      ; line   297 : #define _0004_TAU_CH2_OUTPUT_VALUE_1            (0x0004U) /* tim
+ 1159  1159                      ;              er output value is "1" */
+ 1160  1160                      ; line   298 : /* Timer output of channel 3 (TOm3) */
+ 1161  1161                      ; line   299 : #define _0000_TAU_CH3_OUTPUT_VALUE_0            (0x0000U) /* tim
+ 1162  1162                      ;              er output value is "0" */
+ 1163  1163                      ; line   300 : #define _0008_TAU_CH3_OUTPUT_VALUE_1            (0x0008U) /* tim
+ 1164  1164                      ;              er output value is "1" */
+ 1165  1165                      ; line   301 : /* Timer output of channel 4 (TOm4) */
+ 1166  1166                      ; line   302 : #define _0000_TAU_CH4_OUTPUT_VALUE_0            (0x0000U) /* tim
+ 1167  1167                      ;              er output value is "0" */
+ 1168  1168                      ; line   303 : #define _0010_TAU_CH4_OUTPUT_VALUE_1            (0x0010U) /* tim
+ 1169  1169                      ;              er output value is "1" */
+ 1170  1170                      ; line   304 : /* Timer output of channel 5 (TOm5) */
+ 1171  1171                      ; line   305 : #define _0000_TAU_CH5_OUTPUT_VALUE_0            (0x0000U) /* tim
+ 1172  1172                      ;              er output value is "0" */
+ 1173  1173                      ; line   306 : #define _0020_TAU_CH5_OUTPUT_VALUE_1            (0x0020U) /* tim
+ 1174  1174                      ;              er output value is "1" */
+ 1175  1175                      ; line   307 : /* Timer output of channel 6 (TOm6) */
+ 1176  1176                      ; line   308 : #define _0000_TAU_CH6_OUTPUT_VALUE_0            (0x0000U) /* tim
+ 1177  1177                      ;              er output value is "0" */
+ 1178  1178                      ; line   309 : #define _0040_TAU_CH6_OUTPUT_VALUE_1            (0x0040U) /* tim
+ 1179  1179                      ;              er output value is "1" */
+ 1180  1180                      ; line   310 : /* Timer output of channel 7 (TOm7) */
+ 1181  1181                      ; line   311 : #define _0000_TAU_CH7_OUTPUT_VALUE_0            (0x0000U) /* tim
+ 1182  1182                      ;              er output value is "0" */
+ 1183  1183                      ; line   312 : #define _0080_TAU_CH7_OUTPUT_VALUE_1            (0x0080U) /* tim
+ 1184  1184                      ;              er output value is "1" */
+ 1185  1185                      ; line   313 : 
+ 1186  1186                      ; line   314 : /*
+ 1187  1187                      ; line   315 :     Timer Output Level Register 0 (TOLm)
+ 1188  1188                      ; line   316 : */
+ 1189  1189                      ; line   317 : /* Control of timer output level of channel 1 (TOLm1) */
+ 1190  1190                      ; line   318 : #define _0000_TAU_CH1_OUTPUT_LEVEL_H            (0x0000U) /* pos
+ 1191  1191                      ;              itive logic output (active-high) */
+ 1192  1192                      ; line   319 : #define _0002_TAU_CH1_OUTPUT_LEVEL_L            (0x0002U) /* inv
+ 1193  1193                      ;              erted output (active-low) */
+ 1194  1194                      ; line   320 : /* Control of timer output level of channel 2 (TOLm2) */
+ 1195  1195                      ; line   321 : #define _0000_TAU_CH2_OUTPUT_LEVEL_H            (0x0000U) /* pos
+ 1196  1196                      ;              itive logic output (active-high) */
+ 1197  1197                      ; line   322 : #define _0004_TAU_CH2_OUTPUT_LEVEL_L            (0x0004U) /* inv
+ 1198  1198                      ;              erted output (active-low) */
+ 1199  1199                      ; line   323 : /* Control of timer output level of channel 3 (TOLm3) */
+ 1200  1200                      ; line   324 : #define _0000_TAU_CH3_OUTPUT_LEVEL_H            (0x0000U) /* pos
+ 1201  1201                      ;              itive logic output (active-high) */
+ 1202  1202                      ; line   325 : #define _0008_TAU_CH3_OUTPUT_LEVEL_L            (0x0008U) /* inv
+ 1203  1203                      ;              erted output (active-low) */
+ 1204  1204                      ; line   326 : /* Control of timer output level of channel 4 (TOLm4) */
+ 1205  1205                      ; line   327 : #define _0000_TAU_CH4_OUTPUT_LEVEL_H            (0x0000U) /* pos
+ 1206  1206                      ;              itive logic output (active-high) */
+ 1207  1207                      ; line   328 : #define _0010_TAU_CH4_OUTPUT_LEVEL_L            (0x0010U) /* inv
+ 1208  1208                      ;              erted output (active-low) */
+ 1209  1209                      ; line   329 : /* Control of timer output level of channel 5 (TOLm5) */
+ 1210  1210                      ; line   330 : #define _0000_TAU_CH5_OUTPUT_LEVEL_H            (0x0000U) /* pos
+ 1211  1211                      ;              itive logic output (active-high) */
+ 1212  1212                      ; line   331 : #define _0020_TAU_CH5_OUTPUT_LEVEL_L            (0x0020U) /* inv
+ 1213  1213                      ;              erted output (active-low) */
+ 1214  1214                      ; line   332 : /* Control of timer output level of channel 6 (TOLm6) */
+ 1215  1215                      ; line   333 : #define _0000_TAU_CH6_OUTPUT_LEVEL_H            (0x0000U) /* pos
+ 1216  1216                      ;              itive logic output (active-high) */
+ 1217  1217                      ; line   334 : #define _0040_TAU_CH6_OUTPUT_LEVEL_L            (0x0040U) /* inv
+ 1218  1218                      ;              erted output (active-low) */
+ 1219  1219                      ; line   335 : /* Control of timer output level of channel 7 (TOLm7) */
+ 1220  1220                      ; line   336 : #define _0000_TAU_CH7_OUTPUT_LEVEL_H            (0x0000U) /* pos
+ 1221  1221                      ;              itive logic output (active-high) */
+ 1222  1222                      ; line   337 : #define _0080_TAU_CH7_OUTPUT_LEVEL_L            (0x0080U) /* inv
+ 1223  1223                      ;              erted output (active-low) */
+ 1224  1224                      ; line   338 : 
+ 1225  1225                      ; line   339 : /*
+ 1226  1226                      ; line   340 :     Timer Output Mode Register m (TOMm)
+ 1227  1227                      ; line   341 : */
+ 1228  1228                      ; line   342 : /* Control of timer output mode of channel 1 (TOMm1) */
+ 1229  1229                      ; line   343 : #define _0000_TAU_CH1_OUTPUT_TOGGLE             (0x0000U) /* tog
+ 1230  1230                      ;              gle operation mode */
+ 1231  1231                      ; line   344 : #define _0002_TAU_CH1_OUTPUT_COMBIN             (0x0002U) /* com
+ 1232  1232                      ;              bination operation mode */
+ 1233  1233                      ; line   345 : /* Control of timer output mode of channel 2 (TOMm2) */
+ 1234  1234                      ; line   346 : #define _0000_TAU_CH2_OUTPUT_TOGGLE             (0x0000U) /* tog
+ 1235  1235                      ;              gle operation mode */
+ 1236  1236                      ; line   347 : #define _0004_TAU_CH2_OUTPUT_COMBIN             (0x0004U) /* com
+ 1237  1237                      ;              bination operation mode */
+ 1238  1238                      ; line   348 : /* Control of timer output mode of channel 3 (TOMm3) */
+ 1239  1239                      ; line   349 : #define _0000_TAU_CH3_OUTPUT_TOGGLE             (0x0000U) /* tog
+ 1240  1240                      ;              gle operation mode */
+ 1241  1241                      ; line   350 : #define _0008_TAU_CH3_OUTPUT_COMBIN             (0x0008U) /* com
+ 1242  1242                      ;              bination operation mode */
+ 1243  1243                      ; line   351 : /* Control of timer output mode of channel 4 (TOMm4) */
+ 1244  1244                      ; line   352 : #define _0000_TAU_CH4_OUTPUT_TOGGLE             (0x0000U) /* tog
+ 1245  1245                      ;              gle operation mode */
+ 1246  1246                      ; line   353 : #define _0010_TAU_CH4_OUTPUT_COMBIN             (0x0010U) /* com
+ 1247  1247                      ;              bination operation mode */
+ 1248  1248                      ; line   354 : /* Control of timer output mode of channel 5 (TOMm5) */
+ 1249  1249                      ; line   355 : #define _0000_TAU_CH5_OUTPUT_TOGGLE             (0x0000U) /* tog
+ 1250  1250                      ;              gle operation mode */
+ 1251  1251                      ; line   356 : #define _0020_TAU_CH5_OUTPUT_COMBIN             (0x0020U) /* com
+ 1252  1252                      ;              bination operation mode */
+ 1253  1253                      ; line   357 : /* Control of timer output mode of channel 6 (TOMm6) */
+ 1254  1254                      ; line   358 : #define _0000_TAU_CH6_OUTPUT_TOGGLE             (0x0000U) /* tog
+ 1255  1255                      ;              gle operation mode */
+ 1256  1256                      ; line   359 : #define _0040_TAU_CH6_OUTPUT_COMBIN             (0x0040U) /* com
+ 1257  1257                      ;              bination operation mode */
+ 1258  1258                      ; line   360 : /* Control of timer output mode of channel 7 (TOMm7) */
+ 1259  1259                      ; line   361 : #define _0000_TAU_CH7_OUTPUT_TOGGLE             (0x0000U) /* tog
+ 1260  1260                      ;              gle operation mode */
+ 1261  1261                      ; line   362 : #define _0080_TAU_CH7_OUTPUT_COMBIN             (0x0080U) /* com
+ 1262  1262                      ;              bination operation mode */
+ 1263  1263                      ; line   363 : 
+ 1264  1264                      ; line   364 : /*
+ 1265  1265                      ; line   365 :     Input Switch Control Register (ISC)
+ 1266  1266                      ; line   366 : */
+ 1267  1267                      ; line   367 : /* Switching external interrupt (INTP0) input (ISC0) */
+ 1268  1268                      ; line   368 : #define _00_TAU_EXTINT_INTP0                    (0x00U) /* uses 
+ 1269  1269                      ;              the INTP0 pin as an external interrupt */
+ 1270  1270                      ; line   369 : #define _01_TAU_EXTINT_RXD0                     (0x01U) /* uses 
+ 1271  1271                      ;              RXD0 pin as an external interrupt */
+ 1272  1272                      ; line   370 : /* Switching channel 5 input of timer array unit (ISC1) */
+ 1273  1273                      ; line   371 : #define _00_TAU_CH7_TI07_INPUT                  (0x00U) /* input
+ 1274  1274                      ;               signal of the TI05 pin as a timer input */
+ 1275  1275                      ; line   372 : #define _02_TAU_CH7_RXD0_INPUT                  (0x02U) /* input
+ 1276  1276                      ;               signal of RxD0 pin is used as timer input */
+ 1277  1277                      ; line   373 : 
+ 1278  1278                      ; line   374 : /*
+ 1279  1279                      ; line   375 :     Noise Filter Enable Register 1 (NFEN1)
+ 1280  1280                      ; line   376 : */
+ 1281  1281                      ; line   377 : /* Enable/disable using noise filter of TI00 pin input signal (T
+ 1282  1282                      ;              NFEN00) */
+ 1283  1283                      ; line   378 : #define _00_TAU_CH0_NOISE_OFF                   (0x00U) /* noise
+ 1284  1284                      ;               filter OFF */
+ 1285  1285                      ; line   379 : #define _01_TAU_CH0_NOISE_ON                    (0x01U) /* noise
+ 1286  1286                      ;               filter ON */
+ 1287  1287                      ; line   380 : /* Enable/disable using noise filter of TI01 pin input signal (T
+ 1288  1288                      ;              NFEN01) */
+ 1289  1289                      ; line   381 : #define _00_TAU_CH1_NOISE_OFF                   (0x00U) /* noise
+ 1290  1290                      ;               filter OFF */
+ 1291  1291                      ; line   382 : #define _02_TAU_CH1_NOISE_ON                    (0x02U) /* noise
+ 1292  1292                      ;               filter ON */
+ 1293  1293                      ; line   383 : /* Enable/disable using noise filter of TI02 pin input signal (T
+ 1294  1294                      ;              NFEN02) */
+ 1295  1295                      ; line   384 : #define _00_TAU_CH2_NOISE_OFF                   (0x00U) /* noise
+ 1296  1296                      ;               filter OFF */
+ 1297  1297                      ; line   385 : #define _04_TAU_CH2_NOISE_ON                    (0x04U) /* noise
+ 1298  1298                      ;               filter ON */
+ 1299  1299                      ; line   386 : /* Enable/disable using noise filter of TI03 pin input signal (T
+ 1300  1300                      ;              NFEN03) */
+ 1301  1301                      ; line   387 : #define _00_TAU_CH3_NOISE_OFF                   (0x00U) /* noise
+ 1302  1302                      ;               filter OFF */
+ 1303  1303                      ; line   388 : #define _08_TAU_CH3_NOISE_ON                    (0x08U) /* noise
+ 1304  1304                      ;               filter ON */
+ 1305  1305                      ; line   389 : /* Enable/disable using noise filter of TI04 pin input signal (T
+ 1306  1306                      ;              NFEN04) */
+ 1307  1307                      ; line   390 : #define _00_TAU_CH4_NOISE_OFF                   (0x00U) /* noise
+ 1308  1308                      ;               filter OFF */
+ 1309  1309                      ; line   391 : #define _10_TAU_CH4_NOISE_ON                    (0x10U) /* noise
+ 1310  1310                      ;               filter ON */
+ 1311  1311                      ; line   392 : /* Enable/disable using noise filter of TI05 pin input signal (T
+ 1312  1312                      ;              NFEN05) */
+ 1313  1313                      ; line   393 : #define _00_TAU_CH5_NOISE_OFF                   (0x00U) /* noise
+ 1314  1314                      ;               filter OFF */
+ 1315  1315                      ; line   394 : #define _20_TAU_CH5_NOISE_ON                    (0x20U) /* noise
+ 1316  1316                      ;               filter ON */
+ 1317  1317                      ; line   395 : /* Enable/disable using noise filter of TI06 pin input signal (T
+ 1318  1318                      ;              NFEN06) */
+ 1319  1319                      ; line   396 : #define _00_TAU_CH6_NOISE_OFF                   (0x00U) /* noise
+ 1320  1320                      ;               filter OFF */
+ 1321  1321                      ; line   397 : #define _40_TAU_CH6_NOISE_ON                    (0x40U) /* noise
+ 1322  1322                      ;               filter ON */
+ 1323  1323                      ; line   398 : /* Enable/disable using noise filter of TI07 pin input signal (T
+ 1324  1324                      ;              NFEN07) */
+ 1325  1325                      ; line   399 : #define _00_TAU_CH7_NOISE_OFF                   (0x00U) /* noise
+ 1326  1326                      ;               filter OFF */
+ 1327  1327                      ; line   400 : #define _80_TAU_CH7_NOISE_ON                    (0x80U) /* noise
+ 1328  1328                      ;               filter ON */
+ 1329  1329                      ; line   401 : 
+ 1330  1330                      ; line   402 : /***************************************************************
+ 1331  1331                      ;              ********************************************************
+ 1332  1332                      ; line   403 : Macro definitions
+ 1333  1333                      ; line   404 : ****************************************************************
+ 1334  1334                      ;              *******************************************************/
+ 1335  1335                      ; line   405 : /* 16-bit timer data register 00 (TDR00) */
+ 1336  1336                      ; line   406 : #define _C34F_TAU_TDR00_VALUE                   (0xC34FU)
+ 1337  1337                      ; line   407 : /* Clock divisor for TAU0 channel 0 */
+ 1338  1338                      ; line   408 : #define TAU0_CHANNEL0_DIVISOR                   (8U)      /* fCL
+ 1339  1339                      ;              K/2^3 */
+ 1340  1340                      ; line   409 : /* 16-bit timer data register 01 (TDR01) */
+ 1341  1341                      ; line   410 : #define _F423_TAU_TDR01_VALUE                   (0xF423U)
+ 1342  1342                      ; line   411 : /* Clock divisor for TAU0 channel 1 */
+ 1343  1343                      ; line   412 : #define TAU0_CHANNEL1_DIVISOR                   (64U)     /* fCL
+ 1344  1344                      ;              K/2^6 */
+ 1345  1345                      ; line   413 : /* 16-bit timer data register 02 (TDR02) */
+ 1346  1346                      ; line   414 : #define _0138_TAU_TDR02_VALUE                   (0x0138U)
+ 1347  1347                      ; line   415 : /* Clock divisor for TAU0 channel 2 */
+ 1348  1348                      ; line   416 : #define TAU0_CHANNEL2_DIVISOR                   (8U)      /* fCL
+ 1349  1349                      ;              K/2^3 */
+ 1350  1350                      ; line   417 : /* 16-bit timer data register 03 (TDR03) */
+ 1351  1351                      ; line   418 : #define _09C3_TAU_TDR03_VALUE                   (0x09C3U)
+ 1352  1352                      ; line   419 : /* Clock divisor for TAU0 channel 3 */
+ 1353  1353                      ; line   420 : #define TAU0_CHANNEL3_DIVISOR                   (8U)      /* fCL
+ 1354  1354                      ;              K/2^3 */
+ 1355  1355                      ; line   421 : 
+ 1356  1356                      ; line   422 : /***************************************************************
+ 1357  1357                      ;              ********************************************************
+ 1358  1358                      ; line   423 : Typedef definitions
+ 1359  1359                      ; line   424 : ****************************************************************
+ 1360  1360                      ;              *******************************************************/
+ 1361  1361                      ; line   425 : 
+ 1362  1362                      ; line   426 : /***************************************************************
+ 1363  1363                      ;              ********************************************************
+ 1364  1364                      ; line   427 : Global functions
+ 1365  1365                      ; line   428 : ****************************************************************
+ 1366  1366                      ;              *******************************************************/
+ 1367  1367                      ; line   429 : void R_TAU0_Create(void);
+ 1368  1368                      ; line   430 : void R_TAU0_Channel0_Start(void);
+ 1369  1369                      ; line   431 : void R_TAU0_Channel0_Stop(void);
+ 1370  1370                      ; line   432 : void R_TAU0_Channel1_Start(void);
+ 1371  1371                      ; line   433 : void R_TAU0_Channel1_Stop(void);
+ 1372  1372                      ; line   434 : void R_TAU0_Channel2_Start(void);
+ 1373  1373                      ; line   435 : void R_TAU0_Channel2_Stop(void);
+ 1374  1374                      ; line   436 : void R_TAU0_Channel3_Start(void);
+ 1375  1375                      ; line   437 : void R_TAU0_Channel3_Stop(void);
+ 1376  1376                      ; line   438 : 
+ 1377  1377                      ; line   439 : /* Start user code for function. Do not edit comment generated h
+ 1378  1378                      ;              ere */
+ 1379  1379                      ; line   440 : void R_TAU_MsDelay(const uint16_t millisec);
+ 1380  1380                      ; line     1 : /***************************************************************
+ 1381  1381                      ;              ****************
+ 1382  1382                      ; line     2 : * DISCLAIMER
+ 1383  1383                      ; line     3 : * This software is supplied by Renesas Electronics Corporation a
+ 1384  1384                      ;              nd is only
+ 1385  1385                      ; line     4 : * intended for use with Renesas products. No other uses are auth
+ 1386  1386                      ;              orized. This
+ 1387  1387                      ; line     5 : * software is owned by Renesas Electronics Corporation and is pr
+ 1388  1388                      ;              otected under
+ 1389  1389                      ; line     6 : * all applicable laws, including copyright laws.
+ 1390  1390                      ; line     7 : * THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANT
+ 1391  1391                      ;              IES REGARDING
+ 1392  1392                      ; line     8 : * THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDIN
+ 1393  1393                      ;              G BUT NOT
+ 1394  1394                      ; line     9 : * LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTIC
+ 1395  1395                      ;              ULAR PURPOSE
+ 1396  1396                      ; line    10 : * AND NON-INFRINGEMENT. ALL SUCH WARRANTIES ARE EXPRESSLY DISCLA
+ 1397  1397                      ;              IMED.
+ 1398  1398                      ; line    11 : * TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER
+ 1399  1399                      ;               RENESAS
+ 1400  1400                      ; line    12 : * ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SH
+ 1401  1401                      ;              ALL BE LIABLE
+ 1402  1402                      ; line    13 : * FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL
+ 1403  1403                      ;               DAMAGES FOR
+ 1404  1404                      ; line    14 : * ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AF
+ 1405  1405                      ;              FILIATES HAVE
+ 1406  1406                      ; line    15 : * BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+ 1407  1407                      ; line    16 : * Renesas reserves the right, without notice, to make changes to
+ 1408  1408                      ;               this software
+ 1409  1409                      ; line    17 : * and to discontinue the availability of this software. By using
+ 1410  1410                      ;               this software,
+ 1411  1411                      ; line    18 : * you agree to the additional terms and conditions found by acce
+ 1412  1412                      ;              ssing the
+ 1413  1413                      ; line    19 : * following link:
+ 1414  1414                      ; line    20 : * http://www.renesas.com/disclaimer
+ 1415  1415                      ; line    21 : ****************************************************************
+ 1416  1416                      ;              ***************/
+ 1417  1417                      ; line    22 : /* Copyright (C) 2013 Renesas Electronics Corporation. All right
+ 1418  1418                      ;              s reserved.   */
+ 1419  1419                      ; line    23 : /***************************************************************
+ 1420  1420                      ;              ****************
+ 1421  1421                      ; line    24 : * File Name     : switch.c
+ 1422  1422                      ; line    25 : * Version       : 1.00
+ 1423  1423                      ; line    26 : * Device(s)     : R5F10WMG
+ 1424  1424                      ; line    27 : * Tool-Chain    : CA78K0R
+ 1425  1425                      ; line    28 : * H/W Platform  : RSKRL78L13
+ 1426  1426                      ; line    29 : * Description   : Defines interrupt service routine functions fo
+ 1427  1427                      ;              r the switch
+ 1428  1428                      ; line    30 : *                 interrupts. De-bounces switch and sets a key p
+ 1429  1429                      ;              ress flag. 
+ 1430  1430                      ; line    31 : ****************************************************************
+ 1431  1431                      ;              ***************/
+ 1432  1432                      ; line    32 : /***************************************************************
+ 1433  1433                      ;              ****************
+ 1434  1434                      ; line    33 : * History       : 08/10/2013  Ver. 1.00 First Release
+ 1435  1435                      ; line    34 : ****************************************************************
+ 1436  1436                      ;              ***************/
+ 1437  1437                      ; line    35 : 
+ 1438  1438                      ; line    36 : /***************************************************************
+ 1439  1439                      ;              ****************
+ 1440  1440                      ; line    37 : * User Includes (Project Level Includes)
+ 1441  1441                      ; line    38 : ****************************************************************
+ 1442  1442                      ;              ***************/
+ 1443  1443                      ; line    39 : /* Switch handler function definitions */
+ 1444  1444                      ; line    40 : #include "switch.h"
+ 1445  1445                      ; line    41 : 
+ 1446  1446                      ; line    42 : /* INTP function definitions */
+ 1447  1447                      ; line    43 : #include "r_cg_intp.h"
+ 1448  1448                      ; line    44 : 
+ 1449  1449                      ; line    45 : /* TAU function definitions */
+ 1450  1450                      ; line    46 : #include "r_cg_tau.h"
+ 1451  1451                      ; line    47 : 
+ 1452  1452                      ; line    48 : /* General definitions */
+ 1453  1453                      ; line    49 : #include "r_cg_userdefine.h"
+ 1454  1454                      ; line    50 : 
+ 1455  1455                      ; line    51 : /* General definitions */
+ 1456  1456                      ; line    52 : #include "rskrl78l13def.h"
+ 1457  1457                      ; line    53 : 
+ 1458  1458                      ; line    54 : /***************************************************************
+ 1459  1459                      ;              ****************
+ 1460  1460                      ; line    55 : * Global Variables
+ 1461  1461                      ; line    56 : ****************************************************************
+ 1462  1462                      ;              ***************/
+ 1463  1463                      ; line    57 : /* Switch flag global variable */
+ 1464  1464                      ; line    58 : volatile uint8_t g_switch_flag = 0x00;
+ 1465  1465                      ; line    59 : 
+ 1466  1466                      ; line    60 : /* Detected switch faults counter variable */
+ 1467  1467                      ; line    61 : volatile uint16_t g_switch_faults_detected = 0;
+ 1468  1468                      ; line    62 : 
+ 1469  1469                      ; line    63 : /* Switch press callback pointer declaration */
+ 1470  1470                      ; line    64 : void (*g_switch_press_callback_func)(void) = 0;
+ 1471  1471                      ; line    65 : 
+ 1472  1472                      ; line    66 : /* Switch release callback pointer declaration */
+ 1473  1473                      ; line    67 : void (*g_switch_release_callback_func)(void) = 0;
+ 1474  1474                      ; line    68 : 
+ 1475  1475                      ; line    69 : /***************************************************************
+ 1476  1476                      ;              ****************
+ 1477  1477                      ; line    70 : * Local Function Prototypes
+ 1478  1478                      ; line    71 : ****************************************************************
+ 1479  1479                      ;              ***************/
+ 1480  1480                      ; line    72 : 
+ 1481  1481                      ; line    73 : 
+ 1482  1482                      ; line    74 : /***************************************************************
+ 1483  1483                      ;              ***************
+ 1484  1484                      ; line    75 : * Function Name : Switch_Init
+ 1485  1485                      ; line    76 : * Description   : Takes a pointer to a function, and sets it as 
+ 1486  1486                      ;              the callback
+ 1487  1487                      ; line    77 : *                 function for the switch interrupts. The passed
+ 1488  1488                      ;               function is
+ 1489  1489                      ; line    78 : *                 executed every time any switch is pressed down
+ 1490  1490                      ;              .
+ 1491  1491                      ; line    79 : * Argument      : pointer to callback function (set to NULL to d
+ 1492  1492                      ;              isable)
+ 1493  1493                      ; line    80 : * Return value  : none
+ 1494  1494                      ; line    81 : ****************************************************************
+ 1495  1495                      ;              **************/
+ 1496  1496                      ; line    82 : void Switch_Init (void)
+ 1497  1497                      ; line    83 : {
+ 1498  1498                      
+ 1499  1499 -----                @@CODEL CSEG
+ 1500  1500 00000                _Switch_Init:
+ 1501  1501                      $DGL    1,19
+ 1502  1502 00000                ??bf_Switch_Init:
+ 1503  1503                      ; line    84 :     /* Turn on the switch interrupts */
+ 1504  1504                      ; line    85 :     ControlSwitchInterrupts(1);
+ 1505  1505                      $DGL    0,3
+ 1506  1506 00000  E6                    onew    ax                                              ;[INF] 1, 1
+ 1507  1507 00001 RFCFD0000              call    !!_ControlSwitchInterrupts                      ;[INF] 4, 3
+ 1508  1508                      ; line    86 : }
+ 1509  1509                      $DGL    0,4
+ 1510  1510 00005                ??ef_Switch_Init:
+ 1511  1511 00005  D7                    ret                                                     ;[INF] 1, 6
+ 1512  1512 00006                ??ee_Switch_Init:
+ 1513  1513                      ; line    87 : /***************************************************************
+ 1514  1514                      ;              ***************
+ 1515  1515                      ; line    88 : * End of function Switch_Init
+ 1516  1516                      ; line    89 : ****************************************************************
+ 1517  1517                      ;              **************/
+ 1518  1518                      ; line    90 : 
+ 1519  1519                      ; line    91 : /***************************************************************
+ 1520  1520                      ;              ***************
+ 1521  1521                      ; line    92 : * Function Name : SetSwitchPressCallback
+ 1522  1522                      ; line    93 : * Description   : Takes a pointer to a function, and sets it as 
+ 1523  1523                      ;              the callback
+ 1524  1524                      ; line    94 : *                 function for the switch interrupts. The passed
+ 1525  1525                      ;               function is
+ 1526  1526                      ; line    95 : *                 executed every time any switch is pressed down
+ 1527  1527                      ;              .
+ 1528  1528                      ; line    96 : * Argument      : pointer to callback function (set to NULL to d
+ 1529  1529                      ;              isable)
+ 1530  1530                      ; line    97 : * Return value  : none
+ 1531  1531                      ; line    98 : ****************************************************************
+ 1532  1532                      ;              **************/
+ 1533  1533                      ; line    99 : void SetSwitchPressCallback (void( *const callback)(void))
+ 1534  1534                      ; line   100 : {
+ 1535  1535 00006                _SetSwitchPressCallback:
+ 1536  1536                      $DGL    1,25
+ 1537  1537 00006  C7                    push    hl                                              ;[INF] 1, 1
+ 1538  1538 00007  C3                    push    bc                                              ;[INF] 1, 1
+ 1539  1539 00008  C1                    push    ax                                              ;[INF] 1, 1
+ 1540  1540 00009  FBF8FF                movw    hl,sp                                           ;[INF] 3, 1
+ 1541  1541 0000C                ??bf_SetSwitchPressCallback:
+ 1542  1542                      ; line   101 :     /* Store the callback function pointer into the global varia
+ 1543  1543                      ;              ble */
+ 1544  1544                      ; line   102 :     g_switch_press_callback_func = callback;
+ 1545  1545                      $DGL    0,3
+ 1546  1546 0000C  AB                    movw    ax,[hl] ; callback                              ;[INF] 1, 1
+ 1547  1547 0000D RBF0400                movw    !_g_switch_press_callback_func,ax               ;[INF] 3, 1
+ 1548  1548 00010  8C02                  mov     a,[hl+2]        ; callback                      ;[INF] 2, 1
+ 1549  1549 00012 R9F0600                mov     !_g_switch_press_callback_func+2,a              ;[INF] 3, 1
+ 1550  1550                      ; line   103 : }
+ 1551  1551                      $DGL    0,4
+ 1552  1552 00015                ??ef_SetSwitchPressCallback:
+ 1553  1553 00015  1004                  addw    sp,#04H                                         ;[INF] 2, 1
+ 1554  1554 00017  C6                    pop     hl                                              ;[INF] 1, 1
+ 1555  1555 00018  D7                    ret                                                     ;[INF] 1, 6
+ 1556  1556 00019                ??ee_SetSwitchPressCallback:
+ 1557  1557                      ; line   104 : /***************************************************************
+ 1558  1558                      ;              ***************
+ 1559  1559                      ; line   105 : * End of function SetSwitchPressCallback
+ 1560  1560                      ; line   106 : ****************************************************************
+ 1561  1561                      ;              **************/
+ 1562  1562                      ; line   107 : 
+ 1563  1563                      ; line   108 : /***************************************************************
+ 1564  1564                      ;              ***************
+ 1565  1565                      ; line   109 : * Function Name : SetSwitchReleaseCallback
+ 1566  1566                      ; line   110 : * Description   : Takes a pointer to a function, and sets it as 
+ 1567  1567                      ;              the callback
+ 1568  1568                      ; line   111 : *                 function for the switch interrupts. The passed
+ 1569  1569                      ;               function is
+ 1570  1570                      ; line   112 : *                 executed every time any switch is released. No
+ 1571  1571                      ;              te that switch
+ 1572  1572                      ; line   113 : *                 release functionality is not provided for SW3.
+ 1573  1573                      ; line   114 : * Argument      : pointer to callback function (set to NULL to d
+ 1574  1574                      ;              isable)
+ 1575  1575                      ; line   115 : * Return value  : none
+ 1576  1576                      ; line   116 : ****************************************************************
+ 1577  1577                      ;              **************/
+ 1578  1578                      ; line   117 : void SetSwitchReleaseCallback (void( *const callback)(void))
+ 1579  1579                      ; line   118 : {
+ 1580  1580 00019                _SetSwitchReleaseCallback:
+ 1581  1581                      $DGL    1,33
+ 1582  1582 00019  C7                    push    hl                                              ;[INF] 1, 1
+ 1583  1583 0001A  C3                    push    bc                                              ;[INF] 1, 1
+ 1584  1584 0001B  C1                    push    ax                                              ;[INF] 1, 1
+ 1585  1585 0001C  FBF8FF                movw    hl,sp                                           ;[INF] 3, 1
+ 1586  1586 0001F                ??bf_SetSwitchReleaseCallback:
+ 1587  1587                      ; line   119 :     /* Store the callback function pointer into the global varia
+ 1588  1588                      ;              ble */
+ 1589  1589                      ; line   120 :     g_switch_release_callback_func = callback;
+ 1590  1590                      $DGL    0,3
+ 1591  1591 0001F  AB                    movw    ax,[hl] ; callback                              ;[INF] 1, 1
+ 1592  1592 00020 RBF0800                movw    !_g_switch_release_callback_func,ax             ;[INF] 3, 1
+ 1593  1593 00023  8C02                  mov     a,[hl+2]        ; callback                      ;[INF] 2, 1
+ 1594  1594 00025 R9F0A00                mov     !_g_switch_release_callback_func+2,a            ;[INF] 3, 1
+ 1595  1595                      ; line   121 : }
+ 1596  1596                      $DGL    0,4
+ 1597  1597 00028                ??ef_SetSwitchReleaseCallback:
+ 1598  1598 00028  1004                  addw    sp,#04H                                         ;[INF] 2, 1
+ 1599  1599 0002A  C6                    pop     hl                                              ;[INF] 1, 1
+ 1600  1600 0002B  D7                    ret                                                     ;[INF] 1, 6
+ 1601  1601 0002C                ??ee_SetSwitchReleaseCallback:
+ 1602  1602                      ; line   122 : /***************************************************************
+ 1603  1603                      ;              ***************
+ 1604  1604                      ; line   123 : * End of function SetSwitchReleaseCallback
+ 1605  1605                      ; line   124 : ****************************************************************
+ 1606  1606                      ;              **************/
+ 1607  1607                      ; line   125 : 
+ 1608  1608                      ; line   126 :     
+ 1609  1609                      ; line   127 : /***************************************************************
+ 1610  1610                      ;              ***************
+ 1611  1611                      ; line   128 : * Function Name : Switch1IsrCallback
+ 1612  1612                      ; line   129 : * Description   : Switch 1 callback ISR function. The function d
+ 1613  1613                      ;              isables switch
+ 1614  1614                      ; line   130 : *                 interrupts, then uses the debounce timer to re
+ 1615  1615                      ;              -enable them
+ 1616  1616                      ; line   131 : *                 after the debounce period finishes.
+ 1617  1617                      ; line   132 : * Argument      : none
+ 1618  1618                      ; line   133 : * Return value  : none
+ 1619  1619                      ; line   134 : ****************************************************************
+ 1620  1620                      ;              **************/
+ 1621  1621                      ; line   135 : void Switch1IsrCallback (void)
+ 1622  1622                      ; line   136 : {       
+ 1623  1623 0002C                _Switch1IsrCallback:
+ 1624  1624                      $DGL    1,41
+ 1625  1625 0002C                ??bf_Switch1IsrCallback:
+ 1626  1626                      ; line   137 :     /* Disable switch 1 interrupts */
+ 1627  1627                      ; line   138 :     R_INTC0_Stop();    
+ 1628  1628                      $DGL    0,3
+ 1629  1629 0002C RFC000000              call    !!_R_INTC0_Stop                                 ;[INF] 4, 3
+ 1630  1630                      ; line   139 :                        
+ 1631  1631                      ; line   140 :     /* Check if interrupt was generated by falling edge */
+ 1632  1632                      ; line   141 :     if (1 == R_INTC0_IsFallingEdge())
+ 1633  1633                      $DGL    0,6
+ 1634  1634 00030 RFC000000              call    !!_R_INTC0_IsFallingEdge                        ;[INF] 4, 3
+ 1635  1635 00034  92                    dec     c                                               ;[INF] 1, 1
+ 1636  1636 00035  DF18                  bnz     $?L0009                                         ;[INF] 2, 4
+ 1637  1637                      ; line   142 :     {
+ 1638  1638 00037                ??bb00_Switch1IsrCallback:
+ 1639  1639                      ; line   143 :         /* Start short debounce timer */
+ 1640  1640                      ; line   144 :         R_TAU0_Channel0_Start();
+ 1641  1641                      $DGL    0,9
+ 1642  1642 00037 RFC000000              call    !!_R_TAU0_Channel0_Start                        ;[INF] 4, 3
+ 1643  1643                      ; line   145 :         
+ 1644  1644                      ; line   146 :         /* Set detection direction as rising edge */
+ 1645  1645                      ; line   147 :         R_INTC0_SetFallingEdge(0);
+ 1646  1646                      $DGL    0,12
+ 1647  1647 0003B  F6                    clrw    ax                                              ;[INF] 1, 1
+ 1648  1648 0003C RFC000000              call    !!_R_INTC0_SetFallingEdge                       ;[INF] 4, 3
+ 1649  1649                      ; line   148 :         R_INTC0_SetRisingEdge(1);        
+ 1650  1650                      $DGL    0,13
+ 1651  1651 00040  E6                    onew    ax                                              ;[INF] 1, 1
+ 1652  1652 00041 RFC000000              call    !!_R_INTC0_SetRisingEdge                        ;[INF] 4, 3
+ 1653  1653                      ; line   149 :                 
+ 1654  1654                      ; line   150 :         /* Set global switch flag to indicate SW1 is held down *
+ 1655  1655                      ;              /
+ 1656  1656                      ; line   151 :         g_switch_flag |= SWITCHHOLD_1;
+ 1657  1657                      $DGL    0,16
+ 1658  1658 00045 R8F0000                mov     a,!_g_switch_flag                               ;[INF] 3, 1
+ 1659  1659 00048  6C08                  or      a,#08H  ; 8                                     ;[INF] 2, 1
+ 1660  1660 0004A R9F0000                mov     !_g_switch_flag,a                               ;[INF] 3, 1
+ 1661  1661 0004D                ??eb00_Switch1IsrCallback:
+ 1662  1662                      ; line   152 :     }
+ 1663  1663                      ; line   153 :     else
+ 1664  1664                      $DGL    0,18
+ 1665  1665 0004D  EF32                  br      $?L0010                                         ;[INF] 2, 3
+ 1666  1666 0004F                ?L0009:
+ 1667  1667                      ; line   154 :     {   
+ 1668  1668 0004F                ??bb01_Switch1IsrCallback:
+ 1669  1669                      ; line   155 :         /* Start long debounce timer */
+ 1670  1670                      ; line   156 :         R_TAU0_Channel1_Start();
+ 1671  1671                      $DGL    0,21
+ 1672  1672 0004F RFC000000              call    !!_R_TAU0_Channel1_Start                        ;[INF] 4, 3
+ 1673  1673                      ; line   157 :             
+ 1674  1674                      ; line   158 :         /* Set detection direction to falling edge */
+ 1675  1675                      ; line   159 :         R_INTC0_SetFallingEdge(1);
+ 1676  1676                      $DGL    0,24
+ 1677  1677 00053  E6                    onew    ax                                              ;[INF] 1, 1
+ 1678  1678 00054 RFC000000              call    !!_R_INTC0_SetFallingEdge                       ;[INF] 4, 3
+ 1679  1679                      ; line   160 :         R_INTC0_SetRisingEdge(0);        
+ 1680  1680                      $DGL    0,25
+ 1681  1681 00058  F6                    clrw    ax                                              ;[INF] 1, 1
+ 1682  1682 00059 RFC000000              call    !!_R_INTC0_SetRisingEdge                        ;[INF] 4, 3
+ 1683  1683                      ; line   161 :         
+ 1684  1684                      ; line   162 :         /* Clear SW1 held-down flag bit in switch flag */
+ 1685  1685                      ; line   163 :         /* type cast required to remove warning for 
+ 1686  1686                      ; line   164 :             Conversion may lose significant digits */ 
+ 1687  1687                      ; line   165 :         g_switch_flag &= (uint8_t) ~SWITCHHOLD_1;
+ 1688  1688                      $DGL    0,30
+ 1689  1689 0005D R8F0000                mov     a,!_g_switch_flag                               ;[INF] 3, 1
+ 1690  1690 00060  5CF7                  and     a,#0F7H ; 247                                   ;[INF] 2, 1
+ 1691  1691 00062 R9F0000                mov     !_g_switch_flag,a                               ;[INF] 3, 1
+ 1692  1692                      ; line   166 :         
+ 1693  1693                      ; line   167 :         /* Set global switch flag to indicate SW1 press complete
+ 1694  1694                      ;               */
+ 1695  1695                      ; line   168 :         g_switch_flag |= SWITCHPRESS_1;
+ 1696  1696                      $DGL    0,33
+ 1697  1697 00065 R8F0000                mov     a,!_g_switch_flag                               ;[INF] 3, 1
+ 1698  1698 00068  6C80                  or      a,#080H ; 128                                   ;[INF] 2, 1
+ 1699  1699 0006A R9F0000                mov     !_g_switch_flag,a                               ;[INF] 3, 1
+ 1700  1700                      ; line   169 :     
+ 1701  1701                      ; line   170 :         /* Check if switch release callback function is not NULL
+ 1702  1702                      ;               */
+ 1703  1703                      ; line   171 :         if (g_switch_release_callback_func)
+ 1704  1704                      $DGL    0,36
+ 1705  1705 0006D RAF0800                movw    ax,!_g_switch_release_callback_func             ;[INF] 3, 1
+ 1706  1706 00070  6168                  or      a,x                                             ;[INF] 2, 1
+ 1707  1707 00072 R6F0A00                or      a,!_g_switch_release_callback_func+2            ;[INF] 3, 1
+ 1708  1708 00075  DD0A                  bz      $?L0011                                         ;[INF] 2, 4
+ 1709  1709                      ; line   172 :         {
+ 1710  1710 00077                ??bb02_Switch1IsrCallback:
+ 1711  1711                      ; line   173 :             /* Execute user callback function */
+ 1712  1712                      ; line   174 :             g_switch_release_callback_func();
+ 1713  1713                      $DGL    0,39
+ 1714  1714 00077 R8F0A00                mov     a,!_g_switch_release_callback_func+2            ;[INF] 3, 1
+ 1715  1715 0007A  9EFC                  mov     CS,a                                            ;[INF] 2, 1
+ 1716  1716 0007C RAF0800                movw    ax,!_g_switch_release_callback_func             ;[INF] 3, 1
+ 1717  1717 0007F  61CA                  call    ax                                              ;[INF] 2, 3
+ 1718  1718 00081                ??eb02_Switch1IsrCallback:
+ 1719  1719                      ; line   175 :         }
+ 1720  1720 00081                ?L0011:
+ 1721  1721 00081                ?L0012:
+ 1722  1722 00081                ??eb01_Switch1IsrCallback:
+ 1723  1723                      ; line   176 :     }
+ 1724  1724 00081                ?L0010:
+ 1725  1725                      ; line   177 : }
+ 1726  1726                      $DGL    0,42
+ 1727  1727 00081                ??ef_Switch1IsrCallback:
+ 1728  1728 00081  D7                    ret                                                     ;[INF] 1, 6
+ 1729  1729 00082                ??ee_Switch1IsrCallback:
+ 1730  1730                      ; line   178 : /***************************************************************
+ 1731  1731                      ;              ***************
+ 1732  1732                      ; line   179 : * End of function Switch1IsrCallback
+ 1733  1733                      ; line   180 : ****************************************************************
+ 1734  1734                      ;              **************/ 
+ 1735  1735                      ; line   181 : 
+ 1736  1736                      ; line   182 : /***************************************************************
+ 1737  1737                      ;              ***************
+ 1738  1738                      ; line   183 : * Function Name : Switch3IsrCallback
+ 1739  1739                      ; line   184 : * Description   : Switch 3 callback ISR function. The function d
+ 1740  1740                      ;              isables switch
+ 1741  1741                      ; line   185 : *                 interrupts, then uses the debounce timer to re
+ 1742  1742                      ;              -enable them
+ 1743  1743                      ; line   186 : *                 after the debounce period finishes.
+ 1744  1744                      ; line   187 : * Argument      : none
+ 1745  1745                      ; line   188 : * Return value  : none
+ 1746  1746                      ; line   189 : ****************************************************************
+ 1747  1747                      ;              **************/
+ 1748  1748                      ; line   190 : void Switch3IsrCallback (void)
+ 1749  1749                      ; line   191 : {       
+ 1750  1750 00082                _Switch3IsrCallback:
+ 1751  1751                      $DGL    1,59
+ 1752  1752 00082                ??bf_Switch3IsrCallback:
+ 1753  1753                      ; line   192 :     /* Disable switch 2 interrupts */
+ 1754  1754                      ; line   193 :     R_INTC7_Stop();
+ 1755  1755                      $DGL    0,3
+ 1756  1756 00082 RFC000000              call    !!_R_INTC7_Stop                                 ;[INF] 4, 3
+ 1757  1757                      ; line   194 :                        
+ 1758  1758                      ; line   195 :     /* Check if interrupt was generated by falling edge */
+ 1759  1759                      ; line   196 :     if (1 == R_INTC7_IsFallingEdge())
+ 1760  1760                      $DGL    0,6
+ 1761  1761 00086 RFC000000              call    !!_R_INTC7_IsFallingEdge                        ;[INF] 4, 3
+ 1762  1762 0008A  92                    dec     c                                               ;[INF] 1, 1
+ 1763  1763 0008B  DF18                  bnz     $?L0015                                         ;[INF] 2, 4
+ 1764  1764                      ; line   197 :     {
+ 1765  1765 0008D                ??bb00_Switch3IsrCallback:
+ 1766  1766                      ; line   198 :         /* Start short debounce timer */
+ 1767  1767                      ; line   199 :         R_TAU0_Channel0_Start();
+ 1768  1768                      $DGL    0,9
+ 1769  1769 0008D RFC000000              call    !!_R_TAU0_Channel0_Start                        ;[INF] 4, 3
+ 1770  1770                      ; line   200 :         
+ 1771  1771                      ; line   201 :         /* Set detection direction as rising edge */
+ 1772  1772                      ; line   202 :         R_INTC7_SetFallingEdge(0);
+ 1773  1773                      $DGL    0,12
+ 1774  1774 00091  F6                    clrw    ax                                              ;[INF] 1, 1
+ 1775  1775 00092 RFC000000              call    !!_R_INTC7_SetFallingEdge                       ;[INF] 4, 3
+ 1776  1776                      ; line   203 :         R_INTC7_SetRisingEdge(1);
+ 1777  1777                      $DGL    0,13
+ 1778  1778 00096  E6                    onew    ax                                              ;[INF] 1, 1
+ 1779  1779 00097 RFC000000              call    !!_R_INTC7_SetRisingEdge                        ;[INF] 4, 3
+ 1780  1780                      ; line   204 :                 
+ 1781  1781                      ; line   205 :         /* Set global switch flag to indicate SW3 is held down *
+ 1782  1782                      ;              /
+ 1783  1783                      ; line   206 :         g_switch_flag |= SWITCHHOLD_3;
+ 1784  1784                      $DGL    0,16
+ 1785  1785 0009B R8F0000                mov     a,!_g_switch_flag                               ;[INF] 3, 1
+ 1786  1786 0009E  6C02                  or      a,#02H  ; 2                                     ;[INF] 2, 1
+ 1787  1787 000A0 R9F0000                mov     !_g_switch_flag,a                               ;[INF] 3, 1
+ 1788  1788 000A3                ??eb00_Switch3IsrCallback:
+ 1789  1789                      ; line   207 :     }
+ 1790  1790                      ; line   208 :     else
+ 1791  1791                      $DGL    0,18
+ 1792  1792 000A3  EF32                  br      $?L0016                                         ;[INF] 2, 3
+ 1793  1793 000A5                ?L0015:
+ 1794  1794                      ; line   209 :     {   
+ 1795  1795 000A5                ??bb01_Switch3IsrCallback:
+ 1796  1796                      ; line   210 :         /* Start long debounce timer */
+ 1797  1797                      ; line   211 :         R_TAU0_Channel1_Start();
+ 1798  1798                      $DGL    0,21
+ 1799  1799 000A5 RFC000000              call    !!_R_TAU0_Channel1_Start                        ;[INF] 4, 3
+ 1800  1800                      ; line   212 :             
+ 1801  1801                      ; line   213 :         /* Set detection direction to falling edge */
+ 1802  1802                      ; line   214 :         R_INTC7_SetFallingEdge(1);
+ 1803  1803                      $DGL    0,24
+ 1804  1804 000A9  E6                    onew    ax                                              ;[INF] 1, 1
+ 1805  1805 000AA RFC000000              call    !!_R_INTC7_SetFallingEdge                       ;[INF] 4, 3
+ 1806  1806                      ; line   215 :         R_INTC7_SetRisingEdge(0);
+ 1807  1807                      $DGL    0,25
+ 1808  1808 000AE  F6                    clrw    ax                                              ;[INF] 1, 1
+ 1809  1809 000AF RFC000000              call    !!_R_INTC7_SetRisingEdge                        ;[INF] 4, 3
+ 1810  1810                      ; line   216 :         
+ 1811  1811                      ; line   217 :         /* Clear SW2 held-down flag bit in switch flag */
+ 1812  1812                      ; line   218 :         /* type cast required to remove warning for 
+ 1813  1813                      ; line   219 :             Conversion may lose significant digits */ 
+ 1814  1814                      ; line   220 :         g_switch_flag &= (uint8_t) ~SWITCHHOLD_3;
+ 1815  1815                      $DGL    0,30
+ 1816  1816 000B3 R8F0000                mov     a,!_g_switch_flag                               ;[INF] 3, 1
+ 1817  1817 000B6  5CFD                  and     a,#0FDH ; 253                                   ;[INF] 2, 1
+ 1818  1818 000B8 R9F0000                mov     !_g_switch_flag,a                               ;[INF] 3, 1
+ 1819  1819                      ; line   221 :         
+ 1820  1820                      ; line   222 :         /* Set global switch flag to indicate SW3 press complete
+ 1821  1821                      ;               */
+ 1822  1822                      ; line   223 :         g_switch_flag |= SWITCHPRESS_3;
+ 1823  1823                      $DGL    0,33
+ 1824  1824 000BB R8F0000                mov     a,!_g_switch_flag                               ;[INF] 3, 1
+ 1825  1825 000BE  6C20                  or      a,#020H ; 32                                    ;[INF] 2, 1
+ 1826  1826 000C0 R9F0000                mov     !_g_switch_flag,a                               ;[INF] 3, 1
+ 1827  1827                      ; line   224 :     
+ 1828  1828                      ; line   225 :         /* Check if switch release callback function is not NULL
+ 1829  1829                      ;               */
+ 1830  1830                      ; line   226 :         if (g_switch_release_callback_func)
+ 1831  1831                      $DGL    0,36
+ 1832  1832 000C3 RAF0800                movw    ax,!_g_switch_release_callback_func             ;[INF] 3, 1
+ 1833  1833 000C6  6168                  or      a,x                                             ;[INF] 2, 1
+ 1834  1834 000C8 R6F0A00                or      a,!_g_switch_release_callback_func+2            ;[INF] 3, 1
+ 1835  1835 000CB  DD0A                  bz      $?L0017                                         ;[INF] 2, 4
+ 1836  1836                      ; line   227 :         {
+ 1837  1837 000CD                ??bb02_Switch3IsrCallback:
+ 1838  1838                      ; line   228 :             /* Execute user callback function */
+ 1839  1839                      ; line   229 :             g_switch_release_callback_func();
+ 1840  1840                      $DGL    0,39
+ 1841  1841 000CD R8F0A00                mov     a,!_g_switch_release_callback_func+2            ;[INF] 3, 1
+ 1842  1842 000D0  9EFC                  mov     CS,a                                            ;[INF] 2, 1
+ 1843  1843 000D2 RAF0800                movw    ax,!_g_switch_release_callback_func             ;[INF] 3, 1
+ 1844  1844 000D5  61CA                  call    ax                                              ;[INF] 2, 3
+ 1845  1845 000D7                ??eb02_Switch3IsrCallback:
+ 1846  1846                      ; line   230 :         }
+ 1847  1847 000D7                ?L0017:
+ 1848  1848 000D7                ?L0018:
+ 1849  1849 000D7                ??eb01_Switch3IsrCallback:
+ 1850  1850                      ; line   231 :     }
+ 1851  1851 000D7                ?L0016:
+ 1852  1852                      ; line   232 : }
+ 1853  1853                      $DGL    0,42
+ 1854  1854 000D7                ??ef_Switch3IsrCallback:
+ 1855  1855 000D7  D7                    ret                                                     ;[INF] 1, 6
+ 1856  1856 000D8                ??ee_Switch3IsrCallback:
+ 1857  1857                      ; line   233 : /***************************************************************
+ 1858  1858                      ;              ***************
+ 1859  1859                      ; line   234 : * End of function Switch3IsrCallback
+ 1860  1860                      ; line   235 : ****************************************************************
+ 1861  1861                      ;              **************/ 
+ 1862  1862                      ; line   236 : 
+ 1863  1863                      ; line   237 : 
+ 1864  1864                      ; line   238 : 
+ 1865  1865                      ; line   239 : /***************************************************************
+ 1866  1866                      ;              ***************
+ 1867  1867                      ; line   240 : * Function Name : SwitchDebounceIsrCallback
+ 1868  1868                      ; line   241 : * Description   : Switch debounce timer callback function. Funct
+ 1869  1869                      ;              ion is executed
+ 1870  1870                      ; line   242 : *                 by the timer ISR used for debounce. Function r
+ 1871  1871                      ;              e-enables all 
+ 1872  1872                      ; line   243 : *                 switch interrupts; then verifies a correct swi
+ 1873  1873                      ;              tch press was
+ 1874  1874                      ; line   244 : *                 detected, and calls the user switch press call
+ 1875  1875                      ;              back function.
+ 1876  1876                      ; line   245 : * Argument      : none
+ 1877  1877                      ; line   246 : * Return value  : none
+ 1878  1878                      ; line   247 : ****************************************************************
+ 1879  1879                      ;              **************/
+ 1880  1880                      ; line   248 : void SwitchDebounceIsrCallback (void)
+ 1881  1881                      ; line   249 : {   
+ 1882  1882 000D8                _SwitchDebounceIsrCallback:
+ 1883  1883                      $DGL    1,77
+ 1884  1884 000D8                ??bf_SwitchDebounceIsrCallback:
+ 1885  1885                      ; line   250 :    /* Re-enable switch 1 interrupts */
+ 1886  1886                      ; line   251 :     R_INTC0_Start();
+ 1887  1887                      $DGL    0,3
+ 1888  1888 000D8 RFC000000              call    !!_R_INTC0_Start                                ;[INF] 4, 3
+ 1889  1889                      ; line   252 : 
+ 1890  1890                      ; line   253 :     /* Re-enable switch 3 interrupts */
+ 1891  1891                      ; line   254 :     R_INTC7_Start();
+ 1892  1892                      $DGL    0,6
+ 1893  1893 000DC RFC000000              call    !!_R_INTC7_Start                                ;[INF] 4, 3
+ 1894  1894                      ; line   255 : 
+ 1895  1895                      ; line   256 :     /* Check if switch 1 hold flag is set */ 
+ 1896  1896                      ; line   257 :     if ((g_switch_flag & 0x0F) & (SWITCHHOLD_1 | SWITCHHOLD_2 | 
+ 1897  1897                      ;              SWITCHHOLD_3))
+ 1898  1898                      $DGL    0,9
+ 1899  1899 000E0 R8F0000                mov     a,!_g_switch_flag                               ;[INF] 3, 1
+ 1900  1900 000E3  5C0E                  and     a,#0EH  ; 14                                    ;[INF] 2, 1
+ 1901  1901 000E5  D1                    cmp0    a                                               ;[INF] 1, 1
+ 1902  1902 000E6  DD14                  bz      $?L0021                                         ;[INF] 2, 4
+ 1903  1903                      ; line   258 :     {
+ 1904  1904 000E8                ??bb00_SwitchDebounceIsrCallback:
+ 1905  1905                      ; line   259 :        /* Check if switch press callback function is not NULL */
+ 1906  1906                      ; line   260 :         if (g_switch_press_callback_func)
+ 1907  1907                      $DGL    0,12
+ 1908  1908 000E8 RAF0400                movw    ax,!_g_switch_press_callback_func               ;[INF] 3, 1
+ 1909  1909 000EB  6168                  or      a,x                                             ;[INF] 2, 1
+ 1910  1910 000ED R6F0600                or      a,!_g_switch_press_callback_func+2              ;[INF] 3, 1
+ 1911  1911 000F0  DD0A                  bz      $?L0023                                         ;[INF] 2, 4
+ 1912  1912                      ; line   261 :         {
+ 1913  1913 000F2                ??bb01_SwitchDebounceIsrCallback:
+ 1914  1914                      ; line   262 :             /* Execute user callback function */
+ 1915  1915                      ; line   263 :             g_switch_press_callback_func();
+ 1916  1916                      $DGL    0,15
+ 1917  1917 000F2 R8F0600                mov     a,!_g_switch_press_callback_func+2              ;[INF] 3, 1
+ 1918  1918 000F5  9EFC                  mov     CS,a                                            ;[INF] 2, 1
+ 1919  1919 000F7 RAF0400                movw    ax,!_g_switch_press_callback_func               ;[INF] 3, 1
+ 1920  1920 000FA  61CA                  call    ax                                              ;[INF] 2, 3
+ 1921  1921 000FC                ??eb01_SwitchDebounceIsrCallback:
+ 1922  1922                      ; line   264 :         }
+ 1923  1923 000FC                ?L0023:
+ 1924  1924 000FC                ?L0024:
+ 1925  1925 000FC                ??eb00_SwitchDebounceIsrCallback:
+ 1926  1926                      ; line   265 :     }
+ 1927  1927 000FC                ?L0021:
+ 1928  1928 000FC                ?L0022:
+ 1929  1929                      ; line   266 :   
+ 1930  1930                      ; line   267 : 
+ 1931  1931                      ; line   268 : }
+ 1932  1932                      $DGL    0,20
+ 1933  1933 000FC                ??ef_SwitchDebounceIsrCallback:
+ 1934  1934 000FC  D7                    ret                                                     ;[INF] 1, 6
+ 1935  1935 000FD                ??ee_SwitchDebounceIsrCallback:
+ 1936  1936                      ; line   269 : /***************************************************************
+ 1937  1937                      ;              ***************
+ 1938  1938                      ; line   270 : * End of function SwitchDebounceIsrCallback
+ 1939  1939                      ; line   271 : ****************************************************************
+ 1940  1940                      ;              **************/
+ 1941  1941                      ; line   272 : 
+ 1942  1942                      ; line   273 : /***************************************************************
+ 1943  1943                      ;              ***************
+ 1944  1944                      ; line   274 : * Function Name : ControlSwitchInterrupts
+ 1945  1945                      ; line   275 : * Description   : Enables or disables the switch IRQ interrupts,
+ 1946  1946                      ;               based on the
+ 1947  1947                      ; line   276 : *                 input variable, control.
+ 1948  1948                      ; line   277 : * Argument      : uint8_t - 0x1  : Enables switch interrupts.
+ 1949  1949                      ; line   278 : *                           0x0  : Disables switch interrupts.
+ 1950  1950                      ; line   279 : * Return value  : none
+ 1951  1951                      ; line   280 : ****************************************************************
+ 1952  1952                      ;              **************/
+ 1953  1953                      ; line   281 : void ControlSwitchInterrupts (const uint8_t control)
+ 1954  1954                      ; line   282 : {    
+ 1955  1955 000FD                _ControlSwitchInterrupts:
+ 1956  1956                      $DGL    1,91
+ 1957  1957 000FD  C7                    push    hl                                              ;[INF] 1, 1
+ 1958  1958 000FE  C1                    push    ax                                              ;[INF] 1, 1
+ 1959  1959 000FF  FBF8FF                movw    hl,sp                                           ;[INF] 3, 1
+ 1960  1960 00102                ??bf_ControlSwitchInterrupts:
+ 1961  1961                      ; line   283 :     /* Check if control input is 0x1 */
+ 1962  1962                      ; line   284 :     if (control)
+ 1963  1963                      $DGL    0,3
+ 1964  1964 00102  8B                    mov     a,[hl]  ; control                               ;[INF] 1, 1
+ 1965  1965 00103  D1                    cmp0    a                                               ;[INF] 1, 1
+ 1966  1966 00104  DD0A                  bz      $?L0027                                         ;[INF] 2, 4
+ 1967  1967                      ; line   285 :     {
+ 1968  1968 00106                ??bb00_ControlSwitchInterrupts:
+ 1969  1969                      ; line   286 :         /* Enable SW1 interrupt requests */
+ 1970  1970                      ; line   287 :         R_INTC0_Start();
+ 1971  1971                      $DGL    0,6
+ 1972  1972 00106 RFC000000              call    !!_R_INTC0_Start                                ;[INF] 4, 3
+ 1973  1973                      ; line   288 :     
+ 1974  1974                      ; line   289 :         /* Enable SW3 interrupt requests */
+ 1975  1975                      ; line   290 :         R_INTC7_Start();
+ 1976  1976                      $DGL    0,9
+ 1977  1977 0010A RFC000000              call    !!_R_INTC7_Start                                ;[INF] 4, 3
+ 1978  1978 0010E                ??eb00_ControlSwitchInterrupts:
+ 1979  1979                      ; line   291 :     }
+ 1980  1980                      ; line   292 :     else
+ 1981  1981                      $DGL    0,11
+ 1982  1982 0010E  EF08                  br      $?L0028                                         ;[INF] 2, 3
+ 1983  1983 00110                ?L0027:
+ 1984  1984                      ; line   293 :     {   
+ 1985  1985 00110                ??bb01_ControlSwitchInterrupts:
+ 1986  1986                      ; line   294 :         /* Control input is 0x0 */
+ 1987  1987                      ; line   295 :         /* Disable SW1 interrupts */
+ 1988  1988                      ; line   296 :         R_INTC0_Stop();
+ 1989  1989                      $DGL    0,15
+ 1990  1990 00110 RFC000000              call    !!_R_INTC0_Stop                                 ;[INF] 4, 3
+ 1991  1991                      ; line   297 :         
+ 1992  1992                      ; line   298 :         /* Disable SW3 interrupts */
+ 1993  1993                      ; line   299 :         R_INTC7_Stop();
+ 1994  1994                      $DGL    0,18
+ 1995  1995 00114 RFC000000              call    !!_R_INTC7_Stop                                 ;[INF] 4, 3
+ 1996  1996 00118                ??eb01_ControlSwitchInterrupts:
+ 1997  1997                      ; line   300 :     } 
+ 1998  1998 00118                ?L0028:
+ 1999  1999                      ; line   301 : }   
+ 2000  2000                      $DGL    0,20
+ 2001  2001 00118                ??ef_ControlSwitchInterrupts:
+ 2002  2002 00118  C0                    pop     ax                                              ;[INF] 1, 1
+ 2003  2003 00119  C6                    pop     hl                                              ;[INF] 1, 1
+ 2004  2004 0011A  D7                    ret                                                     ;[INF] 1, 6
+ 2005  2005 0011B                ??ee_ControlSwitchInterrupts:
+ 2006  2006                      ; line   302 : /***************************************************************
+ 2007  2007                      ;              ***************
+ 2008  2008                      ; line   303 : * End of function ControlSwitchInterrupts
+ 2009  2009                      ; line   304 : ****************************************************************
+ 2010  2010                      ;              **************/ 
+ 2011  2011                      ; line   305 : 
+ 2012  2012                      ; line   306 : 
+ 2013  2013                      ; line   307 : /***************************************************************
+ 2014  2014                      ;              ***************
+ 2015  2015                      ; line   308 : * Function Name : Switch2_Poll
+ 2016  2016                      ; line   309 : * Description   : Polls SW2 for the specified event returns TRUE
+ 2017  2017                      ;               if occurred.
+ 2018  2018                      ; line   310 : * Argument      : uint8_t switch_flag: Flag indicating which typ
+ 2019  2019                      ;              es of SW2 event
+ 2020  2020                      ; line   311 : *                                      to check, SWITCHPRESS_2 o
+ 2021  2021                      ;              r SWITCHHOLD_2
+ 2022  2022                      ; line   312 : * Return value  : TRUE if event occurred, FALSE if not.
+ 2023  2023                      ; line   313 : ****************************************************************
+ 2024  2024                      ;              **************/
+ 2025  2025                      ; line   314 : uint8_t Switch2_Poll (const uint8_t switch_flag)
+ 2026  2026                      ; line   315 : {
+ 2027  2027 0011B                _Switch2_Poll:
+ 2028  2028                      $DGL    1,106
+ 2029  2029 0011B  C7                    push    hl                                              ;[INF] 1, 1
+ 2030  2030 0011C  C1                    push    ax                                              ;[INF] 1, 1
+ 2031  2031 0011D  C1                    push    ax                                              ;[INF] 1, 1
+ 2032  2032 0011E  FBF8FF                movw    hl,sp                                           ;[INF] 3, 1
+ 2033  2033 00121                ??bf_Switch2_Poll:
+ 2034  2034                      ; line   316 :     uint8_t event_occurred = FALSE;
+ 2035  2035                      $DGL    0,2
+ 2036  2036 00121  CC0100                mov     [hl+1],#00H     ; event_occurred,0              ;[INF] 3, 1
+ 2037  2037                      ; line   317 : 
+ 2038  2038                      ; line   318 :     /* Check to see if SW is down */
+ 2039  2039                      ; line   319 :     if (0 == SW2)
+ 2040  2040                      $DGL    0,5
+ 2041  2041 00124  3112002B              bt      P0.1,$?L0031                                    ;[INF] 4, 5
+ 2042  2042                      ; line   320 :     {
+ 2043  2043 00128                ??bb00_Switch2_Poll:
+ 2044  2044                      ; line   321 :         /* if we want a SWITCHPRESS_2 event we wait for release 
+ 2045  2045                      ;              */
+ 2046  2046                      ; line   322 :         if (SWITCHPRESS_2 == switch_flag)
+ 2047  2047                      $DGL    0,8
+ 2048  2048 00128  8C02                  mov     a,[hl+2]        ; switch_flag                   ;[INF] 2, 1
+ 2049  2049 0012A  4C40                  cmp     a,#040H ; 64                                    ;[INF] 2, 1
+ 2050  2050 0012C  DF10                  bnz     $?L0033                                         ;[INF] 2, 4
+ 2051  2051                      ; line   323 :         {
+ 2052  2052 0012E                ??bb01_Switch2_Poll:
+ 2053  2053                      ; line   324 :             while (0 == SW2)
+ 2054  2054                      $DGL    0,10
+ 2055  2055 0012E                ?L0035:
+ 2056  2056 0012E  31120002              bt      P0.1,$?L0036                                    ;[INF] 4, 5
+ 2057  2057                      ; line   325 :             {
+ 2058  2058 00132                ??bb02_Switch2_Poll:
+ 2059  2059 00132                ??eb02_Switch2_Poll:
+ 2060  2060                      ; line   326 :                /* Wait */
+ 2061  2061                      ; line   327 :             }
+ 2062  2062                      $DGL    0,13
+ 2063  2063 00132  EFFA                  br      $?L0035                                         ;[INF] 2, 3
+ 2064  2064 00134                ?L0036:
+ 2065  2065                      ; line   328 :             g_switch_flag = switch_flag;
+ 2066  2066                      $DGL    0,14
+ 2067  2067 00134  8C02                  mov     a,[hl+2]        ; switch_flag                   ;[INF] 2, 1
+ 2068  2068 00136 R9F0000                mov     !_g_switch_flag,a                               ;[INF] 3, 1
+ 2069  2069                      ; line   329 :             event_occurred = TRUE;
+ 2070  2070                      $DGL    0,15
+ 2071  2071 00139  CC0101                mov     [hl+1],#01H     ; event_occurred,1              ;[INF] 3, 1
+ 2072  2072 0013C                ??eb01_Switch2_Poll:
+ 2073  2073                      ; line   330 :         }
+ 2074  2074                      ; line   331 :         else if (SWITCHHOLD_2 == switch_flag)
+ 2075  2075                      $DGL    0,17
+ 2076  2076 0013C  EF0E                  br      $?L0034                                         ;[INF] 2, 3
+ 2077  2077 0013E                ?L0033:
+ 2078  2078 0013E  8C02                  mov     a,[hl+2]        ; switch_flag                   ;[INF] 2, 1
+ 2079  2079 00140  4C04                  cmp     a,#04H  ; 4                                     ;[INF] 2, 1
+ 2080  2080 00142  DF08                  bnz     $?L0037                                         ;[INF] 2, 4
+ 2081  2081                      ; line   332 :         {
+ 2082  2082 00144                ??bb03_Switch2_Poll:
+ 2083  2083                      ; line   333 :             g_switch_flag = switch_flag;
+ 2084  2084                      $DGL    0,19
+ 2085  2085 00144  8C02                  mov     a,[hl+2]        ; switch_flag                   ;[INF] 2, 1
+ 2086  2086 00146 R9F0000                mov     !_g_switch_flag,a                               ;[INF] 3, 1
+ 2087  2087                      ; line   334 :             event_occurred = TRUE;
+ 2088  2088                      $DGL    0,20
+ 2089  2089 00149  CC0101                mov     [hl+1],#01H     ; event_occurred,1              ;[INF] 3, 1
+ 2090  2090 0014C                ??eb03_Switch2_Poll:
+ 2091  2091                      ; line   335 :         }
+ 2092  2092                      ; line   336 :         else
+ 2093  2093 0014C                ?L0037:
+ 2094  2094                      ; line   337 :         {
+ 2095  2095 0014C                ??bb04_Switch2_Poll:
+ 2096  2096 0014C                ??eb04_Switch2_Poll:
+ 2097  2097                      ; line   338 :             /* Do nothing */
+ 2098  2098                      ; line   339 :         }
+ 2099  2099 0014C                ?L0038:
+ 2100  2100 0014C                ?L0034:
+ 2101  2101                      ; line   340 : 
+ 2102  2102                      ; line   341 :         /* Delay for debounce */
+ 2103  2103                      ; line   342 :         R_TAU_MsDelay(200);
+ 2104  2104                      $DGL    0,28
+ 2105  2105 0014C  30C800                movw    ax,#0C8H        ; 200                           ;[INF] 3, 1
+ 2106  2106 0014F RFC000000              call    !!_R_TAU_MsDelay                                ;[INF] 4, 3
+ 2107  2107 00153                ??eb00_Switch2_Poll:
+ 2108  2108                      ; line   343 :    }
+ 2109  2109 00153                ?L0031:
+ 2110  2110 00153                ?L0032:
+ 2111  2111                      ; line   344 :     return event_occurred;
+ 2112  2112                      $DGL    0,30
+ 2113  2113 00153  8C01                  mov     a,[hl+1]        ; event_occurred                ;[INF] 2, 1
+ 2114  2114 00155  318E                  shrw    ax,8                                            ;[INF] 2, 1
+ 2115  2115 00157  12                    movw    bc,ax                                           ;[INF] 1, 1
+ 2116  2116                      ; line   345 : 
+ 2117  2117                      ; line   346 : }
+ 2118  2118 00158                ?L0030:
+ 2119  2119                      $DGL    0,32
+ 2120  2120 00158                ??ef_Switch2_Poll:
+ 2121  2121 00158  1004                  addw    sp,#04H                                         ;[INF] 2, 1
+ 2122  2122 0015A  C6                    pop     hl                                              ;[INF] 1, 1
+ 2123  2123 0015B  D7                    ret                                                     ;[INF] 1, 6
+ 2124  2124 0015C                ??ee_Switch2_Poll:
+ 2125  2125                      
+ 2126  2126 -----                @@CODE  CSEG    BASE
+ 2127  2127                      
+ 2128  2128 -----                @@BASE  CSEG    BASE
+ 2129  2129                              END
+ 2130  2130                      
+ 2131  2131                      
+ 2132  2132                      ; *** Code Information ***
+ 2133  2133                      ;
+ 2134  2134                      ; $FILE C:\Users\nguye\Downloads\dtmf_reader_rl78\RSK_Module_test\RSKRL78L13\AD
+ 2135  2135                      ;       C_Repeat\cg_src\switch.c
+ 2136  2136                      ;
+ 2137  2137                      ; $FUNC Switch_Init(83)
+ 2138  2138                      ;       void=(void)
+ 2139  2139                      ;       CODE SIZE= 6 bytes, CLOCK_SIZE= 10 clocks, STACK_SIZE= 4 bytes
+ 2140  2140                      ;
+ 2141  2141                      ; $CALL ControlSwitchInterrupts(85)
+ 2142  2142                      ;       void=(int:ax)
+ 2143  2143                      ;
+ 2144  2144                      ; $FUNC SetSwitchPressCallback(100)
+ 2145  2145                      ;       void=(pointer callback:ax,bc)
+ 2146  2146                      ;       CODE SIZE= 19 bytes, CLOCK_SIZE= 16 clocks, STACK_SIZE= 6 bytes
+ 2147  2147                      ;
+ 2148  2148                      ; $FUNC SetSwitchReleaseCallback(118)
+ 2149  2149                      ;       void=(pointer callback:ax,bc)
+ 2150  2150                      ;       CODE SIZE= 19 bytes, CLOCK_SIZE= 16 clocks, STACK_SIZE= 6 bytes
+ 2151  2151                      ;
+ 2152  2152                      ; $FUNC Switch1IsrCallback(136)
+ 2153  2153                      ;       void=(void)
+ 2154  2154                      ;       CODE SIZE= 86 bytes, CLOCK_SIZE= 64 clocks, STACK_SIZE= 4 bytes
+ 2155  2155                      ;
+ 2156  2156                      ; $CALL R_INTC0_Stop(138)
+ 2157  2157                      ;       void=(void)
+ 2158  2158                      ;
+ 2159  2159                      ; $CALL R_INTC0_IsFallingEdge(141)
+ 2160  2160                      ;       bc=(void)
+ 2161  2161                      ;
+ 2162  2162                      ; $CALL R_TAU0_Channel0_Start(144)
+ 2163  2163                      ;       void=(void)
+ 2164  2164                      ;
+ 2165  2165                      ; $CALL R_INTC0_SetFallingEdge(147)
+ 2166  2166                      ;       void=(int:ax)
+ 2167  2167                      ;
+ 2168  2168                      ; $CALL R_INTC0_SetRisingEdge(148)
+ 2169  2169                      ;       void=(int:ax)
+ 2170  2170                      ;
+ 2171  2171                      ; $CALL R_TAU0_Channel1_Start(156)
+ 2172  2172                      ;       void=(void)
+ 2173  2173                      ;
+ 2174  2174                      ; $CALL R_INTC0_SetFallingEdge(159)
+ 2175  2175                      ;       void=(int:ax)
+ 2176  2176                      ;
+ 2177  2177                      ; $CALL R_INTC0_SetRisingEdge(160)
+ 2178  2178                      ;       void=(int:ax)
+ 2179  2179                      ;
+ 2180  2180                      ; $CALL g_switch_release_callback_func(174)
+ 2181  2181                      ;       void=(void)
+ 2182  2182                      ;
+ 2183  2183                      ; $FUNC Switch3IsrCallback(191)
+ 2184  2184                      ;       void=(void)
+ 2185  2185                      ;       CODE SIZE= 86 bytes, CLOCK_SIZE= 64 clocks, STACK_SIZE= 4 bytes
+ 2186  2186                      ;
+ 2187  2187                      ; $CALL R_INTC7_Stop(193)
+ 2188  2188                      ;       void=(void)
+ 2189  2189                      ;
+ 2190  2190                      ; $CALL R_INTC7_IsFallingEdge(196)
+ 2191  2191                      ;       bc=(void)
+ 2192  2192                      ;
+ 2193  2193                      ; $CALL R_TAU0_Channel0_Start(199)
+ 2194  2194                      ;       void=(void)
+ 2195  2195                      ;
+ 2196  2196                      ; $CALL R_INTC7_SetFallingEdge(202)
+ 2197  2197                      ;       void=(int:ax)
+ 2198  2198                      ;
+ 2199  2199                      ; $CALL R_INTC7_SetRisingEdge(203)
+ 2200  2200                      ;       void=(int:ax)
+ 2201  2201                      ;
+ 2202  2202                      ; $CALL R_TAU0_Channel1_Start(211)
+ 2203  2203                      ;       void=(void)
+ 2204  2204                      ;
+ 2205  2205                      ; $CALL R_INTC7_SetFallingEdge(214)
+ 2206  2206                      ;       void=(int:ax)
+ 2207  2207                      ;
+ 2208  2208                      ; $CALL R_INTC7_SetRisingEdge(215)
+ 2209  2209                      ;       void=(int:ax)
+ 2210  2210                      ;
+ 2211  2211                      ; $CALL g_switch_release_callback_func(229)
+ 2212  2212                      ;       void=(void)
+ 2213  2213                      ;
+ 2214  2214                      ; $FUNC SwitchDebounceIsrCallback(249)
+ 2215  2215                      ;       void=(void)
+ 2216  2216                      ;       CODE SIZE= 37 bytes, CLOCK_SIZE= 32 clocks, STACK_SIZE= 4 bytes
+ 2217  2217                      ;
+ 2218  2218                      ; $CALL R_INTC0_Start(251)
+ 2219  2219                      ;       void=(void)
+ 2220  2220                      ;
+ 2221  2221                      ; $CALL R_INTC7_Start(254)
+ 2222  2222                      ;       void=(void)
+ 2223  2223                      ;
+ 2224  2224                      ; $CALL g_switch_press_callback_func(263)
+ 2225  2225                      ;       void=(void)
+ 2226  2226                      ;
+ 2227  2227                      ; $FUNC ControlSwitchInterrupts(282)
+ 2228  2228                      ;       void=(unsigned char control:x)
+ 2229  2229                      ;       CODE SIZE= 30 bytes, CLOCK_SIZE= 32 clocks, STACK_SIZE= 8 bytes
+ 2230  2230                      ;
+ 2231  2231                      ; $CALL R_INTC0_Start(287)
+ 2232  2232                      ;       void=(void)
+ 2233  2233                      ;
+ 2234  2234                      ; $CALL R_INTC7_Start(290)
+ 2235  2235                      ;       void=(void)
+ 2236  2236                      ;
+ 2237  2237                      ; $CALL R_INTC0_Stop(296)
+ 2238  2238                      ;       void=(void)
+ 2239  2239                      ;
+ 2240  2240                      ; $CALL R_INTC7_Stop(299)
+ 2241  2241                      ;       void=(void)
+ 2242  2242                      ;
+ 2243  2243                      ; $FUNC Switch2_Poll(315)
+ 2244  2244                      ;       bc=(unsigned char switch_flag:x)
+ 2245  2245                      ;       CODE SIZE= 65 bytes, CLOCK_SIZE= 54 clocks, STACK_SIZE= 10 bytes
+ 2246  2246                      ;
+ 2247  2247                      ; $CALL R_TAU_MsDelay(342)
+ 2248  2248                      ;       void=(unsigned short:ax)
+ 2249  2249                      
+ 2250  2250                      ; Target chip : R5F10WMG
+ 2251  2251                      ; Device file : V1.00 
+
+Segment informations:
+
+ADRS  LEN      NAME
+
+00000 00000H.0 @@BITS
+00000 00000H   @@CNST
+00000 0000CH   @@R_INIT
+00000 0000CH   @@INIT
+00000 00000H   @@DATA
+00000 00000H   @@R_INIS
+00000 00000H   @@INIS
+00000 00000H   @@DATS
+00000 00000H   @@CNSTL
+00000 00000H   @@RLINIT
+00000 00000H   @@INITL
+00000 00000H   @@DATAL
+00000 00000H   @@CALT
+00000 0015CH   @@CODEL
+00000 00000H   @@CODE
+00000 00000H   @@BASE
+
+ Target chip : R5F10WMG
+ Device file : V1.00
+Assembly complete,     0 error(s) and     0 warning(s) found. (    0)
+

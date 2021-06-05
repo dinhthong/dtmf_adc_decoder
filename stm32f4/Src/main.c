@@ -70,7 +70,7 @@ static char DTMFchar[16] = {
   '*', '0', '#', 'D', 
 };
 char decoded_char;
-char dtmf_result[10];
+char dtmf_result[5];
 int main(void)
 {
 
@@ -112,7 +112,7 @@ int main(void)
 			
 			
 			decoded_char = DTMFchar[dail1.digit & 0x0F];
-			if (r_cnt==10) r_cnt = 0;
+			if (r_cnt==5) r_cnt = 0;
 			dtmf_result[r_cnt++] = decoded_char;
 			//printf ("%c ", DTMFchar[decoded_char & 0x0F]);
 			//HAL_ADC_Stop(&hadc1);
@@ -275,7 +275,7 @@ static void MX_ADC1_Init(void)
   */
   hadc1.Instance = ADC1;
   hadc1.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV2;
-  hadc1.Init.Resolution = ADC_RESOLUTION_12B;
+  hadc1.Init.Resolution = ADC_RESOLUTION_6B;
   hadc1.Init.ScanConvMode = DISABLE;
   hadc1.Init.ContinuousConvMode = DISABLE;
   hadc1.Init.DiscontinuousConvMode = DISABLE;

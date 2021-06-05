@@ -1,0 +1,854 @@
+
+
+
+78K0R Assembler V1.80                                                                                    Date: 5 Jun 2021 Page:   1
+
+
+
+Command:  -cf10wmg -yC:\Program Files (x86)\Renesas Electronics\CubeSuite+\Device\RL78\Devicefile Debug\r_cg_intp_user.asm -_msgoff
+          -pDebug -oDebug -zs
+Para-file:
+In-file:  Debug\r_cg_intp_user.asm
+Obj-file: Debug\r_cg_intp_user.rel
+Prn-file: Debug\r_cg_intp_user.prn
+
+      Assemble list
+
+ ALNO  STNO ADRS   OBJECT   M I  SOURCE STATEMENT
+
+    1     1                      ; 78K0R C Compiler V2.60 Assembler Source        Date: 5 Jun 2021 Time:10:38:22
+    2     2                      
+    3     3                      ; Command   : -cf10wmg -yC:\Program Files (x86)\Renesas Electronics\CubeSuite+\
+    4     4                      ;             Device\RL78\Devicefile ..\RSKRL78L13\ADC_Repeat\cg_src\r_cg_intp_
+    5     5                      ;             user.c -oDebug -_msgoff -nq -i..\RSKRL78L13\ADC_Repeat\cg_src -v 
+    6     6                      ;             -w2 -zps -mm -mi0 -saDebug -li -no -g2
+    7     7                      ; In-file   : ..\RSKRL78L13\ADC_Repeat\cg_src\r_cg_intp_user.c
+    8     8                      ; Asm-file  : Debug\r_cg_intp_user.asm
+    9     9                      ; Para-file : 
+   10    10                      
+   11    11                      $PROCESSOR(F10WMG)
+   12    12                      $DEBUG
+   13    13                      $NODEBUGA
+   14    14                      $KANJICODE SJIS
+   15    15                      $TOL_INF        03FH, 0260H, 00H, 04000H, 00H, 00H, 00H
+   16    16                      
+   17    17                      $DGS    FIL_NAM, .file,         021H,   0FFFEH, 03FH,   067H,   01H,    00H
+   18    18                      $DGS    AUX_FIL, r_cg_intp_user.c
+   19    19                      $DGS    MOD_NAM, r_cg_intp_user,        00H,    0FFFEH, 00H,    077H,   00H,    00H
+   20    20                      $DGS    SEC_NAM, @@BITS,        U,      U,      00H,    078H,   00H,    00H
+   21    21                      $DGS    SEC_NAM, @@CNST,        U,      U,      00H,    078H,   00H,    00H
+   22    22                      $DGS    SEC_NAM, @@R_INIT,      U,      U,      00H,    078H,   00H,    00H
+   23    23                      $DGS    SEC_NAM, @@INIT,        U,      U,      00H,    078H,   00H,    00H
+   24    24                      $DGS    SEC_NAM, @@DATA,        U,      U,      00H,    078H,   00H,    00H
+   25    25                      $DGS    SEC_NAM, @@R_INIS,      U,      U,      00H,    078H,   00H,    00H
+   26    26                      $DGS    SEC_NAM, @@INIS,        U,      U,      00H,    078H,   00H,    00H
+   27    27                      $DGS    SEC_NAM, @@DATS,        U,      U,      00H,    078H,   00H,    00H
+   28    28                      $DGS    SEC_NAM, @@CNSTL,       U,      U,      00H,    078H,   00H,    00H
+   29    29                      $DGS    SEC_NAM, @@RLINIT,      U,      U,      00H,    078H,   00H,    00H
+   30    30                      $DGS    SEC_NAM, @@INITL,       U,      U,      00H,    078H,   00H,    00H
+   31    31                      $DGS    SEC_NAM, @@DATAL,       U,      U,      00H,    078H,   00H,    00H
+   32    32                      $DGS    SEC_NAM, @@CALT,        U,      U,      00H,    078H,   00H,    00H
+   33    33                      $DGS    SEC_NAM, @@CODE,        U,      U,      00H,    078H,   00H,    00H
+   34    34                      $DGS    SEC_NAM, @@CODEL,       U,      U,      00H,    078H,   00H,    00H
+   35    35                      $DGS    SEC_NAM, @@BASE,        U,      U,      00H,    078H,   00H,    00H
+   36    36                      $DGS    SEC_NAM, @@VECT08,      U,      U,      00H,    078H,   00H,    00H
+   37    37                      $DGS    SEC_NAM, @@VECT4C,      U,      U,      00H,    078H,   00H,    00H
+   38    38                      $DGS    STA_SYM, _r_intc0_interrupt,    U,      U,      0E001H, 03H,    01H,    02H
+   39    39                      $DGS    AUX_FUN, 00H,           U,      U,      01BH,   00H,    00H
+   40    40                      $DGS    BEG_FUN, ??bf_r_intc0_interrupt,        U,      U,      00H,    065H,   01H,    00H
+   41    41                      $DGS    AUX_BEG, 044H,          016H,   01BH
+   42    42                      $DGS    END_FUN, ??ef_r_intc0_interrupt,        U,      U,      00H,    065H,   01H,    00H
+   43    43                      $DGS    AUX_END, 0BH
+   44    44                      $DGS    STA_SYM, _r_intc7_interrupt,    U,      U,      0E001H, 03H,    01H,    02H
+   45    45                      $DGS    AUX_FUN, 00H,           U,      U,      021H,   00H,    00H
+   46    46                      $DGS    BEG_FUN, ??bf_r_intc7_interrupt,        U,      U,      00H,    065H,   01H,    00H
+   47    47                      $DGS    AUX_BEG, 056H,          016H,   021H
+   48    48                      $DGS    END_FUN, ??ef_r_intc7_interrupt,        U,      U,      00H,    065H,   01H,    00H
+   49    49                      $DGS    AUX_END, 0BH
+   50    50                      $DGS    GLV_SYM, _@vect08,      U,      U,      00H,    026H,   00H,    00H
+   51    51                      $DGS    GLV_SYM, _@vect4c,      U,      U,      00H,    026H,   00H,    00H
+   52    52                      $DGS    GLV_SYM, _@RTARG6,      U,      U,      00H,    02H,    00H,    00H
+   53    53                      $DGS    GLV_SYM, _@RTARG4,      U,      U,      00H,    02H,    00H,    00H
+   54    54                      $DGS    GLV_SYM, _@RTARG2,      U,      U,      00H,    02H,    00H,    00H
+   55    55                      $DGS    GLV_SYM, _@RTARG0,      U,      U,      00H,    02H,    00H,    00H
+   56    56                      $DGS    GLV_SYM, _@SEGDE,       U,      U,      00H,    02H,    00H,    00H
+   57    57                      $DGS    GLV_SYM, _@SEGAX,       U,      U,      00H,    02H,    00H,    00H
+   58    58                      $DGS    GLV_SYM, _Switch1IsrCallback,   U,      U,      01H,    02H,    01H,    02H
+   59    59                      $DGS    AUX_FUN, 00H,           U,      U,      00H,    01H,    00H
+   60    60                      $DGS    GLV_SYM, _Switch3IsrCallback,   U,      U,      01H,    02H,    01H,    02H
+   61    61                      $DGS    AUX_FUN, 00H,           U,      U,      00H,    01H,    00H
+   62    62                      
+   63    63                              EXTRN   _@RTARG6
+   64    64                              EXTRN   _@RTARG4
+   65    65                              EXTRN   _@RTARG2
+   66    66                              EXTRN   _@RTARG0
+   67    67                              EXTRN   _@SEGDE
+   68    68                              EXTRN   _@SEGAX
+   69    69                              EXTRN   _Switch1IsrCallback
+   70    70                              EXTRN   _Switch3IsrCallback
+   71    71                              PUBLIC  _@vect08
+   72    72                              PUBLIC  _@vect4c
+   73    73                      
+   74    74 -----                @@BITS  BSEG
+   75    75                      
+   76    76 -----                @@CNST  CSEG    MIRRORP
+   77    77                      
+   78    78 -----                @@R_INIT        CSEG    UNIT64KP
+   79    79                      
+   80    80 -----                @@INIT  DSEG    BASEP
+   81    81                      
+   82    82 -----                @@DATA  DSEG    BASEP
+   83    83                      
+   84    84 -----                @@R_INIS        CSEG    UNIT64KP
+   85    85                      
+   86    86 -----                @@INIS  DSEG    SADDRP
+   87    87                      
+   88    88 -----                @@DATS  DSEG    SADDRP
+   89    89                      
+   90    90 -----                @@CNSTL CSEG    PAGE64KP
+   91    91                      
+   92    92 -----                @@RLINIT        CSEG    UNIT64KP
+   93    93                      
+   94    94 -----                @@INITL DSEG    UNIT64KP
+   95    95                      
+   96    96 -----                @@DATAL DSEG    UNIT64KP
+   97    97                      
+   98    98 -----                @@CALT  CSEG    CALLT0
+   99    99                      
+  100   100                      ; line     1 : /***************************************************************
+  101   101                      ;              ********************************************************
+  102   102                      ; line     2 : * DISCLAIMER
+  103   103                      ; line     3 : * This software is supplied by Renesas Electronics Corporation a
+  104   104                      ;              nd is only 
+  105   105                      ; line     4 : * intended for use with Renesas products. No other uses are auth
+  106   106                      ;              orized. This 
+  107   107                      ; line     5 : * software is owned by Renesas Electronics Corporation and is pr
+  108   108                      ;              otected under 
+  109   109                      ; line     6 : * all applicable laws, including copyright laws.
+  110   110                      ; line     7 : * THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANT
+  111   111                      ;              IES REGARDING 
+  112   112                      ; line     8 : * THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDIN
+  113   113                      ;              G BUT NOT 
+  114   114                      ; line     9 : * LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTIC
+  115   115                      ;              ULAR PURPOSE 
+  116   116                      ; line    10 : * AND NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCL
+  117   117                      ;              AIMED.
+  118   118                      ; line    11 : * TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER
+  119   119                      ;               RENESAS 
+  120   120                      ; line    12 : * ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SH
+  121   121                      ;              ALL BE LIABLE 
+  122   122                      ; line    13 : * FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL
+  123   123                      ;               DAMAGES FOR 
+  124   124                      ; line    14 : * ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AF
+  125   125                      ;              FILIATES HAVE 
+  126   126                      ; line    15 : * BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+  127   127                      ; line    16 : * Renesas reserves the right, without notice, to make changes to
+  128   128                      ;               this software 
+  129   129                      ; line    17 : * and to discontinue the availability of this software.  By usin
+  130   130                      ;              g this software, 
+  131   131                      ; line    18 : * you agree to the additional terms and conditions found by acce
+  132   132                      ;              ssing the 
+  133   133                      ; line    19 : * following link:
+  134   134                      ; line    20 : * http://www.renesas.com/disclaimer
+  135   135                      ; line    21 : *
+  136   136                      ; line    22 : * Copyright (C) 2013 Renesas Electronics Corporation. All rights
+  137   137                      ;               reserved.
+  138   138                      ; line    23 : ****************************************************************
+  139   139                      ;              *******************************************************/
+  140   140                      ; line    24 : 
+  141   141                      ; line    25 : /***************************************************************
+  142   142                      ;              ********************************************************
+  143   143                      ; line    26 : * File Name    : r_cg_macrodriver.h
+  144   144                      ; line    27 : * Version      : Applilet4 for RL78/L13 V1.00.00.02 [10 May 2013
+  145   145                      ;              ]
+  146   146                      ; line    28 : * Device(s)    : R5F10WMG
+  147   147                      ; line    29 : * Tool-Chain   : CA78K0R
+  148   148                      ; line    30 : * Description  : This file implements general head file.
+  149   149                      ; line    31 : * Creation Date: 05-Jun-21
+  150   150                      ; line    32 : ****************************************************************
+  151   151                      ;              *******************************************************/
+  152   152                      ; line    33 : #ifndef MODULEID_H
+  153   153                      ; line    34 : #define MODULEID_H
+  154   154                      ; line    35 : /***************************************************************
+  155   155                      ;              ********************************************************
+  156   156                      ; line    36 : Includes
+  157   157                      ; line    37 : ****************************************************************
+  158   158                      ;              *******************************************************/
+  159   159                      ; line    38 : #pragma sfr
+  160   160                      ; line    39 : #pragma DI
+  161   161                      ; line    40 : #pragma EI
+  162   162                      ; line    41 : #pragma NOP
+  163   163                      ; line    42 : #pragma HALT
+  164   164                      ; line    43 : #pragma STOP
+  165   165                      ; line    44 : 
+  166   166                      ; line    45 : /***************************************************************
+  167   167                      ;              ********************************************************
+  168   168                      ; line    46 : Macro definitions (Register bit)
+  169   169                      ; line    47 : ****************************************************************
+  170   170                      ;              *******************************************************/
+  171   171                      ; line    48 : 
+  172   172                      ; line    49 : /***************************************************************
+  173   173                      ;              ********************************************************
+  174   174                      ; line    50 : Macro definitions
+  175   175                      ; line    51 : ****************************************************************
+  176   176                      ;              *******************************************************/
+  177   177                      ; line    52 : #ifndef __TYPEDEF__
+  178   178                      ; line    53 : /* Status list definition */
+  179   179                      ; line    54 : #define MD_STATUSBASE        (0x00U)
+  180   180                      ; line    55 : #define MD_OK                (MD_STATUSBASE + 0x00U) /* register
+  181   181                      ;               setting OK */
+  182   182                      ; line    56 : #define MD_SPT               (MD_STATUSBASE + 0x01U) /* IIC stop
+  183   183                      ;               */
+  184   184                      ; line    57 : #define MD_NACK              (MD_STATUSBASE + 0x02U) /* IIC no A
+  185   185                      ;              CK */
+  186   186                      ; line    58 : #define MD_BUSY1             (MD_STATUSBASE + 0x03U) /* busy 1 *
+  187   187                      ;              /
+  188   188                      ; line    59 : #define MD_BUSY2             (MD_STATUSBASE + 0x04U) /* busy 2 *
+  189   189                      ;              /
+  190   190                      ; line    60 : 
+  191   191                      ; line    61 : /* Error list definition */
+  192   192                      ; line    62 : #define MD_ERRORBASE         (0x80U)
+  193   193                      ; line    63 : #define MD_ERROR             (MD_ERRORBASE + 0x00U)  /* error */
+  194   194                      ; line    64 : #define MD_ARGERROR          (MD_ERRORBASE + 0x01U)  /* error ag
+  195   195                      ;              rument input error */
+  196   196                      ; line    65 : #define MD_ERROR1            (MD_ERRORBASE + 0x02U)  /* error 1 
+  197   197                      ;              */
+  198   198                      ; line    66 : #define MD_ERROR2            (MD_ERRORBASE + 0x03U)  /* error 2 
+  199   199                      ;              */
+  200   200                      ; line    67 : #define MD_ERROR3            (MD_ERRORBASE + 0x04U)  /* error 3 
+  201   201                      ;              */
+  202   202                      ; line    68 : #define MD_ERROR4            (MD_ERRORBASE + 0x05U)  /* error 4 
+  203   203                      ;              */
+  204   204                      ; line    69 : #define MD_ERROR5            (MD_ERRORBASE + 0x06U)  /* error 5 
+  205   205                      ;              */
+  206   206                      ; line    70 : #endif
+  207   207                      ; line    71 : 
+  208   208                      ; line    72 : /***************************************************************
+  209   209                      ;              ********************************************************
+  210   210                      ; line    73 : Typedef definitions
+  211   211                      ; line    74 : ****************************************************************
+  212   212                      ;              *******************************************************/
+  213   213                      ; line    75 : #ifndef __TYPEDEF__
+  214   214                      ; line    76 : typedef signed char         int8_t;
+  215   215                      ; line    77 : typedef unsigned char       uint8_t;
+  216   216                      ; line    78 : typedef signed short        int16_t;
+  217   217                      ; line    79 : typedef unsigned short      uint16_t;
+  218   218                      ; line    80 : typedef signed long         int32_t;
+  219   219                      ; line    81 : typedef unsigned long       uint32_t;
+  220   220                      ; line    82 : typedef unsigned short      MD_STATUS;
+  221   221                      ; line     1 : /***************************************************************
+  222   222                      ;              ********************************************************
+  223   223                      ; line     2 : * DISCLAIMER
+  224   224                      ; line     3 : * This software is supplied by Renesas Electronics Corporation a
+  225   225                      ;              nd is only 
+  226   226                      ; line     4 : * intended for use with Renesas products. No other uses are auth
+  227   227                      ;              orized. This 
+  228   228                      ; line     5 : * software is owned by Renesas Electronics Corporation and is pr
+  229   229                      ;              otected under 
+  230   230                      ; line     6 : * all applicable laws, including copyright laws.
+  231   231                      ; line     7 : * THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANT
+  232   232                      ;              IES REGARDING 
+  233   233                      ; line     8 : * THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDIN
+  234   234                      ;              G BUT NOT 
+  235   235                      ; line     9 : * LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTIC
+  236   236                      ;              ULAR PURPOSE 
+  237   237                      ; line    10 : * AND NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCL
+  238   238                      ;              AIMED.
+  239   239                      ; line    11 : * TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER
+  240   240                      ;               RENESAS 
+  241   241                      ; line    12 : * ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SH
+  242   242                      ;              ALL BE LIABLE 
+  243   243                      ; line    13 : * FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL
+  244   244                      ;               DAMAGES FOR 
+  245   245                      ; line    14 : * ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AF
+  246   246                      ;              FILIATES HAVE 
+  247   247                      ; line    15 : * BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+  248   248                      ; line    16 : * Renesas reserves the right, without notice, to make changes to
+  249   249                      ;               this software 
+  250   250                      ; line    17 : * and to discontinue the availability of this software.  By usin
+  251   251                      ;              g this software, 
+  252   252                      ; line    18 : * you agree to the additional terms and conditions found by acce
+  253   253                      ;              ssing the 
+  254   254                      ; line    19 : * following link:
+  255   255                      ; line    20 : * http://www.renesas.com/disclaimer
+  256   256                      ; line    21 : *
+  257   257                      ; line    22 : * Copyright (C) 2013 Renesas Electronics Corporation. All rights
+  258   258                      ;               reserved.
+  259   259                      ; line    23 : ****************************************************************
+  260   260                      ;              *******************************************************/
+  261   261                      ; line    24 : 
+  262   262                      ; line    25 : /***************************************************************
+  263   263                      ;              ********************************************************
+  264   264                      ; line    26 : * File Name    : r_cg_intp.h
+  265   265                      ; line    27 : * Version      : Applilet4 for RL78/L13 V1.00.00.02 [10 May 2013
+  266   266                      ;              ]
+  267   267                      ; line    28 : * Device(s)    : R5F10WMG
+  268   268                      ; line    29 : * Tool-Chain   : CA78K0R
+  269   269                      ; line    30 : * Description  : This file implements device driver for INTP mod
+  270   270                      ;              ule.
+  271   271                      ; line    31 : * Creation Date: 05-Jun-21
+  272   272                      ; line    32 : ****************************************************************
+  273   273                      ;              *******************************************************/
+  274   274                      ; line    33 : #ifndef INTP_H
+  275   275                      ; line    34 : #define INTP_H
+  276   276                      ; line    35 : 
+  277   277                      ; line    36 : /***************************************************************
+  278   278                      ;              ********************************************************
+  279   279                      ; line    37 : Macro definitions (Register bit)
+  280   280                      ; line    38 : ****************************************************************
+  281   281                      ;              *******************************************************/
+  282   282                      ; line    39 : /*
+  283   283                      ; line    40 :     External Interrupt Rising Edge Enable Register 0 (EGP0)
+  284   284                      ; line    41 : */
+  285   285                      ; line    42 : /* INTPn pin valid edge selection (EGPn) */
+  286   286                      ; line    43 : #define _01_INTP0_EDGE_RISING_SEL       (0x01U) /* rising edge s
+  287   287                      ;              elected for INTP0 pin */
+  288   288                      ; line    44 : #define _00_INTP0_EDGE_RISING_UNSEL     (0x00U) /* rising edge n
+  289   289                      ;              ot selected for INTP0 pin */
+  290   290                      ; line    45 : #define _02_INTP1_EDGE_RISING_SEL       (0x02U) /* rising edge s
+  291   291                      ;              elected for INTP1 pin */
+  292   292                      ; line    46 : #define _00_INTP1_EDGE_RISING_UNSEL     (0x00U) /* rising edge n
+  293   293                      ;              ot selected for INTP1 pin */
+  294   294                      ; line    47 : #define _04_INTP2_EDGE_RISING_SEL       (0x04U) /* rising edge s
+  295   295                      ;              elected for INTP2 pin */
+  296   296                      ; line    48 : #define _00_INTP2_EDGE_RISING_UNSEL     (0x00U) /* rising edge n
+  297   297                      ;              ot selected for INTP2 pin */
+  298   298                      ; line    49 : #define _08_INTP3_EDGE_RISING_SEL       (0x08U) /* rising edge s
+  299   299                      ;              elected for INTP3 pin */
+  300   300                      ; line    50 : #define _00_INTP3_EDGE_RISING_UNSEL     (0x00U) /* rising edge n
+  301   301                      ;              ot selected for INTP3 pin */
+  302   302                      ; line    51 : #define _10_INTP4_EDGE_RISING_SEL       (0x10U) /* rising edge s
+  303   303                      ;              elected for INTP4 pin */
+  304   304                      ; line    52 : #define _00_INTP4_EDGE_RISING_UNSEL     (0x00U) /* rising edge n
+  305   305                      ;              ot selected for INTP4 pin */
+  306   306                      ; line    53 : #define _20_INTP5_EDGE_RISING_SEL       (0x20U) /* rising edge s
+  307   307                      ;              elected for INTP5 pin */
+  308   308                      ; line    54 : #define _00_INTP5_EDGE_RISING_UNSEL     (0x00U) /* rising edge n
+  309   309                      ;              ot selected for INTP5 pin */
+  310   310                      ; line    55 : #define _40_INTP6_EDGE_RISING_SEL       (0x40U) /* rising edge s
+  311   311                      ;              elected for INTP6 pin */
+  312   312                      ; line    56 : #define _00_INTP6_EDGE_RISING_UNSEL     (0x00U) /* rising edge n
+  313   313                      ;              ot selected for INTP6 pin */
+  314   314                      ; line    57 : #define _80_INTP7_EDGE_RISING_SEL       (0x80U) /* rising edge s
+  315   315                      ;              elected for INTP7 pin */
+  316   316                      ; line    58 : #define _00_INTP7_EDGE_RISING_UNSEL     (0x00U) /* rising edge n
+  317   317                      ;              ot selected for INTP7 pin */
+  318   318                      ; line    59 : 
+  319   319                      ; line    60 : /*
+  320   320                      ; line    61 :     External Interrupt Falling Edge Enable Register 0 (EGN0)
+  321   321                      ; line    62 : */
+  322   322                      ; line    63 : /* INTPn pin valid edge selection (EGNn) */
+  323   323                      ; line    64 : #define _01_INTP0_EDGE_FALLING_SEL      (0x01U) /* falling edge 
+  324   324                      ;              selected for INTP0 pin */
+  325   325                      ; line    65 : #define _00_INTP0_EDGE_FALLING_UNSEL    (0x00U) /* falling edge 
+  326   326                      ;              not selected for INTP0 pin */
+  327   327                      ; line    66 : #define _02_INTP1_EDGE_FALLING_SEL      (0x02U) /* falling edge 
+  328   328                      ;              selected for INTP1 pin */
+  329   329                      ; line    67 : #define _00_INTP1_EDGE_FALLING_UNSEL    (0x00U) /* falling edge 
+  330   330                      ;              not selected for INTP1 pin */
+  331   331                      ; line    68 : #define _04_INTP2_EDGE_FALLING_SEL      (0x04U) /* falling edge 
+  332   332                      ;              selected for INTP2 pin */
+  333   333                      ; line    69 : #define _00_INTP2_EDGE_FALLING_UNSEL    (0x00U) /* falling edge 
+  334   334                      ;              not selected for INTP2 pin */
+  335   335                      ; line    70 : #define _08_INTP3_EDGE_FALLING_SEL      (0x08U) /* falling edge 
+  336   336                      ;              selected for INTP3 pin */
+  337   337                      ; line    71 : #define _00_INTP3_EDGE_FALLING_UNSEL    (0x00U) /* falling edge 
+  338   338                      ;              not selected for INTP3 pin */
+  339   339                      ; line    72 : #define _10_INTP4_EDGE_FALLING_SEL      (0x10U) /* falling edge 
+  340   340                      ;              selected for INTP4 pin */
+  341   341                      ; line    73 : #define _00_INTP4_EDGE_FALLING_UNSEL    (0x00U) /* falling edge 
+  342   342                      ;              not selected for INTP4 pin */
+  343   343                      ; line    74 : #define _20_INTP5_EDGE_FALLING_SEL      (0x20U) /* falling edge 
+  344   344                      ;              selected for INTP5 pin */
+  345   345                      ; line    75 : #define _00_INTP5_EDGE_FALLING_UNSEL    (0x00U) /* falling edge 
+  346   346                      ;              not selected for INTP5 pin */
+  347   347                      ; line    76 : #define _40_INTP6_EDGE_FALLING_SEL      (0x40U) /* falling edge 
+  348   348                      ;              selected for INTP6 pin */
+  349   349                      ; line    77 : #define _00_INTP6_EDGE_FALLING_UNSEL    (0x00U) /* falling edge 
+  350   350                      ;              not selected for INTP6 pin */
+  351   351                      ; line    78 : #define _80_INTP7_EDGE_FALLING_SEL      (0x80U) /* falling edge 
+  352   352                      ;              selected for INTP7 pin */
+  353   353                      ; line    79 : #define _00_INTP7_EDGE_FALLING_UNSEL    (0x00U) /* falling edge 
+  354   354                      ;              not selected for INTP7 pin */
+  355   355                      ; line    80 : 
+  356   356                      ; line    81 : /***************************************************************
+  357   357                      ;              ********************************************************
+  358   358                      ; line    82 : Macro definitions
+  359   359                      ; line    83 : ****************************************************************
+  360   360                      ;              *******************************************************/
+  361   361                      ; line    84 : 
+  362   362                      ; line    85 : /***************************************************************
+  363   363                      ;              ********************************************************
+  364   364                      ; line    86 : Typedef definitions
+  365   365                      ; line    87 : ****************************************************************
+  366   366                      ;              *******************************************************/
+  367   367                      ; line    88 : 
+  368   368                      ; line    89 : /***************************************************************
+  369   369                      ;              ********************************************************
+  370   370                      ; line    90 : Global functions
+  371   371                      ; line    91 : ****************************************************************
+  372   372                      ;              *******************************************************/
+  373   373                      ; line    92 : void R_INTC_Create(void);
+  374   374                      ; line    93 : void R_INTC0_Start(void);
+  375   375                      ; line    94 : void R_INTC0_Stop(void);
+  376   376                      ; line    95 : void R_INTC7_Start(void);
+  377   377                      ; line    96 : void R_INTC7_Stop(void);
+  378   378                      ; line    97 : 
+  379   379                      ; line    98 : /* Start user code for function. Do not edit comment generated h
+  380   380                      ;              ere */
+  381   381                      ; line    99 : 
+  382   382                      ; line   100 : /* Function prototypes for detecting and setting the edge trigge
+  383   383                      ;              r of INTP0 */
+  384   384                      ; line   101 : uint8_t R_INTC0_IsFallingEdge(void);
+  385   385                      ; line   102 : void R_INTC0_SetFallingEdge(const uint8_t set_f_edge);
+  386   386                      ; line   103 : void R_INTC0_SetRisingEdge(const uint8_t set_r_edge);
+  387   387                      ; line   104 : 
+  388   388                      ; line   105 : /* Function prototypes for detecting and setting the edge trigge
+  389   389                      ;              r of INTP7 */
+  390   390                      ; line   106 : uint8_t R_INTC7_IsFallingEdge(void);
+  391   391                      ; line   107 : void R_INTC7_SetFallingEdge(const uint8_t set_f_edge);
+  392   392                      ; line   108 : void R_INTC7_SetRisingEdge(const uint8_t set_r_edge);
+  393   393                      ; line     1 : /***************************************************************
+  394   394                      ;              ****************
+  395   395                      ; line     2 : * DISCLAIMER
+  396   396                      ; line     3 : * This software is supplied by Renesas Electronics Corporation a
+  397   397                      ;              nd is only
+  398   398                      ; line     4 : * intended for use with Renesas products. No other uses are auth
+  399   399                      ;              orized. This
+  400   400                      ; line     5 : * software is owned by Renesas Electronics Corporation and is pr
+  401   401                      ;              otected under
+  402   402                      ; line     6 : * all applicable laws, including copyright laws.
+  403   403                      ; line     7 : * THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANT
+  404   404                      ;              IES REGARDING
+  405   405                      ; line     8 : * THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDIN
+  406   406                      ;              G BUT NOT
+  407   407                      ; line     9 : * LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTIC
+  408   408                      ;              ULAR PURPOSE
+  409   409                      ; line    10 : * AND NON-INFRINGEMENT. ALL SUCH WARRANTIES ARE EXPRESSLY DISCLA
+  410   410                      ;              IMED.
+  411   411                      ; line    11 : * TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER
+  412   412                      ;               RENESAS
+  413   413                      ; line    12 : * ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SH
+  414   414                      ;              ALL BE LIABLE
+  415   415                      ; line    13 : * FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL
+  416   416                      ;               DAMAGES FOR
+  417   417                      ; line    14 : * ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AF
+  418   418                      ;              FILIATES HAVE
+  419   419                      ; line    15 : * BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+  420   420                      ; line    16 : * Renesas reserves the right, without notice, to make changes to
+  421   421                      ;               this software
+  422   422                      ; line    17 : * and to discontinue the availability of this software. By using
+  423   423                      ;               this software,
+  424   424                      ; line    18 : * you agree to the additional terms and conditions found by acce
+  425   425                      ;              ssing the
+  426   426                      ; line    19 : * following link:
+  427   427                      ; line    20 : * http://www.renesas.com/disclaimer
+  428   428                      ; line    21 : ****************************************************************
+  429   429                      ;              ***************/
+  430   430                      ; line    22 : /* Copyright (C) 2013 Renesas Electronics Corporation. All right
+  431   431                      ;              s reserved.   */
+  432   432                      ; line    23 : /***************************************************************
+  433   433                      ;              ****************
+  434   434                      ; line    24 : * File Name     : switch.h
+  435   435                      ; line    25 : * Version       : 1.00
+  436   436                      ; line    26 : * Device(s)     : R5F10WMG
+  437   437                      ; line    27 : * Tool-Chain    : CA78K0R
+  438   438                      ; line    28 : * H/W Platform  : RSKRL78L13
+  439   439                      ; line    29 : * Description   : Provides declarations of functions defined in 
+  440   440                      ;              switch.c
+  441   441                      ; line    30 : ****************************************************************
+  442   442                      ;              ***************/
+  443   443                      ; line    31 : /***************************************************************
+  444   444                      ;              ****************
+  445   445                      ; line    32 : * History       : 08/10/2013  Ver. 1.00 First Release
+  446   446                      ; line    33 : ****************************************************************
+  447   447                      ;              ***************/
+  448   448                      ; line    34 : /* Multiple inclusion prevention macro */
+  449   449                      ; line    35 : #ifndef SWITCH_H
+  450   450                      ; line    36 : #define SWITCH_H
+  451   451                      ; line    37 : 
+  452   452                      ; line    38 : /***************************************************************
+  453   453                      ;              ****************
+  454   454                      ; line    39 : * Project Includes
+  455   455                      ; line    40 : ****************************************************************
+  456   456                      ;              ***************/
+  457   457                      ; line    41 : #include "r_cg_macrodriver.h"
+  458   458                      ; line    42 : /***************************************************************
+  459   459                      ;              ****************
+  460   460                      ; line    43 : * Macro Definitions
+  461   461                      ; line    44 : ****************************************************************
+  462   462                      ;              ***************/
+  463   463                      ; line    45 : 
+  464   464                      ; line    46 : /* Switch 1 pressed flag mask */
+  465   465                      ; line    47 : #define SWITCHPRESS_1       0x80u
+  466   466                      ; line    48 : 
+  467   467                      ; line    49 : /* Switch 1 held down flag mask */
+  468   468                      ; line    50 : #define SWITCHHOLD_1        0x08u
+  469   469                      ; line    51 : 
+  470   470                      ; line    52 : /* Switch 2 pressed flag mask */
+  471   471                      ; line    53 : #define SWITCHPRESS_2       0x40u
+  472   472                      ; line    54 : 
+  473   473                      ; line    55 : /* Switch 2 held down flag mask */
+  474   474                      ; line    56 : #define SWITCHHOLD_2        0x04u
+  475   475                      ; line    57 : 
+  476   476                      ; line    58 : /* Switch 3 pressed flag mask */
+  477   477                      ; line    59 : #define SWITCHPRESS_3       0x20u
+  478   478                      ; line    60 : 
+  479   479                      ; line    61 : /* Switch 3 held down flag mask */
+  480   480                      ; line    62 : #define SWITCHHOLD_3        0x02u
+  481   481                      ; line    63 : 
+  482   482                      ; line    64 : /* Any switch pressed flag mask */
+  483   483                      ; line    65 : #define SWITCHPRESS_ALL     0xE0u
+  484   484                      ; line    66 : 
+  485   485                      ; line    67 : /* Any switch held down flag mask */
+  486   486                      ; line    68 : #define SWITCHHOLD_ALL      0x0Eu
+  487   487                      ; line    69 : 
+  488   488                      ; line    70 : /***************************************************************
+  489   489                      ;              ****************
+  490   490                      ; line    71 : * Global Variables
+  491   491                      ; line    72 : ****************************************************************
+  492   492                      ;              ***************/
+  493   493                      ; line    73 : 
+  494   494                      ; line    74 : /* Switch flag global variable. Switch status bits:
+  495   495                      ; line    75 :         b7 : Switch 1 press complete flag*
+  496   496                      ; line    76 :         b6 : Switch 2 press complete flag*
+  497   497                      ; line    77 :         b5 : Switch 3 press complete flag*
+  498   498                      ; line    78 :         b4 : Unused
+  499   499                      ; line    79 :         b3 : Switch 1 held-down status flag
+  500   500                      ; line    80 :         b2 : Switch 2 held-down status flag
+  501   501                      ; line    81 :         b1 : Switch 3 held-down status flag
+  502   502                      ; line    82 :         b0 : Unused 
+  503   503                      ; line    83 :          * Switch press complete flags must be cleared manually 
+  504   504                      ;              */
+  505   505                      ; line    84 : extern volatile uint8_t g_switch_flag;
+  506   506                      ; line    85 : 
+  507   507                      ; line    86 : /***************************************************************
+  508   508                      ;              ****************
+  509   509                      ; line    87 : * Global Function Prototypes
+  510   510                      ; line    88 : ****************************************************************
+  511   511                      ;              ***************/
+  512   512                      ; line    89 : /* Switch initialisation function */
+  513   513                      ; line    90 : void Switch_Init(void);
+  514   514                      ; line    91 : 
+  515   515                      ; line    92 : /* Switch 1 interrupt callback function */
+  516   516                      ; line    93 : void Switch1IsrCallback(void);
+  517   517                      ; line    94 : 
+  518   518                      ; line    95 : /* Switch 2 interrupt callback function */
+  519   519                      ; line    96 : void Switch2IsrCallback(void);
+  520   520                      ; line    97 : 
+  521   521                      ; line    98 : /* Switch 3 interrupt callback function */
+  522   522                      ; line    99 : void Switch3IsrCallback(void);
+  523   523                      ; line   100 : 
+  524   524                      ; line   101 : /* All switch debounce interrupt callback function */
+  525   525                      ; line   102 : void SwitchDebounceIsrCallback(void);
+  526   526                      ; line   103 : 
+  527   527                      ; line   104 : /* Switch callback function initialisation function prototype */
+  528   528                      ; line   105 : void SetSwitchPressCallback(void( *const callback)(void) );
+  529   529                      ; line   106 : 
+  530   530                      ; line   107 : /* Switch callback function initialisation function prototype */
+  531   531                      ; line   108 : void SetSwitchReleaseCallback(void( *const callback)(void) );
+  532   532                      ; line   109 : 
+  533   533                      ; line   110 : /* Turns switch interrupts on/off */
+  534   534                      ; line   111 : void ControlSwitchInterrupts (const uint8_t control);
+  535   535                      ; line   112 : 
+  536   536                      ; line   113 : /* Polling function for SW2 */
+  537   537                      ; line   114 : uint8_t Switch2_Poll(const uint8_t switch_flag);
+  538   538                      ; line     1 : /***************************************************************
+  539   539                      ;              ********************************************************
+  540   540                      ; line     2 : * DISCLAIMER
+  541   541                      ; line     3 : * This software is supplied by Renesas Electronics Corporation a
+  542   542                      ;              nd is only 
+  543   543                      ; line     4 : * intended for use with Renesas products. No other uses are auth
+  544   544                      ;              orized. This 
+  545   545                      ; line     5 : * software is owned by Renesas Electronics Corporation and is pr
+  546   546                      ;              otected under 
+  547   547                      ; line     6 : * all applicable laws, including copyright laws.
+  548   548                      ; line     7 : * THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANT
+  549   549                      ;              IES REGARDING 
+  550   550                      ; line     8 : * THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDIN
+  551   551                      ;              G BUT NOT 
+  552   552                      ; line     9 : * LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTIC
+  553   553                      ;              ULAR PURPOSE 
+  554   554                      ; line    10 : * AND NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCL
+  555   555                      ;              AIMED.
+  556   556                      ; line    11 : * TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER
+  557   557                      ;               RENESAS 
+  558   558                      ; line    12 : * ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SH
+  559   559                      ;              ALL BE LIABLE 
+  560   560                      ; line    13 : * FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL
+  561   561                      ;               DAMAGES FOR 
+  562   562                      ; line    14 : * ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AF
+  563   563                      ;              FILIATES HAVE 
+  564   564                      ; line    15 : * BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+  565   565                      ; line    16 : * Renesas reserves the right, without notice, to make changes to
+  566   566                      ;               this software 
+  567   567                      ; line    17 : * and to discontinue the availability of this software.  By usin
+  568   568                      ;              g this software, 
+  569   569                      ; line    18 : * you agree to the additional terms and conditions found by acce
+  570   570                      ;              ssing the 
+  571   571                      ; line    19 : * following link:
+  572   572                      ; line    20 : * http://www.renesas.com/disclaimer
+  573   573                      ; line    21 : *
+  574   574                      ; line    22 : * Copyright (C) 2013 Renesas Electronics Corporation. All rights
+  575   575                      ;               reserved.
+  576   576                      ; line    23 : ****************************************************************
+  577   577                      ;              *******************************************************/
+  578   578                      ; line    24 : 
+  579   579                      ; line    25 : /***************************************************************
+  580   580                      ;              ********************************************************
+  581   581                      ; line    26 : * File Name    : r_cg_intp_user.c
+  582   582                      ; line    27 : * Version      : Applilet4 for RL78/L13 V1.00.00.02 [10 May 2013
+  583   583                      ;              ]
+  584   584                      ; line    28 : * Device(s)    : R5F10WMG
+  585   585                      ; line    29 : * Tool-Chain   : CA78K0R
+  586   586                      ; line    30 : * Description  : This file implements device driver for INTP mod
+  587   587                      ;              ule.
+  588   588                      ; line    31 : * Creation Date: 05-Jun-21
+  589   589                      ; line    32 : ****************************************************************
+  590   590                      ;              *******************************************************/
+  591   591                      ; line    33 : 
+  592   592                      ; line    34 : /***************************************************************
+  593   593                      ;              ********************************************************
+  594   594                      ; line    35 : Pragma directive
+  595   595                      ; line    36 : ****************************************************************
+  596   596                      ;              *******************************************************/
+  597   597                      ; line    37 : #pragma interrupt INTP0 r_intc0_interrupt
+  598   598                      ; line    38 : #pragma interrupt INTP7 r_intc7_interrupt
+  599   599                      ; line    39 : /* Start user code for pragma. Do not edit comment generated her
+  600   600                      ;              e */
+  601   601                      ; line    40 : /* End user code. Do not edit comment generated here */
+  602   602                      ; line    41 : 
+  603   603                      ; line    42 : /***************************************************************
+  604   604                      ;              ********************************************************
+  605   605                      ; line    43 : Includes
+  606   606                      ; line    44 : ****************************************************************
+  607   607                      ;              *******************************************************/
+  608   608                      ; line    45 : #include "r_cg_macrodriver.h"
+  609   609                      ; line    46 : #include "r_cg_intp.h"
+  610   610                      ; line    47 : /* Start user code for include. Do not edit comment generated he
+  611   611                      ;              re */
+  612   612                      ; line    48 : 
+  613   613                      ; line    49 : /* Defines switch callback functions required by interrupt handl
+  614   614                      ;              ers */
+  615   615                      ; line    50 : #include "switch.h"
+  616   616                      ; line    51 : 
+  617   617                      ; line    52 : /* End user code. Do not edit comment generated here */
+  618   618                      ; line    53 : #include "r_cg_userdefine.h"
+  619   619                      ; line    54 : 
+  620   620                      ; line    55 : /***************************************************************
+  621   621                      ;              ********************************************************
+  622   622                      ; line    56 : Global variables and functions
+  623   623                      ; line    57 : ****************************************************************
+  624   624                      ;              *******************************************************/
+  625   625                      ; line    58 : /* Start user code for global. Do not edit comment generated her
+  626   626                      ;              e */
+  627   627                      ; line    59 : /* End user code. Do not edit comment generated here */
+  628   628                      ; line    60 : 
+  629   629                      ; line    61 : /***************************************************************
+  630   630                      ;              ********************************************************
+  631   631                      ; line    62 : * Function Name: r_intc0_interrupt
+  632   632                      ; line    63 : * Description  : None
+  633   633                      ; line    64 : * Arguments    : None
+  634   634                      ; line    65 : * Return Value : None
+  635   635                      ; line    66 : ****************************************************************
+  636   636                      ;              *******************************************************/
+  637   637                      ; line    67 : __interrupt static void r_intc0_interrupt(void)
+  638   638                      ; line    68 : {
+  639   639                      
+  640   640 -----                @@BASE  CSEG    BASE
+  641   641 00000                _r_intc0_interrupt:
+  642   642                      $DGL    1,21
+  643   643 00000  C1                    push    ax                                              ;[INF] 1, 1
+  644   644 00001  C3                    push    bc                                              ;[INF] 1, 1
+  645   645 00002  C5                    push    de                                              ;[INF] 1, 1
+  646   646 00003  C7                    push    hl                                              ;[INF] 1, 1
+  647   647 00004 RAD00                  movw    ax,_@RTARG6                                     ;[INF] 2, 1
+  648   648 00006  C1                    push    ax                                              ;[INF] 1, 1
+  649   649 00007 RAD00                  movw    ax,_@RTARG4                                     ;[INF] 2, 1
+  650   650 00009  C1                    push    ax                                              ;[INF] 1, 1
+  651   651 0000A RAD00                  movw    ax,_@RTARG2                                     ;[INF] 2, 1
+  652   652 0000C  C1                    push    ax                                              ;[INF] 1, 1
+  653   653 0000D RAD00                  movw    ax,_@RTARG0                                     ;[INF] 2, 1
+  654   654 0000F  C1                    push    ax                                              ;[INF] 1, 1
+  655   655 00010 RAD00                  movw    ax,_@SEGDE                                      ;[INF] 2, 1
+  656   656 00012  C1                    push    ax                                              ;[INF] 1, 1
+  657   657 00013 RAD00                  movw    ax,_@SEGAX                                      ;[INF] 2, 1
+  658   658 00015  C1                    push    ax                                              ;[INF] 1, 1
+  659   659 00016  8EFD                  mov     a,ES                                            ;[INF] 2, 1
+  660   660 00018  70                    mov     x,a                                             ;[INF] 1, 1
+  661   661 00019  8EFC                  mov     a,CS                                            ;[INF] 2, 1
+  662   662 0001B  C1                    push    ax                                              ;[INF] 1, 1
+  663   663 0001C                ??bf_r_intc0_interrupt:
+  664   664                      ; line    69 :     /* Start user code. Do not edit comment generated here */
+  665   665                      ; line    70 :     
+  666   666                      ; line    71 :     /* Switch 1 callback handler */
+  667   667                      ; line    72 :     Switch1IsrCallback();
+  668   668                      $DGL    0,5
+  669   669 0001C RFC000000              call    !!_Switch1IsrCallback                           ;[INF] 4, 3
+  670   670                      ; line    73 :     
+  671   671                      ; line    74 :     /* clear INTP0 interrupt flag */
+  672   672                      ; line    75 :     PIF0 = 0U;    
+  673   673                      $DGL    0,8
+  674   674 00020  712BE0                clr1    IF0L.2                                          ;[INF] 3, 2
+  675   675                      ; line    76 :  
+  676   676                      ; line    77 :     /* End user code. Do not edit comment generated here */
+  677   677                      ; line    78 : }
+  678   678                      $DGL    0,11
+  679   679 00023                ??ef_r_intc0_interrupt:
+  680   680 00023  C0                    pop     ax                                              ;[INF] 1, 1
+  681   681 00024  9EFC                  mov     CS,a                                            ;[INF] 2, 1
+  682   682 00026  60                    mov     a,x                                             ;[INF] 1, 1
+  683   683 00027  9EFD                  mov     ES,a                                            ;[INF] 2, 1
+  684   684 00029  C0                    pop     ax                                              ;[INF] 1, 1
+  685   685 0002A RBD00                  movw    _@SEGAX,ax                                      ;[INF] 2, 1
+  686   686 0002C  C0                    pop     ax                                              ;[INF] 1, 1
+  687   687 0002D RBD00                  movw    _@SEGDE,ax                                      ;[INF] 2, 1
+  688   688 0002F  C0                    pop     ax                                              ;[INF] 1, 1
+  689   689 00030 RBD00                  movw    _@RTARG0,ax                                     ;[INF] 2, 1
+  690   690 00032  C0                    pop     ax                                              ;[INF] 1, 1
+  691   691 00033 RBD00                  movw    _@RTARG2,ax                                     ;[INF] 2, 1
+  692   692 00035  C0                    pop     ax                                              ;[INF] 1, 1
+  693   693 00036 RBD00                  movw    _@RTARG4,ax                                     ;[INF] 2, 1
+  694   694 00038  C0                    pop     ax                                              ;[INF] 1, 1
+  695   695 00039 RBD00                  movw    _@RTARG6,ax                                     ;[INF] 2, 1
+  696   696 0003B  C6                    pop     hl                                              ;[INF] 1, 1
+  697   697 0003C  C4                    pop     de                                              ;[INF] 1, 1
+  698   698 0003D  C2                    pop     bc                                              ;[INF] 1, 1
+  699   699 0003E  C0                    pop     ax                                              ;[INF] 1, 1
+  700   700 0003F  61FC                  reti                                                    ;[INF] 2, 6
+  701   701 00041                ??ee_r_intc0_interrupt:
+  702   702                      ; line    79 : /***************************************************************
+  703   703                      ;              ********************************************************
+  704   704                      ; line    80 : * Function Name: r_intc7_interrupt
+  705   705                      ; line    81 : * Description  : None
+  706   706                      ; line    82 : * Arguments    : None
+  707   707                      ; line    83 : * Return Value : None
+  708   708                      ; line    84 : ****************************************************************
+  709   709                      ;              *******************************************************/
+  710   710                      ; line    85 : __interrupt static void r_intc7_interrupt(void)
+  711   711                      ; line    86 : {
+  712   712 00041                _r_intc7_interrupt:
+  713   713                      $DGL    1,27
+  714   714 00041  C1                    push    ax                                              ;[INF] 1, 1
+  715   715 00042  C3                    push    bc                                              ;[INF] 1, 1
+  716   716 00043  C5                    push    de                                              ;[INF] 1, 1
+  717   717 00044  C7                    push    hl                                              ;[INF] 1, 1
+  718   718 00045 RAD00                  movw    ax,_@RTARG6                                     ;[INF] 2, 1
+  719   719 00047  C1                    push    ax                                              ;[INF] 1, 1
+  720   720 00048 RAD00                  movw    ax,_@RTARG4                                     ;[INF] 2, 1
+  721   721 0004A  C1                    push    ax                                              ;[INF] 1, 1
+  722   722 0004B RAD00                  movw    ax,_@RTARG2                                     ;[INF] 2, 1
+  723   723 0004D  C1                    push    ax                                              ;[INF] 1, 1
+  724   724 0004E RAD00                  movw    ax,_@RTARG0                                     ;[INF] 2, 1
+  725   725 00050  C1                    push    ax                                              ;[INF] 1, 1
+  726   726 00051 RAD00                  movw    ax,_@SEGDE                                      ;[INF] 2, 1
+  727   727 00053  C1                    push    ax                                              ;[INF] 1, 1
+  728   728 00054 RAD00                  movw    ax,_@SEGAX                                      ;[INF] 2, 1
+  729   729 00056  C1                    push    ax                                              ;[INF] 1, 1
+  730   730 00057  8EFD                  mov     a,ES                                            ;[INF] 2, 1
+  731   731 00059  70                    mov     x,a                                             ;[INF] 1, 1
+  732   732 0005A  8EFC                  mov     a,CS                                            ;[INF] 2, 1
+  733   733 0005C  C1                    push    ax                                              ;[INF] 1, 1
+  734   734 0005D                ??bf_r_intc7_interrupt:
+  735   735                      ; line    87 :     /* Start user code. Do not edit comment generated here */
+  736   736                      ; line    88 :     
+  737   737                      ; line    89 :     /* Switch 3 callback handler */
+  738   738                      ; line    90 :     Switch3IsrCallback();
+  739   739                      $DGL    0,5
+  740   740 0005D RFC000000              call    !!_Switch3IsrCallback                           ;[INF] 4, 3
+  741   741                      ; line    91 :     
+  742   742                      ; line    92 :     /* clear INTP7 interrupt flag */
+  743   743                      ; line    93 :     PIF7 = 0U;    
+  744   744                      $DGL    0,8
+  745   745 00061  714BD0                clr1    IF2L.4                                          ;[INF] 3, 2
+  746   746                      ; line    94 :     
+  747   747                      ; line    95 :     /* End user code. Do not edit comment generated here */
+  748   748                      ; line    96 : }
+  749   749                      $DGL    0,11
+  750   750 00064                ??ef_r_intc7_interrupt:
+  751   751 00064  C0                    pop     ax                                              ;[INF] 1, 1
+  752   752 00065  9EFC                  mov     CS,a                                            ;[INF] 2, 1
+  753   753 00067  60                    mov     a,x                                             ;[INF] 1, 1
+  754   754 00068  9EFD                  mov     ES,a                                            ;[INF] 2, 1
+  755   755 0006A  C0                    pop     ax                                              ;[INF] 1, 1
+  756   756 0006B RBD00                  movw    _@SEGAX,ax                                      ;[INF] 2, 1
+  757   757 0006D  C0                    pop     ax                                              ;[INF] 1, 1
+  758   758 0006E RBD00                  movw    _@SEGDE,ax                                      ;[INF] 2, 1
+  759   759 00070  C0                    pop     ax                                              ;[INF] 1, 1
+  760   760 00071 RBD00                  movw    _@RTARG0,ax                                     ;[INF] 2, 1
+  761   761 00073  C0                    pop     ax                                              ;[INF] 1, 1
+  762   762 00074 RBD00                  movw    _@RTARG2,ax                                     ;[INF] 2, 1
+  763   763 00076  C0                    pop     ax                                              ;[INF] 1, 1
+  764   764 00077 RBD00                  movw    _@RTARG4,ax                                     ;[INF] 2, 1
+  765   765 00079  C0                    pop     ax                                              ;[INF] 1, 1
+  766   766 0007A RBD00                  movw    _@RTARG6,ax                                     ;[INF] 2, 1
+  767   767 0007C  C6                    pop     hl                                              ;[INF] 1, 1
+  768   768 0007D  C4                    pop     de                                              ;[INF] 1, 1
+  769   769 0007E  C2                    pop     bc                                              ;[INF] 1, 1
+  770   770 0007F  C0                    pop     ax                                              ;[INF] 1, 1
+  771   771 00080  61FC                  reti                                                    ;[INF] 2, 6
+  772   772 00082                ??ee_r_intc7_interrupt:
+  773   773                      
+  774   774 -----                @@VECT08        CSEG    AT    0008H
+  775   775 00008                _@vect08:
+  776   776 00008 R0000                  DW      _r_intc0_interrupt
+  777   777                      
+  778   778 -----                @@VECT4C        CSEG    AT    004CH
+  779   779 0004C                _@vect4c:
+  780   780 0004C R4100                  DW      _r_intc7_interrupt
+  781   781                      
+  782   782 -----                @@CODE  CSEG    BASE
+  783   783                      
+  784   784 -----                @@CODEL CSEG
+  785   785                              END
+  786   786                      
+  787   787                      
+  788   788                      ; *** Code Information ***
+  789   789                      ;
+  790   790                      ; $FILE C:\Users\nguye\Downloads\dtmf_reader_rl78\RSK_Module_test\RSKRL78L13\AD
+  791   791                      ;       C_Repeat\cg_src\r_cg_intp_user.c
+  792   792                      ;
+  793   793                      ; $FUNC r_intc0_interrupt(68)
+  794   794                      ;       void=(void)
+  795   795                      ;       CODE SIZE= 65 bytes, CLOCK_SIZE= 51 clocks, STACK_SIZE= 26 bytes
+  796   796                      ;
+  797   797                      ; $CALL Switch1IsrCallback(72)
+  798   798                      ;       void=(void)
+  799   799                      ;
+  800   800                      ; $FUNC r_intc7_interrupt(86)
+  801   801                      ;       void=(void)
+  802   802                      ;       CODE SIZE= 65 bytes, CLOCK_SIZE= 51 clocks, STACK_SIZE= 26 bytes
+  803   803                      ;
+  804   804                      ; $CALL Switch3IsrCallback(90)
+  805   805                      ;       void=(void)
+  806   806                      
+  807   807                      ; Target chip : R5F10WMG
+  808   808                      ; Device file : V1.00 
+
+Segment informations:
+
+ADRS  LEN      NAME
+
+00000 00000H.0 @@BITS
+00000 00000H   @@CNST
+00000 00000H   @@R_INIT
+00000 00000H   @@INIT
+00000 00000H   @@DATA
+00000 00000H   @@R_INIS
+00000 00000H   @@INIS
+00000 00000H   @@DATS
+00000 00000H   @@CNSTL
+00000 00000H   @@RLINIT
+00000 00000H   @@INITL
+00000 00000H   @@DATAL
+00000 00000H   @@CALT
+00000 00082H   @@BASE
+00008 00002H   @@VECT08
+0004C 00002H   @@VECT4C
+00000 00000H   @@CODE
+00000 00000H   @@CODEL
+
+ Target chip : R5F10WMG
+ Device file : V1.00
+Assembly complete,     0 error(s) and     0 warning(s) found. (    0)
+

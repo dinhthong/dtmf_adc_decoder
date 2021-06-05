@@ -1,0 +1,1042 @@
+
+
+
+78K0R Assembler V1.80                                                                                    Date: 5 Jun 2021 Page:   1
+
+
+
+Command:  -cf10wmg -yC:\Program Files (x86)\Renesas Electronics\CubeSuite+\Device\RL78\Devicefile Debug\r_cg_intp.asm -_msgoff -pDeb
+          ug -oDebug -zs
+Para-file:
+In-file:  Debug\r_cg_intp.asm
+Obj-file: Debug\r_cg_intp.rel
+Prn-file: Debug\r_cg_intp.prn
+
+      Assemble list
+
+ ALNO  STNO ADRS   OBJECT   M I  SOURCE STATEMENT
+
+    1     1                      ; 78K0R C Compiler V2.60 Assembler Source        Date: 5 Jun 2021 Time:10:38:21
+    2     2                      
+    3     3                      ; Command   : -cf10wmg -yC:\Program Files (x86)\Renesas Electronics\CubeSuite+\
+    4     4                      ;             Device\RL78\Devicefile ..\RSKRL78L13\ADC_Repeat\cg_src\r_cg_intp.
+    5     5                      ;             c -oDebug -_msgoff -nq -i..\RSKRL78L13\ADC_Repeat\cg_src -v -w2 -
+    6     6                      ;             zps -mm -mi0 -saDebug -li -no -g2
+    7     7                      ; In-file   : ..\RSKRL78L13\ADC_Repeat\cg_src\r_cg_intp.c
+    8     8                      ; Asm-file  : Debug\r_cg_intp.asm
+    9     9                      ; Para-file : 
+   10    10                      
+   11    11                      $PROCESSOR(F10WMG)
+   12    12                      $DEBUG
+   13    13                      $NODEBUGA
+   14    14                      $KANJICODE SJIS
+   15    15                      $TOL_INF        03FH, 0260H, 00H, 04000H, 00H, 00H, 00H
+   16    16                      
+   17    17                      $DGS    FIL_NAM, .file,         083H,   0FFFEH, 03FH,   067H,   01H,    00H
+   18    18                      $DGS    AUX_FIL, r_cg_intp.c
+   19    19                      $DGS    MOD_NAM, r_cg_intp,     00H,    0FFFEH, 00H,    077H,   00H,    00H
+   20    20                      $DGS    SEC_NAM, @@BITS,        U,      U,      00H,    078H,   00H,    00H
+   21    21                      $DGS    SEC_NAM, @@CNST,        U,      U,      00H,    078H,   00H,    00H
+   22    22                      $DGS    SEC_NAM, @@R_INIT,      U,      U,      00H,    078H,   00H,    00H
+   23    23                      $DGS    SEC_NAM, @@INIT,        U,      U,      00H,    078H,   00H,    00H
+   24    24                      $DGS    SEC_NAM, @@DATA,        U,      U,      00H,    078H,   00H,    00H
+   25    25                      $DGS    SEC_NAM, @@R_INIS,      U,      U,      00H,    078H,   00H,    00H
+   26    26                      $DGS    SEC_NAM, @@INIS,        U,      U,      00H,    078H,   00H,    00H
+   27    27                      $DGS    SEC_NAM, @@DATS,        U,      U,      00H,    078H,   00H,    00H
+   28    28                      $DGS    SEC_NAM, @@CNSTL,       U,      U,      00H,    078H,   00H,    00H
+   29    29                      $DGS    SEC_NAM, @@RLINIT,      U,      U,      00H,    078H,   00H,    00H
+   30    30                      $DGS    SEC_NAM, @@INITL,       U,      U,      00H,    078H,   00H,    00H
+   31    31                      $DGS    SEC_NAM, @@DATAL,       U,      U,      00H,    078H,   00H,    00H
+   32    32                      $DGS    SEC_NAM, @@CALT,        U,      U,      00H,    078H,   00H,    00H
+   33    33                      $DGS    SEC_NAM, @@CODE,        U,      U,      00H,    078H,   00H,    00H
+   34    34                      $DGS    SEC_NAM, @@CODEL,       U,      U,      00H,    078H,   00H,    00H
+   35    35                      $DGS    SEC_NAM, @@BASE,        U,      U,      00H,    078H,   00H,    00H
+   36    36                      $DGS    GLV_SYM, _R_INTC_Create,        U,      U,      01H,    026H,   01H,    02H
+   37    37                      $DGS    AUX_FUN, 00H,           U,      U,      019H,   01H,    00H
+   38    38                      $DGS    BEG_FUN, ??bf_R_INTC_Create,    U,      U,      00H,    065H,   01H,    00H
+   39    39                      $DGS    AUX_BEG, 03EH,          00H,    019H
+   40    40                      $DGS    END_FUN, ??ef_R_INTC_Create,    U,      U,      00H,    065H,   01H,    00H
+   41    41                      $DGS    AUX_END, 01CH
+   42    42                      $DGS    GLV_SYM, _R_INTC0_Start,        U,      U,      01H,    026H,   01H,    02H
+   43    43                      $DGS    AUX_FUN, 00H,           U,      U,      01FH,   01H,    00H
+   44    44                      $DGS    BEG_FUN, ??bf_R_INTC0_Start,    U,      U,      00H,    065H,   01H,    00H
+   45    45                      $DGS    AUX_BEG, 062H,          00H,    01FH
+   46    46                      $DGS    END_FUN, ??ef_R_INTC0_Start,    U,      U,      00H,    065H,   01H,    00H
+   47    47                      $DGS    AUX_END, 04H
+   48    48                      $DGS    GLV_SYM, _R_INTC0_Stop, U,      U,      01H,    026H,   01H,    02H
+   49    49                      $DGS    AUX_FUN, 00H,           U,      U,      025H,   01H,    00H
+   50    50                      $DGS    BEG_FUN, ??bf_R_INTC0_Stop,     U,      U,      00H,    065H,   01H,    00H
+   51    51                      $DGS    AUX_BEG, 06DH,          00H,    025H
+   52    52                      $DGS    END_FUN, ??ef_R_INTC0_Stop,     U,      U,      00H,    065H,   01H,    00H
+   53    53                      $DGS    AUX_END, 04H
+   54    54                      $DGS    GLV_SYM, _R_INTC7_Start,        U,      U,      01H,    026H,   01H,    02H
+   55    55                      $DGS    AUX_FUN, 00H,           U,      U,      02BH,   01H,    00H
+   56    56                      $DGS    BEG_FUN, ??bf_R_INTC7_Start,    U,      U,      00H,    065H,   01H,    00H
+   57    57                      $DGS    AUX_BEG, 078H,          00H,    02BH
+   58    58                      $DGS    END_FUN, ??ef_R_INTC7_Start,    U,      U,      00H,    065H,   01H,    00H
+   59    59                      $DGS    AUX_END, 04H
+   60    60                      $DGS    GLV_SYM, _R_INTC7_Stop, U,      U,      01H,    026H,   01H,    02H
+   61    61                      $DGS    AUX_FUN, 00H,           U,      U,      031H,   01H,    00H
+   62    62                      $DGS    BEG_FUN, ??bf_R_INTC7_Stop,     U,      U,      00H,    065H,   01H,    00H
+   63    63                      $DGS    AUX_BEG, 083H,          00H,    031H
+   64    64                      $DGS    END_FUN, ??ef_R_INTC7_Stop,     U,      U,      00H,    065H,   01H,    00H
+   65    65                      $DGS    AUX_END, 04H
+   66    66                      $DGS    GLV_SYM, _R_INTC0_IsFallingEdge,        U,      U,      0CH,    026H,   01H,    02H
+   67    67                      $DGS    AUX_FUN, 00H,           U,      U,      03CH,   01H,    00H
+   68    68                      $DGS    BEG_FUN, ??bf_R_INTC0_IsFallingEdge,    U,      U,      00H,    065H,   01H,    00H
+   69    69                      $DGS    AUX_BEG, 091H,          02H,    036H
+   70    70                      $DGS    AUT_VAR, _falling_edge_trig,    01H,    0FFFFH, 0CH,    01H,    00H,    00H
+   71    71                      $DGS    BEG_BLK, ??bb00_R_INTC0_IsFallingEdge,  U,      U,      00H,    064H,   01H,    00H
+   72    72                      $DGS    AUX_BEG, 05H,           00H,    00H
+   73    73                      $DGS    END_BLK, ??eb00_R_INTC0_IsFallingEdge,  U,      U,      00H,    064H,   01H,    00H
+   74    74                      $DGS    AUX_END, 07H
+   75    75                      $DGS    END_FUN, ??ef_R_INTC0_IsFallingEdge,    U,      U,      00H,    065H,   01H,    00H
+   76    76                      $DGS    AUX_END, 0BH
+   77    77                      $DGS    GLV_SYM, _R_INTC0_SetFallingEdge,       U,      U,      01H,    026H,   01H,    02H
+   78    78                      $DGS    AUX_FUN, 00H,           U,      U,      04BH,   01H,    00H
+   79    79                      $DGS    BEG_FUN, ??bf_R_INTC0_SetFallingEdge,   U,      U,      00H,    065H,   01H,    00H
+   80    80                      $DGS    AUX_BEG, 0A8H,          02H,    041H
+   81    81                      $DGS    FUN_ARG, _set_f_edge,   00H,    0FFFFH, 0500CH, 09H,    00H,    00H
+   82    82                      $DGS    BEG_BLK, ??bb00_R_INTC0_SetFallingEdge, U,      U,      00H,    064H,   01H,    00H
+   83    83                      $DGS    AUX_BEG, 03H,           00H,    045H
+   84    84                      $DGS    END_BLK, ??eb00_R_INTC0_SetFallingEdge, U,      U,      00H,    064H,   01H,    00H
+   85    85                      $DGS    AUX_END, 05H
+   86    86                      $DGS    BEG_BLK, ??bb01_R_INTC0_SetFallingEdge, U,      U,      00H,    064H,   01H,    00H
+   87    87                      $DGS    AUX_BEG, 07H,           00H,    00H
+   88    88                      $DGS    END_BLK, ??eb01_R_INTC0_SetFallingEdge, U,      U,      00H,    064H,   01H,    00H
+   89    89                      $DGS    AUX_END, 09H
+   90    90                      $DGS    END_FUN, ??ef_R_INTC0_SetFallingEdge,   U,      U,      00H,    065H,   01H,    00H
+   91    91                      $DGS    AUX_END, 0AH
+   92    92                      $DGS    GLV_SYM, _R_INTC0_SetRisingEdge,        U,      U,      01H,    026H,   01H,    02H
+   93    93                      $DGS    AUX_FUN, 00H,           U,      U,      05AH,   01H,    00H
+   94    94                      $DGS    BEG_FUN, ??bf_R_INTC0_SetRisingEdge,    U,      U,      00H,    065H,   01H,    00H
+   95    95                      $DGS    AUX_BEG, 0BEH,          02H,    050H
+   96    96                      $DGS    FUN_ARG, _set_r_edge,   00H,    0FFFFH, 0500CH, 09H,    00H,    00H
+   97    97                      $DGS    BEG_BLK, ??bb00_R_INTC0_SetRisingEdge,  U,      U,      00H,    064H,   01H,    00H
+   98    98                      $DGS    AUX_BEG, 03H,           00H,    054H
+   99    99                      $DGS    END_BLK, ??eb00_R_INTC0_SetRisingEdge,  U,      U,      00H,    064H,   01H,    00H
+  100   100                      $DGS    AUX_END, 05H
+  101   101                      $DGS    BEG_BLK, ??bb01_R_INTC0_SetRisingEdge,  U,      U,      00H,    064H,   01H,    00H
+  102   102                      $DGS    AUX_BEG, 07H,           00H,    00H
+  103   103                      $DGS    END_BLK, ??eb01_R_INTC0_SetRisingEdge,  U,      U,      00H,    064H,   01H,    00H
+  104   104                      $DGS    AUX_END, 09H
+  105   105                      $DGS    END_FUN, ??ef_R_INTC0_SetRisingEdge,    U,      U,      00H,    065H,   01H,    00H
+  106   106                      $DGS    AUX_END, 0AH
+  107   107                      $DGS    GLV_SYM, _R_INTC7_IsFallingEdge,        U,      U,      0CH,    026H,   01H,    02H
+  108   108                      $DGS    AUX_FUN, 00H,           U,      U,      065H,   01H,    00H
+  109   109                      $DGS    BEG_FUN, ??bf_R_INTC7_IsFallingEdge,    U,      U,      00H,    065H,   01H,    00H
+  110   110                      $DGS    AUX_BEG, 0D4H,          02H,    05FH
+  111   111                      $DGS    AUT_VAR, _falling_edge_trig,    01H,    0FFFFH, 0CH,    01H,    00H,    00H
+  112   112                      $DGS    BEG_BLK, ??bb00_R_INTC7_IsFallingEdge,  U,      U,      00H,    064H,   01H,    00H
+  113   113                      $DGS    AUX_BEG, 05H,           00H,    00H
+  114   114                      $DGS    END_BLK, ??eb00_R_INTC7_IsFallingEdge,  U,      U,      00H,    064H,   01H,    00H
+  115   115                      $DGS    AUX_END, 07H
+  116   116                      $DGS    END_FUN, ??ef_R_INTC7_IsFallingEdge,    U,      U,      00H,    065H,   01H,    00H
+  117   117                      $DGS    AUX_END, 0BH
+  118   118                      $DGS    GLV_SYM, _R_INTC7_SetFallingEdge,       U,      U,      01H,    026H,   01H,    02H
+  119   119                      $DGS    AUX_FUN, 00H,           U,      U,      074H,   01H,    00H
+  120   120                      $DGS    BEG_FUN, ??bf_R_INTC7_SetFallingEdge,   U,      U,      00H,    065H,   01H,    00H
+  121   121                      $DGS    AUX_BEG, 0EAH,          02H,    06AH
+  122   122                      $DGS    FUN_ARG, _set_f_edge,   00H,    0FFFFH, 0500CH, 09H,    00H,    00H
+  123   123                      $DGS    BEG_BLK, ??bb00_R_INTC7_SetFallingEdge, U,      U,      00H,    064H,   01H,    00H
+  124   124                      $DGS    AUX_BEG, 03H,           00H,    06EH
+  125   125                      $DGS    END_BLK, ??eb00_R_INTC7_SetFallingEdge, U,      U,      00H,    064H,   01H,    00H
+  126   126                      $DGS    AUX_END, 05H
+  127   127                      $DGS    BEG_BLK, ??bb01_R_INTC7_SetFallingEdge, U,      U,      00H,    064H,   01H,    00H
+  128   128                      $DGS    AUX_BEG, 07H,           00H,    00H
+  129   129                      $DGS    END_BLK, ??eb01_R_INTC7_SetFallingEdge, U,      U,      00H,    064H,   01H,    00H
+  130   130                      $DGS    AUX_END, 09H
+  131   131                      $DGS    END_FUN, ??ef_R_INTC7_SetFallingEdge,   U,      U,      00H,    065H,   01H,    00H
+  132   132                      $DGS    AUX_END, 0AH
+  133   133                      $DGS    GLV_SYM, _R_INTC7_SetRisingEdge,        U,      U,      01H,    026H,   01H,    02H
+  134   134                      $DGS    AUX_FUN, 00H,           U,      U,      083H,   01H,    00H
+  135   135                      $DGS    BEG_FUN, ??bf_R_INTC7_SetRisingEdge,    U,      U,      00H,    065H,   01H,    00H
+  136   136                      $DGS    AUX_BEG, 0FFH,          02H,    079H
+  137   137                      $DGS    FUN_ARG, _set_r_edge,   00H,    0FFFFH, 0500CH, 09H,    00H,    00H
+  138   138                      $DGS    BEG_BLK, ??bb00_R_INTC7_SetRisingEdge,  U,      U,      00H,    064H,   01H,    00H
+  139   139                      $DGS    AUX_BEG, 03H,           00H,    07DH
+  140   140                      $DGS    END_BLK, ??eb00_R_INTC7_SetRisingEdge,  U,      U,      00H,    064H,   01H,    00H
+  141   141                      $DGS    AUX_END, 05H
+  142   142                      $DGS    BEG_BLK, ??bb01_R_INTC7_SetRisingEdge,  U,      U,      00H,    064H,   01H,    00H
+  143   143                      $DGS    AUX_BEG, 07H,           00H,    00H
+  144   144                      $DGS    END_BLK, ??eb01_R_INTC7_SetRisingEdge,  U,      U,      00H,    064H,   01H,    00H
+  145   145                      $DGS    AUX_END, 09H
+  146   146                      $DGS    END_FUN, ??ef_R_INTC7_SetRisingEdge,    U,      U,      00H,    065H,   01H,    00H
+  147   147                      $DGS    AUX_END, 0AH
+  148   148                      
+  149   149                              PUBLIC  _R_INTC_Create
+  150   150                              PUBLIC  _R_INTC0_Start
+  151   151                              PUBLIC  _R_INTC0_Stop
+  152   152                              PUBLIC  _R_INTC7_Start
+  153   153                              PUBLIC  _R_INTC7_Stop
+  154   154                              PUBLIC  _R_INTC0_IsFallingEdge
+  155   155                              PUBLIC  _R_INTC0_SetFallingEdge
+  156   156                              PUBLIC  _R_INTC0_SetRisingEdge
+  157   157                              PUBLIC  _R_INTC7_IsFallingEdge
+  158   158                              PUBLIC  _R_INTC7_SetFallingEdge
+  159   159                              PUBLIC  _R_INTC7_SetRisingEdge
+  160   160                      
+  161   161 -----                @@BITS  BSEG
+  162   162                      
+  163   163 -----                @@CNST  CSEG    MIRRORP
+  164   164                      
+  165   165 -----                @@R_INIT        CSEG    UNIT64KP
+  166   166                      
+  167   167 -----                @@INIT  DSEG    BASEP
+  168   168                      
+  169   169 -----                @@DATA  DSEG    BASEP
+  170   170                      
+  171   171 -----                @@R_INIS        CSEG    UNIT64KP
+  172   172                      
+  173   173 -----                @@INIS  DSEG    SADDRP
+  174   174                      
+  175   175 -----                @@DATS  DSEG    SADDRP
+  176   176                      
+  177   177 -----                @@CNSTL CSEG    PAGE64KP
+  178   178                      
+  179   179 -----                @@RLINIT        CSEG    UNIT64KP
+  180   180                      
+  181   181 -----                @@INITL DSEG    UNIT64KP
+  182   182                      
+  183   183 -----                @@DATAL DSEG    UNIT64KP
+  184   184                      
+  185   185 -----                @@CALT  CSEG    CALLT0
+  186   186                      
+  187   187                      ; line     1 : /***************************************************************
+  188   188                      ;              ********************************************************
+  189   189                      ; line     2 : * DISCLAIMER
+  190   190                      ; line     3 : * This software is supplied by Renesas Electronics Corporation a
+  191   191                      ;              nd is only 
+  192   192                      ; line     4 : * intended for use with Renesas products. No other uses are auth
+  193   193                      ;              orized. This 
+  194   194                      ; line     5 : * software is owned by Renesas Electronics Corporation and is pr
+  195   195                      ;              otected under 
+  196   196                      ; line     6 : * all applicable laws, including copyright laws.
+  197   197                      ; line     7 : * THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANT
+  198   198                      ;              IES REGARDING 
+  199   199                      ; line     8 : * THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDIN
+  200   200                      ;              G BUT NOT 
+  201   201                      ; line     9 : * LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTIC
+  202   202                      ;              ULAR PURPOSE 
+  203   203                      ; line    10 : * AND NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCL
+  204   204                      ;              AIMED.
+  205   205                      ; line    11 : * TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER
+  206   206                      ;               RENESAS 
+  207   207                      ; line    12 : * ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SH
+  208   208                      ;              ALL BE LIABLE 
+  209   209                      ; line    13 : * FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL
+  210   210                      ;               DAMAGES FOR 
+  211   211                      ; line    14 : * ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AF
+  212   212                      ;              FILIATES HAVE 
+  213   213                      ; line    15 : * BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+  214   214                      ; line    16 : * Renesas reserves the right, without notice, to make changes to
+  215   215                      ;               this software 
+  216   216                      ; line    17 : * and to discontinue the availability of this software.  By usin
+  217   217                      ;              g this software, 
+  218   218                      ; line    18 : * you agree to the additional terms and conditions found by acce
+  219   219                      ;              ssing the 
+  220   220                      ; line    19 : * following link:
+  221   221                      ; line    20 : * http://www.renesas.com/disclaimer
+  222   222                      ; line    21 : *
+  223   223                      ; line    22 : * Copyright (C) 2013 Renesas Electronics Corporation. All rights
+  224   224                      ;               reserved.
+  225   225                      ; line    23 : ****************************************************************
+  226   226                      ;              *******************************************************/
+  227   227                      ; line    24 : 
+  228   228                      ; line    25 : /***************************************************************
+  229   229                      ;              ********************************************************
+  230   230                      ; line    26 : * File Name    : r_cg_macrodriver.h
+  231   231                      ; line    27 : * Version      : Applilet4 for RL78/L13 V1.00.00.02 [10 May 2013
+  232   232                      ;              ]
+  233   233                      ; line    28 : * Device(s)    : R5F10WMG
+  234   234                      ; line    29 : * Tool-Chain   : CA78K0R
+  235   235                      ; line    30 : * Description  : This file implements general head file.
+  236   236                      ; line    31 : * Creation Date: 05-Jun-21
+  237   237                      ; line    32 : ****************************************************************
+  238   238                      ;              *******************************************************/
+  239   239                      ; line    33 : #ifndef MODULEID_H
+  240   240                      ; line    34 : #define MODULEID_H
+  241   241                      ; line    35 : /***************************************************************
+  242   242                      ;              ********************************************************
+  243   243                      ; line    36 : Includes
+  244   244                      ; line    37 : ****************************************************************
+  245   245                      ;              *******************************************************/
+  246   246                      ; line    38 : #pragma sfr
+  247   247                      ; line    39 : #pragma DI
+  248   248                      ; line    40 : #pragma EI
+  249   249                      ; line    41 : #pragma NOP
+  250   250                      ; line    42 : #pragma HALT
+  251   251                      ; line    43 : #pragma STOP
+  252   252                      ; line    44 : 
+  253   253                      ; line    45 : /***************************************************************
+  254   254                      ;              ********************************************************
+  255   255                      ; line    46 : Macro definitions (Register bit)
+  256   256                      ; line    47 : ****************************************************************
+  257   257                      ;              *******************************************************/
+  258   258                      ; line    48 : 
+  259   259                      ; line    49 : /***************************************************************
+  260   260                      ;              ********************************************************
+  261   261                      ; line    50 : Macro definitions
+  262   262                      ; line    51 : ****************************************************************
+  263   263                      ;              *******************************************************/
+  264   264                      ; line    52 : #ifndef __TYPEDEF__
+  265   265                      ; line    53 : /* Status list definition */
+  266   266                      ; line    54 : #define MD_STATUSBASE        (0x00U)
+  267   267                      ; line    55 : #define MD_OK                (MD_STATUSBASE + 0x00U) /* register
+  268   268                      ;               setting OK */
+  269   269                      ; line    56 : #define MD_SPT               (MD_STATUSBASE + 0x01U) /* IIC stop
+  270   270                      ;               */
+  271   271                      ; line    57 : #define MD_NACK              (MD_STATUSBASE + 0x02U) /* IIC no A
+  272   272                      ;              CK */
+  273   273                      ; line    58 : #define MD_BUSY1             (MD_STATUSBASE + 0x03U) /* busy 1 *
+  274   274                      ;              /
+  275   275                      ; line    59 : #define MD_BUSY2             (MD_STATUSBASE + 0x04U) /* busy 2 *
+  276   276                      ;              /
+  277   277                      ; line    60 : 
+  278   278                      ; line    61 : /* Error list definition */
+  279   279                      ; line    62 : #define MD_ERRORBASE         (0x80U)
+  280   280                      ; line    63 : #define MD_ERROR             (MD_ERRORBASE + 0x00U)  /* error */
+  281   281                      ; line    64 : #define MD_ARGERROR          (MD_ERRORBASE + 0x01U)  /* error ag
+  282   282                      ;              rument input error */
+  283   283                      ; line    65 : #define MD_ERROR1            (MD_ERRORBASE + 0x02U)  /* error 1 
+  284   284                      ;              */
+  285   285                      ; line    66 : #define MD_ERROR2            (MD_ERRORBASE + 0x03U)  /* error 2 
+  286   286                      ;              */
+  287   287                      ; line    67 : #define MD_ERROR3            (MD_ERRORBASE + 0x04U)  /* error 3 
+  288   288                      ;              */
+  289   289                      ; line    68 : #define MD_ERROR4            (MD_ERRORBASE + 0x05U)  /* error 4 
+  290   290                      ;              */
+  291   291                      ; line    69 : #define MD_ERROR5            (MD_ERRORBASE + 0x06U)  /* error 5 
+  292   292                      ;              */
+  293   293                      ; line    70 : #endif
+  294   294                      ; line    71 : 
+  295   295                      ; line    72 : /***************************************************************
+  296   296                      ;              ********************************************************
+  297   297                      ; line    73 : Typedef definitions
+  298   298                      ; line    74 : ****************************************************************
+  299   299                      ;              *******************************************************/
+  300   300                      ; line    75 : #ifndef __TYPEDEF__
+  301   301                      ; line    76 : typedef signed char         int8_t;
+  302   302                      ; line    77 : typedef unsigned char       uint8_t;
+  303   303                      ; line    78 : typedef signed short        int16_t;
+  304   304                      ; line    79 : typedef unsigned short      uint16_t;
+  305   305                      ; line    80 : typedef signed long         int32_t;
+  306   306                      ; line    81 : typedef unsigned long       uint32_t;
+  307   307                      ; line    82 : typedef unsigned short      MD_STATUS;
+  308   308                      ; line     1 : /***************************************************************
+  309   309                      ;              ********************************************************
+  310   310                      ; line     2 : * DISCLAIMER
+  311   311                      ; line     3 : * This software is supplied by Renesas Electronics Corporation a
+  312   312                      ;              nd is only 
+  313   313                      ; line     4 : * intended for use with Renesas products. No other uses are auth
+  314   314                      ;              orized. This 
+  315   315                      ; line     5 : * software is owned by Renesas Electronics Corporation and is pr
+  316   316                      ;              otected under 
+  317   317                      ; line     6 : * all applicable laws, including copyright laws.
+  318   318                      ; line     7 : * THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANT
+  319   319                      ;              IES REGARDING 
+  320   320                      ; line     8 : * THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDIN
+  321   321                      ;              G BUT NOT 
+  322   322                      ; line     9 : * LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTIC
+  323   323                      ;              ULAR PURPOSE 
+  324   324                      ; line    10 : * AND NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCL
+  325   325                      ;              AIMED.
+  326   326                      ; line    11 : * TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER
+  327   327                      ;               RENESAS 
+  328   328                      ; line    12 : * ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SH
+  329   329                      ;              ALL BE LIABLE 
+  330   330                      ; line    13 : * FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL
+  331   331                      ;               DAMAGES FOR 
+  332   332                      ; line    14 : * ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AF
+  333   333                      ;              FILIATES HAVE 
+  334   334                      ; line    15 : * BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+  335   335                      ; line    16 : * Renesas reserves the right, without notice, to make changes to
+  336   336                      ;               this software 
+  337   337                      ; line    17 : * and to discontinue the availability of this software.  By usin
+  338   338                      ;              g this software, 
+  339   339                      ; line    18 : * you agree to the additional terms and conditions found by acce
+  340   340                      ;              ssing the 
+  341   341                      ; line    19 : * following link:
+  342   342                      ; line    20 : * http://www.renesas.com/disclaimer
+  343   343                      ; line    21 : *
+  344   344                      ; line    22 : * Copyright (C) 2013 Renesas Electronics Corporation. All rights
+  345   345                      ;               reserved.
+  346   346                      ; line    23 : ****************************************************************
+  347   347                      ;              *******************************************************/
+  348   348                      ; line    24 : 
+  349   349                      ; line    25 : /***************************************************************
+  350   350                      ;              ********************************************************
+  351   351                      ; line    26 : * File Name    : r_cg_intp.c
+  352   352                      ; line    27 : * Version      : Applilet4 for RL78/L13 V1.00.00.02 [10 May 2013
+  353   353                      ;              ]
+  354   354                      ; line    28 : * Device(s)    : R5F10WMG
+  355   355                      ; line    29 : * Tool-Chain   : CA78K0R
+  356   356                      ; line    30 : * Description  : This file implements device driver for INTP mod
+  357   357                      ;              ule.
+  358   358                      ; line    31 : * Creation Date: 05-Jun-21
+  359   359                      ; line    32 : ****************************************************************
+  360   360                      ;              *******************************************************/
+  361   361                      ; line    33 : 
+  362   362                      ; line    34 : /***************************************************************
+  363   363                      ;              ********************************************************
+  364   364                      ; line    35 : Pragma directive
+  365   365                      ; line    36 : ****************************************************************
+  366   366                      ;              *******************************************************/
+  367   367                      ; line    37 : /* Start user code for pragma. Do not edit comment generated her
+  368   368                      ;              e */
+  369   369                      ; line    38 : /* End user code. Do not edit comment generated here */
+  370   370                      ; line    39 : 
+  371   371                      ; line    40 : /***************************************************************
+  372   372                      ;              ********************************************************
+  373   373                      ; line    41 : Includes
+  374   374                      ; line    42 : ****************************************************************
+  375   375                      ;              *******************************************************/
+  376   376                      ; line    43 : #include "r_cg_macrodriver.h"
+  377   377                      ; line    44 : #include "r_cg_intp.h"
+  378   378                      ; line    45 : /* Start user code for include. Do not edit comment generated he
+  379   379                      ;              re */
+  380   380                      ; line    46 : /* End user code. Do not edit comment generated here */
+  381   381                      ; line    47 : #include "r_cg_userdefine.h"
+  382   382                      ; line    48 : 
+  383   383                      ; line    49 : /***************************************************************
+  384   384                      ;              ********************************************************
+  385   385                      ; line    50 : Global variables and functions
+  386   386                      ; line    51 : ****************************************************************
+  387   387                      ;              *******************************************************/
+  388   388                      ; line    52 : /* Start user code for global. Do not edit comment generated her
+  389   389                      ;              e */
+  390   390                      ; line    53 : /* End user code. Do not edit comment generated here */
+  391   391                      ; line    54 : 
+  392   392                      ; line    55 : /***************************************************************
+  393   393                      ;              ********************************************************
+  394   394                      ; line    56 : * Function Name: R_INTC_Create
+  395   395                      ; line    57 : * Description  : This function initializes INTP module.
+  396   396                      ; line    58 : * Arguments    : None
+  397   397                      ; line    59 : * Return Value : None
+  398   398                      ; line    60 : ****************************************************************
+  399   399                      ;              *******************************************************/
+  400   400                      ; line    61 : void R_INTC_Create(void)
+  401   401                      ; line    62 : {
+  402   402                      
+  403   403 -----                @@CODEL CSEG
+  404   404 00000                _R_INTC_Create:
+  405   405                      $DGL    1,19
+  406   406 00000                ??bf_R_INTC_Create:
+  407   407                      ; line    63 :     PMK0 = 1U;    /* disable INTP0 operation */
+  408   408                      $DGL    0,2
+  409   409 00000  712AE4                set1    MK0L.2                                          ;[INF] 3, 2
+  410   410                      ; line    64 :     PIF0 = 0U;    /* clear INTP0 interrupt flag */
+  411   411                      $DGL    0,3
+  412   412 00003  712BE0                clr1    IF0L.2                                          ;[INF] 3, 2
+  413   413                      ; line    65 :     PMK1 = 1U;    /* disable INTP1 operation */
+  414   414                      $DGL    0,4
+  415   415 00006  713AE4                set1    MK0L.3                                          ;[INF] 3, 2
+  416   416                      ; line    66 :     PIF1 = 0U;    /* clear INTP1 interrupt flag */
+  417   417                      $DGL    0,5
+  418   418 00009  713BE0                clr1    IF0L.3                                          ;[INF] 3, 2
+  419   419                      ; line    67 :     PMK2 = 1U;    /* disable INTP2 operation */
+  420   420                      $DGL    0,6
+  421   421 0000C  714AE4                set1    MK0L.4                                          ;[INF] 3, 2
+  422   422                      ; line    68 :     PIF2 = 0U;    /* clear INTP2 interrupt flag */
+  423   423                      $DGL    0,7
+  424   424 0000F  714BE0                clr1    IF0L.4                                          ;[INF] 3, 2
+  425   425                      ; line    69 :     PMK3 = 1U;    /* disable INTP3 operation */
+  426   426                      $DGL    0,8
+  427   427 00012  715AE4                set1    MK0L.5                                          ;[INF] 3, 2
+  428   428                      ; line    70 :     PIF3 = 0U;    /* clear INTP3 interrupt flag */
+  429   429                      $DGL    0,9
+  430   430 00015  715BE0                clr1    IF0L.5                                          ;[INF] 3, 2
+  431   431                      ; line    71 :     PMK4 = 1U;    /* disable INTP4 operation */
+  432   432                      $DGL    0,10
+  433   433 00018  716AE4                set1    MK0L.6                                          ;[INF] 3, 2
+  434   434                      ; line    72 :     PIF4 = 0U;    /* clear INTP4 interrupt flag */
+  435   435                      $DGL    0,11
+  436   436 0001B  716BE0                clr1    IF0L.6                                          ;[INF] 3, 2
+  437   437                      ; line    73 :     PMK5 = 1U;    /* disable INTP5 operation */
+  438   438                      $DGL    0,12
+  439   439 0001E  717AE4                set1    MK0L.7                                          ;[INF] 3, 2
+  440   440                      ; line    74 :     PIF5 = 0U;    /* clear INTP5 interrupt flag */
+  441   441                      $DGL    0,13
+  442   442 00021  717BE0                clr1    IF0L.7                                          ;[INF] 3, 2
+  443   443                      ; line    75 :     PMK6 = 1U;    /* disable INTP6 operation */
+  444   444                      $DGL    0,14
+  445   445 00024  713AD4                set1    MK2L.3                                          ;[INF] 3, 2
+  446   446                      ; line    76 :     PIF6 = 0U;    /* clear INTP6 interrupt flag */
+  447   447                      $DGL    0,15
+  448   448 00027  713BD0                clr1    IF2L.3                                          ;[INF] 3, 2
+  449   449                      ; line    77 :     PMK7 = 1U;    /* disable INTP7 operation */
+  450   450                      $DGL    0,16
+  451   451 0002A  714AD4                set1    MK2L.4                                          ;[INF] 3, 2
+  452   452                      ; line    78 :     PIF7 = 0U;    /* clear INTP7 interrupt flag */
+  453   453                      $DGL    0,17
+  454   454 0002D  714BD0                clr1    IF2L.4                                          ;[INF] 3, 2
+  455   455                      ; line    79 :     /* Set INTP0 level 1 priority */
+  456   456                      ; line    80 :     PPR10 = 0U;
+  457   457                      $DGL    0,19
+  458   458 00030  712BEC                clr1    PR10L.2                                         ;[INF] 3, 2
+  459   459                      ; line    81 :     PPR00 = 1U;
+  460   460                      $DGL    0,20
+  461   461 00033  712AE8                set1    PR00L.2                                         ;[INF] 3, 2
+  462   462                      ; line    82 :     /* Set INTP7 level 1 priority */
+  463   463                      ; line    83 :     PPR17 = 0U;
+  464   464                      $DGL    0,22
+  465   465 00036  714BDC                clr1    PR12L.4                                         ;[INF] 3, 2
+  466   466                      ; line    84 :     PPR07 = 1U;
+  467   467                      $DGL    0,23
+  468   468 00039  714AD8                set1    PR02L.4                                         ;[INF] 3, 2
+  469   469                      ; line    85 :     EGN0 = _01_INTP0_EDGE_FALLING_SEL | _80_INTP7_EDGE_FALLING_S
+  470   470                      ;              EL;
+  471   471                      $DGL    0,24
+  472   472 0003C  CE3981                mov     EGN0,#081H      ; 129                           ;[INF] 3, 1
+  473   473                      ; line    86 :     /* Set INTP7 pin */
+  474   474                      ; line    87 :     PFSEG5 &= 0xBFU;
+  475   475                      $DGL    0,26
+  476   476 0003F  8F0503                mov     a,!PFSEG5                                       ;[INF] 3, 1
+  477   477 00042  5CBF                  and     a,#0BFH ; 191                                   ;[INF] 2, 1
+  478   478 00044  9F0503                mov     !PFSEG5,a                                       ;[INF] 3, 1
+  479   479                      ; line    88 :     PM0 |= 0x04U;
+  480   480                      $DGL    0,27
+  481   481 00047  8E20                  mov     a,PM0                                           ;[INF] 2, 1
+  482   482 00049  6C04                  or      a,#04H  ; 4                                     ;[INF] 2, 1
+  483   483 0004B  9E20                  mov     PM0,a                                           ;[INF] 2, 1
+  484   484                      ; line    89 : }
+  485   485                      $DGL    0,28
+  486   486 0004D                ??ef_R_INTC_Create:
+  487   487 0004D  D7                    ret                                                     ;[INF] 1, 6
+  488   488 0004E                ??ee_R_INTC_Create:
+  489   489                      ; line    90 : 
+  490   490                      ; line    91 : /***************************************************************
+  491   491                      ;              ********************************************************
+  492   492                      ; line    92 : * Function Name: R_INTC0_Start
+  493   493                      ; line    93 : * Description  : This function clears INTP0 interrupt flag and e
+  494   494                      ;              nables interrupt.
+  495   495                      ; line    94 : * Arguments    : None
+  496   496                      ; line    95 : * Return Value : None
+  497   497                      ; line    96 : ****************************************************************
+  498   498                      ;              *******************************************************/
+  499   499                      ; line    97 : void R_INTC0_Start(void)
+  500   500                      ; line    98 : {
+  501   501 0004E                _R_INTC0_Start:
+  502   502                      $DGL    1,25
+  503   503 0004E                ??bf_R_INTC0_Start:
+  504   504                      ; line    99 :     PIF0 = 0U;    /* clear INTP0 interrupt flag */
+  505   505                      $DGL    0,2
+  506   506 0004E  712BE0                clr1    IF0L.2                                          ;[INF] 3, 2
+  507   507                      ; line   100 :     PMK0 = 0U;    /* enable INTP0 interrupt */
+  508   508                      $DGL    0,3
+  509   509 00051  712BE4                clr1    MK0L.2                                          ;[INF] 3, 2
+  510   510                      ; line   101 : }
+  511   511                      $DGL    0,4
+  512   512 00054                ??ef_R_INTC0_Start:
+  513   513 00054  D7                    ret                                                     ;[INF] 1, 6
+  514   514 00055                ??ee_R_INTC0_Start:
+  515   515                      ; line   102 : /***************************************************************
+  516   516                      ;              ********************************************************
+  517   517                      ; line   103 : * Function Name: R_INTC0_Stop
+  518   518                      ; line   104 : * Description  : This function disables INTP0 interrupt and clea
+  519   519                      ;              rs interrupt flag.
+  520   520                      ; line   105 : * Arguments    : None
+  521   521                      ; line   106 : * Return Value : None
+  522   522                      ; line   107 : ****************************************************************
+  523   523                      ;              *******************************************************/
+  524   524                      ; line   108 : void R_INTC0_Stop(void)
+  525   525                      ; line   109 : {
+  526   526 00055                _R_INTC0_Stop:
+  527   527                      $DGL    1,31
+  528   528 00055                ??bf_R_INTC0_Stop:
+  529   529                      ; line   110 :     PMK0 = 1U;    /* disable INTP0 interrupt */
+  530   530                      $DGL    0,2
+  531   531 00055  712AE4                set1    MK0L.2                                          ;[INF] 3, 2
+  532   532                      ; line   111 :     PIF0 = 0U;    /* clear INTP0 interrupt flag */
+  533   533                      $DGL    0,3
+  534   534 00058  712BE0                clr1    IF0L.2                                          ;[INF] 3, 2
+  535   535                      ; line   112 : }
+  536   536                      $DGL    0,4
+  537   537 0005B                ??ef_R_INTC0_Stop:
+  538   538 0005B  D7                    ret                                                     ;[INF] 1, 6
+  539   539 0005C                ??ee_R_INTC0_Stop:
+  540   540                      ; line   113 : /***************************************************************
+  541   541                      ;              ********************************************************
+  542   542                      ; line   114 : * Function Name: R_INTC7_Start
+  543   543                      ; line   115 : * Description  : This function clears INTP7 interrupt flag and e
+  544   544                      ;              nables interrupt.
+  545   545                      ; line   116 : * Arguments    : None
+  546   546                      ; line   117 : * Return Value : None
+  547   547                      ; line   118 : ****************************************************************
+  548   548                      ;              *******************************************************/
+  549   549                      ; line   119 : void R_INTC7_Start(void)
+  550   550                      ; line   120 : {
+  551   551 0005C                _R_INTC7_Start:
+  552   552                      $DGL    1,37
+  553   553 0005C                ??bf_R_INTC7_Start:
+  554   554                      ; line   121 :     PIF7 = 0U;    /* clear INTP7 interrupt flag */
+  555   555                      $DGL    0,2
+  556   556 0005C  714BD0                clr1    IF2L.4                                          ;[INF] 3, 2
+  557   557                      ; line   122 :     PMK7 = 0U;    /* enable INTP7 interrupt */
+  558   558                      $DGL    0,3
+  559   559 0005F  714BD4                clr1    MK2L.4                                          ;[INF] 3, 2
+  560   560                      ; line   123 : }
+  561   561                      $DGL    0,4
+  562   562 00062                ??ef_R_INTC7_Start:
+  563   563 00062  D7                    ret                                                     ;[INF] 1, 6
+  564   564 00063                ??ee_R_INTC7_Start:
+  565   565                      ; line   124 : /***************************************************************
+  566   566                      ;              ********************************************************
+  567   567                      ; line   125 : * Function Name: R_INTC7_Stop
+  568   568                      ; line   126 : * Description  : This function disables INTP7 interrupt and clea
+  569   569                      ;              rs interrupt flag.
+  570   570                      ; line   127 : * Arguments    : None
+  571   571                      ; line   128 : * Return Value : None
+  572   572                      ; line   129 : ****************************************************************
+  573   573                      ;              *******************************************************/
+  574   574                      ; line   130 : void R_INTC7_Stop(void)
+  575   575                      ; line   131 : {
+  576   576 00063                _R_INTC7_Stop:
+  577   577                      $DGL    1,43
+  578   578 00063                ??bf_R_INTC7_Stop:
+  579   579                      ; line   132 :     PMK7 = 1U;    /* disable INTP7 interrupt */
+  580   580                      $DGL    0,2
+  581   581 00063  714AD4                set1    MK2L.4                                          ;[INF] 3, 2
+  582   582                      ; line   133 :     PIF7 = 0U;    /* clear INTP7 interrupt flag */
+  583   583                      $DGL    0,3
+  584   584 00066  714BD0                clr1    IF2L.4                                          ;[INF] 3, 2
+  585   585                      ; line   134 : }
+  586   586                      $DGL    0,4
+  587   587 00069                ??ef_R_INTC7_Stop:
+  588   588 00069  D7                    ret                                                     ;[INF] 1, 6
+  589   589 0006A                ??ee_R_INTC7_Stop:
+  590   590                      ; line   135 : 
+  591   591                      ; line   136 : /* Start user code for adding. Do not edit comment generated her
+  592   592                      ;              e */
+  593   593                      ; line   137 : /***************************************************************
+  594   594                      ;              ****************
+  595   595                      ; line   138 : * Function Name: R_INTC0_IsFallingEdge
+  596   596                      ; line   139 : * Description  : This function returns 1 if the ITNC0 is set to 
+  597   597                      ;              falling edge 
+  598   598                      ; line   140 : *                triggered, otherwise 0.
+  599   599                      ; line   141 : * Arguments    : None
+  600   600                      ; line   142 : * Return Value : None
+  601   601                      ; line   143 : ****************************************************************
+  602   602                      ;              ***************/
+  603   603                      ; line   144 : uint8_t R_INTC0_IsFallingEdge (void)
+  604   604                      ; line   145 : {
+  605   605 0006A                _R_INTC0_IsFallingEdge:
+  606   606                      $DGL    1,49
+  607   607 0006A  C7                    push    hl                                              ;[INF] 1, 1
+  608   608 0006B  C1                    push    ax                                              ;[INF] 1, 1
+  609   609 0006C  FBF8FF                movw    hl,sp                                           ;[INF] 3, 1
+  610   610 0006F                ??bf_R_INTC0_IsFallingEdge:
+  611   611                      ; line   146 :     uint8_t falling_edge_trig = 0x0;
+  612   612                      $DGL    0,2
+  613   613 0006F  CC0100                mov     [hl+1],#00H     ; falling_edge_trig,0           ;[INF] 3, 1
+  614   614                      ; line   147 :     
+  615   615                      ; line   148 :     if (EGN0 & _01_INTP0_EDGE_FALLING_SEL)
+  616   616                      $DGL    0,4
+  617   617 00072  8E39                  mov     a,EGN0                                          ;[INF] 2, 1
+  618   618 00074  5C01                  and     a,#01H  ; 1                                     ;[INF] 2, 1
+  619   619 00076  D1                    cmp0    a                                               ;[INF] 1, 1
+  620   620 00077  61E8                  skz                                                     ;[INF] 2, 1
+  621   621                      ; line   149 :     {
+  622   622 00079                ??bb00_R_INTC0_IsFallingEdge:
+  623   623                      ; line   150 :         falling_edge_trig = 1;
+  624   624                      $DGL    0,6
+  625   625 00079  CC0101                mov     [hl+1],#01H     ; falling_edge_trig,1           ;[INF] 3, 1
+  626   626 0007C                ??eb00_R_INTC0_IsFallingEdge:
+  627   627                      ; line   151 :     }
+  628   628 0007C                ?L0013:
+  629   629 0007C                ?L0014:
+  630   630                      ; line   152 :         
+  631   631                      ; line   153 :     return falling_edge_trig;
+  632   632                      $DGL    0,9
+  633   633 0007C  8C01                  mov     a,[hl+1]        ; falling_edge_trig             ;[INF] 2, 1
+  634   634 0007E  318E                  shrw    ax,8                                            ;[INF] 2, 1
+  635   635 00080  12                    movw    bc,ax                                           ;[INF] 1, 1
+  636   636                      ; line   154 :     
+  637   637                      ; line   155 : }
+  638   638 00081                ?L0012:
+  639   639                      $DGL    0,11
+  640   640 00081                ??ef_R_INTC0_IsFallingEdge:
+  641   641 00081  C0                    pop     ax                                              ;[INF] 1, 1
+  642   642 00082  C6                    pop     hl                                              ;[INF] 1, 1
+  643   643 00083  D7                    ret                                                     ;[INF] 1, 6
+  644   644 00084                ??ee_R_INTC0_IsFallingEdge:
+  645   645                      ; line   156 : /***************************************************************
+  646   646                      ;              ****************
+  647   647                      ; line   157 : * End of function R_INTC0_IsFallingEdge
+  648   648                      ; line   158 : ****************************************************************
+  649   649                      ;              ***************/
+  650   650                      ; line   159 : 
+  651   651                      ; line   160 : /***************************************************************
+  652   652                      ;              ****************
+  653   653                      ; line   161 : * Function Name: R_INTC0_SetFallingEdge
+  654   654                      ; line   162 : * Description  : This function sets/clears the falling edge trig
+  655   655                      ;              ger for INTP0.
+  656   656                      ; line   163 : * Arguments    : uint8_t set_f_edge, 1 if setting falling edge t
+  657   657                      ;              riggered, 0 if 
+  658   658                      ; line   164 : *                clearing
+  659   659                      ; line   165 : * Return Value : None
+  660   660                      ; line   166 : ****************************************************************
+  661   661                      ;              ***************/
+  662   662                      ; line   167 : void R_INTC0_SetFallingEdge (const uint8_t set_f_edge)
+  663   663                      ; line   168 : {
+  664   664 00084                _R_INTC0_SetFallingEdge:
+  665   665                      $DGL    1,60
+  666   666 00084  C7                    push    hl                                              ;[INF] 1, 1
+  667   667 00085  C1                    push    ax                                              ;[INF] 1, 1
+  668   668 00086  FBF8FF                movw    hl,sp                                           ;[INF] 3, 1
+  669   669 00089                ??bf_R_INTC0_SetFallingEdge:
+  670   670                      ; line   169 :     if (1 == set_f_edge)
+  671   671                      $DGL    0,2
+  672   672 00089  8B                    mov     a,[hl]  ; set_f_edge                            ;[INF] 1, 1
+  673   673 0008A  91                    dec     a                                               ;[INF] 1, 1
+  674   674 0008B  DF08                  bnz     $?L0017                                         ;[INF] 2, 4
+  675   675                      ; line   170 :     {
+  676   676 0008D                ??bb00_R_INTC0_SetFallingEdge:
+  677   677                      ; line   171 :         EGN0 |= _01_INTP0_EDGE_FALLING_SEL;    
+  678   678                      $DGL    0,4
+  679   679 0008D  8E39                  mov     a,EGN0                                          ;[INF] 2, 1
+  680   680 0008F  6C01                  or      a,#01H  ; 1                                     ;[INF] 2, 1
+  681   681 00091  9E39                  mov     EGN0,a                                          ;[INF] 2, 1
+  682   682 00093                ??eb00_R_INTC0_SetFallingEdge:
+  683   683                      ; line   172 :     }
+  684   684                      ; line   173 :     else
+  685   685                      $DGL    0,6
+  686   686 00093  EF06                  br      $?L0018                                         ;[INF] 2, 3
+  687   687 00095                ?L0017:
+  688   688                      ; line   174 :     {
+  689   689 00095                ??bb01_R_INTC0_SetFallingEdge:
+  690   690                      ; line   175 :         EGN0 &= (uint8_t) ~_01_INTP0_EDGE_FALLING_SEL;    
+  691   691                      $DGL    0,8
+  692   692 00095  8E39                  mov     a,EGN0                                          ;[INF] 2, 1
+  693   693 00097  5CFE                  and     a,#0FEH ; 254                                   ;[INF] 2, 1
+  694   694 00099  9E39                  mov     EGN0,a                                          ;[INF] 2, 1
+  695   695 0009B                ??eb01_R_INTC0_SetFallingEdge:
+  696   696                      ; line   176 :     }
+  697   697 0009B                ?L0018:
+  698   698                      ; line   177 : }
+  699   699                      $DGL    0,10
+  700   700 0009B                ??ef_R_INTC0_SetFallingEdge:
+  701   701 0009B  C0                    pop     ax                                              ;[INF] 1, 1
+  702   702 0009C  C6                    pop     hl                                              ;[INF] 1, 1
+  703   703 0009D  D7                    ret                                                     ;[INF] 1, 6
+  704   704 0009E                ??ee_R_INTC0_SetFallingEdge:
+  705   705                      ; line   178 : /***************************************************************
+  706   706                      ;              ***************
+  707   707                      ; line   179 : * End of function R_INTC0_SetFallingEdge
+  708   708                      ; line   180 : ****************************************************************
+  709   709                      ;              ***************/
+  710   710                      ; line   181 : 
+  711   711                      ; line   182 : /***************************************************************
+  712   712                      ;              ****************
+  713   713                      ; line   183 : * Function Name: R_INTC0_SetRisingEdge
+  714   714                      ; line   184 : * Description  : This function sets/clear the rising edge trigge
+  715   715                      ;              r for INTP0.
+  716   716                      ; line   185 : * Arguments    : uint8_t set_r_edge, 1 if setting rising edge tr
+  717   717                      ;              iggered, 0 if
+  718   718                      ; line   186 : *                clearing
+  719   719                      ; line   187 : * Return Value : None
+  720   720                      ; line   188 : ****************************************************************
+  721   721                      ;              ***************/
+  722   722                      ; line   189 : void R_INTC0_SetRisingEdge (const uint8_t set_r_edge)
+  723   723                      ; line   190 : {
+  724   724 0009E                _R_INTC0_SetRisingEdge:
+  725   725                      $DGL    1,75
+  726   726 0009E  C7                    push    hl                                              ;[INF] 1, 1
+  727   727 0009F  C1                    push    ax                                              ;[INF] 1, 1
+  728   728 000A0  FBF8FF                movw    hl,sp                                           ;[INF] 3, 1
+  729   729 000A3                ??bf_R_INTC0_SetRisingEdge:
+  730   730                      ; line   191 :     if (1 == set_r_edge)
+  731   731                      $DGL    0,2
+  732   732 000A3  8B                    mov     a,[hl]  ; set_r_edge                            ;[INF] 1, 1
+  733   733 000A4  91                    dec     a                                               ;[INF] 1, 1
+  734   734 000A5  DF08                  bnz     $?L0021                                         ;[INF] 2, 4
+  735   735                      ; line   192 :     {
+  736   736 000A7                ??bb00_R_INTC0_SetRisingEdge:
+  737   737                      ; line   193 :         EGP0 |= _01_INTP0_EDGE_RISING_SEL;    
+  738   738                      $DGL    0,4
+  739   739 000A7  8E38                  mov     a,EGP0                                          ;[INF] 2, 1
+  740   740 000A9  6C01                  or      a,#01H  ; 1                                     ;[INF] 2, 1
+  741   741 000AB  9E38                  mov     EGP0,a                                          ;[INF] 2, 1
+  742   742 000AD                ??eb00_R_INTC0_SetRisingEdge:
+  743   743                      ; line   194 :     }
+  744   744                      ; line   195 :     else
+  745   745                      $DGL    0,6
+  746   746 000AD  EF06                  br      $?L0022                                         ;[INF] 2, 3
+  747   747 000AF                ?L0021:
+  748   748                      ; line   196 :     {
+  749   749 000AF                ??bb01_R_INTC0_SetRisingEdge:
+  750   750                      ; line   197 :         EGP0 &= (uint8_t) ~_01_INTP0_EDGE_RISING_SEL;    
+  751   751                      $DGL    0,8
+  752   752 000AF  8E38                  mov     a,EGP0                                          ;[INF] 2, 1
+  753   753 000B1  5CFE                  and     a,#0FEH ; 254                                   ;[INF] 2, 1
+  754   754 000B3  9E38                  mov     EGP0,a                                          ;[INF] 2, 1
+  755   755 000B5                ??eb01_R_INTC0_SetRisingEdge:
+  756   756                      ; line   198 :     }
+  757   757 000B5                ?L0022:
+  758   758                      ; line   199 : }
+  759   759                      $DGL    0,10
+  760   760 000B5                ??ef_R_INTC0_SetRisingEdge:
+  761   761 000B5  C0                    pop     ax                                              ;[INF] 1, 1
+  762   762 000B6  C6                    pop     hl                                              ;[INF] 1, 1
+  763   763 000B7  D7                    ret                                                     ;[INF] 1, 6
+  764   764 000B8                ??ee_R_INTC0_SetRisingEdge:
+  765   765                      ; line   200 : /***************************************************************
+  766   766                      ;              ***************
+  767   767                      ; line   201 : * End of function R_INTC0_SetRisingEdge
+  768   768                      ; line   202 : ****************************************************************
+  769   769                      ;              ***************/
+  770   770                      ; line   203 : 
+  771   771                      ; line   204 : /***************************************************************
+  772   772                      ;              ****************
+  773   773                      ; line   205 : * Function Name: R_INTC7_IsFallingEdge
+  774   774                      ; line   206 : * Description  : This function returns 1 if the INTP7 is set to 
+  775   775                      ;              falling edge
+  776   776                      ; line   207 : *                triggered, otherwise 0.
+  777   777                      ; line   208 : * Arguments    : None
+  778   778                      ; line   209 : * Return Value : None
+  779   779                      ; line   210 : ****************************************************************
+  780   780                      ;              ***************/
+  781   781                      ; line   211 : uint8_t R_INTC7_IsFallingEdge (void)
+  782   782                      ; line   212 : {
+  783   783 000B8                _R_INTC7_IsFallingEdge:
+  784   784                      $DGL    1,90
+  785   785 000B8  C7                    push    hl                                              ;[INF] 1, 1
+  786   786 000B9  C1                    push    ax                                              ;[INF] 1, 1
+  787   787 000BA  FBF8FF                movw    hl,sp                                           ;[INF] 3, 1
+  788   788 000BD                ??bf_R_INTC7_IsFallingEdge:
+  789   789                      ; line   213 :     uint8_t falling_edge_trig = 0x0;
+  790   790                      $DGL    0,2
+  791   791 000BD  CC0100                mov     [hl+1],#00H     ; falling_edge_trig,0           ;[INF] 3, 1
+  792   792                      ; line   214 :     
+  793   793                      ; line   215 :     if (EGN0 & _80_INTP7_EDGE_FALLING_SEL)
+  794   794                      $DGL    0,4
+  795   795 000C0  8E39                  mov     a,EGN0                                          ;[INF] 2, 1
+  796   796 000C2  5C80                  and     a,#080H ; 128                                   ;[INF] 2, 1
+  797   797 000C4  D1                    cmp0    a                                               ;[INF] 1, 1
+  798   798 000C5  61E8                  skz                                                     ;[INF] 2, 1
+  799   799                      ; line   216 :     {
+  800   800 000C7                ??bb00_R_INTC7_IsFallingEdge:
+  801   801                      ; line   217 :         falling_edge_trig = 1;
+  802   802                      $DGL    0,6
+  803   803 000C7  CC0101                mov     [hl+1],#01H     ; falling_edge_trig,1           ;[INF] 3, 1
+  804   804 000CA                ??eb00_R_INTC7_IsFallingEdge:
+  805   805                      ; line   218 :     }
+  806   806 000CA                ?L0025:
+  807   807 000CA                ?L0026:
+  808   808                      ; line   219 :         
+  809   809                      ; line   220 :     return falling_edge_trig;
+  810   810                      $DGL    0,9
+  811   811 000CA  8C01                  mov     a,[hl+1]        ; falling_edge_trig             ;[INF] 2, 1
+  812   812 000CC  318E                  shrw    ax,8                                            ;[INF] 2, 1
+  813   813 000CE  12                    movw    bc,ax                                           ;[INF] 1, 1
+  814   814                      ; line   221 :     
+  815   815                      ; line   222 : }
+  816   816 000CF                ?L0024:
+  817   817                      $DGL    0,11
+  818   818 000CF                ??ef_R_INTC7_IsFallingEdge:
+  819   819 000CF  C0                    pop     ax                                              ;[INF] 1, 1
+  820   820 000D0  C6                    pop     hl                                              ;[INF] 1, 1
+  821   821 000D1  D7                    ret                                                     ;[INF] 1, 6
+  822   822 000D2                ??ee_R_INTC7_IsFallingEdge:
+  823   823                      ; line   223 : /***************************************************************
+  824   824                      ;              ***************
+  825   825                      ; line   224 : * End of function R_INTC7_IsFallingEdge
+  826   826                      ; line   225 : ****************************************************************
+  827   827                      ;              ***************/
+  828   828                      ; line   226 : /***************************************************************
+  829   829                      ;              ****************
+  830   830                      ; line   227 : * Function Name: R_INTC7_SetFallingEdge
+  831   831                      ; line   228 : * Description  : This function sets/clears the falling edge trig
+  832   832                      ;              ger for INTP7.
+  833   833                      ; line   229 : * Arguments    : uint8_t set_f_edge, 1 if setting falling edge t
+  834   834                      ;              riggered, 0 
+  835   835                      ; line   230 : *                if clearing
+  836   836                      ; line   231 : * Return Value : None
+  837   837                      ; line   232 : ****************************************************************
+  838   838                      ;              ***************/
+  839   839                      ; line   233 : void R_INTC7_SetFallingEdge (const uint8_t set_f_edge)
+  840   840                      ; line   234 : {
+  841   841 000D2                _R_INTC7_SetFallingEdge:
+  842   842                      $DGL    1,101
+  843   843 000D2  C7                    push    hl                                              ;[INF] 1, 1
+  844   844 000D3  C1                    push    ax                                              ;[INF] 1, 1
+  845   845 000D4  FBF8FF                movw    hl,sp                                           ;[INF] 3, 1
+  846   846 000D7                ??bf_R_INTC7_SetFallingEdge:
+  847   847                      ; line   235 :     if (1 == set_f_edge)
+  848   848                      $DGL    0,2
+  849   849 000D7  8B                    mov     a,[hl]  ; set_f_edge                            ;[INF] 1, 1
+  850   850 000D8  91                    dec     a                                               ;[INF] 1, 1
+  851   851 000D9  DF08                  bnz     $?L0029                                         ;[INF] 2, 4
+  852   852                      ; line   236 :     {
+  853   853 000DB                ??bb00_R_INTC7_SetFallingEdge:
+  854   854                      ; line   237 :         EGN0 |= _80_INTP7_EDGE_FALLING_SEL;
+  855   855                      $DGL    0,4
+  856   856 000DB  8E39                  mov     a,EGN0                                          ;[INF] 2, 1
+  857   857 000DD  6C80                  or      a,#080H ; 128                                   ;[INF] 2, 1
+  858   858 000DF  9E39                  mov     EGN0,a                                          ;[INF] 2, 1
+  859   859 000E1                ??eb00_R_INTC7_SetFallingEdge:
+  860   860                      ; line   238 :     }
+  861   861                      ; line   239 :     else
+  862   862                      $DGL    0,6
+  863   863 000E1  EF06                  br      $?L0030                                         ;[INF] 2, 3
+  864   864 000E3                ?L0029:
+  865   865                      ; line   240 :     {
+  866   866 000E3                ??bb01_R_INTC7_SetFallingEdge:
+  867   867                      ; line   241 :         EGN0 &= (uint8_t) ~_80_INTP7_EDGE_FALLING_SEL;
+  868   868                      $DGL    0,8
+  869   869 000E3  8E39                  mov     a,EGN0                                          ;[INF] 2, 1
+  870   870 000E5  5C7F                  and     a,#07FH ; 127                                   ;[INF] 2, 1
+  871   871 000E7  9E39                  mov     EGN0,a                                          ;[INF] 2, 1
+  872   872 000E9                ??eb01_R_INTC7_SetFallingEdge:
+  873   873                      ; line   242 :     }
+  874   874 000E9                ?L0030:
+  875   875                      ; line   243 : }
+  876   876                      $DGL    0,10
+  877   877 000E9                ??ef_R_INTC7_SetFallingEdge:
+  878   878 000E9  C0                    pop     ax                                              ;[INF] 1, 1
+  879   879 000EA  C6                    pop     hl                                              ;[INF] 1, 1
+  880   880 000EB  D7                    ret                                                     ;[INF] 1, 6
+  881   881 000EC                ??ee_R_INTC7_SetFallingEdge:
+  882   882                      ; line   244 : /***************************************************************
+  883   883                      ;              ****************
+  884   884                      ; line   245 : * End of function R_INTC7_SetFallingEdge
+  885   885                      ; line   246 : ****************************************************************
+  886   886                      ;              ***************/
+  887   887                      ; line   247 : /***************************************************************
+  888   888                      ;              ****************
+  889   889                      ; line   248 : * Function Name: R_INTC7_SetRisingEdge
+  890   890                      ; line   249 : * Description  : This function sets/clear the rising edge trigge
+  891   891                      ;              r for INTP0.
+  892   892                      ; line   250 : * Arguments    : uint8_t set_r_edge, 1 if setting rising edge tr
+  893   893                      ;              iggered, 0 if
+  894   894                      ; line   251 : *                clearing
+  895   895                      ; line   252 : * Return Value : None
+  896   896                      ; line   253 : ****************************************************************
+  897   897                      ;              ***************/
+  898   898                      ; line   254 : void R_INTC7_SetRisingEdge (const uint8_t set_r_edge)
+  899   899                      ; line   255 : {
+  900   900 000EC                _R_INTC7_SetRisingEdge:
+  901   901                      $DGL    1,116
+  902   902 000EC  C7                    push    hl                                              ;[INF] 1, 1
+  903   903 000ED  C1                    push    ax                                              ;[INF] 1, 1
+  904   904 000EE  FBF8FF                movw    hl,sp                                           ;[INF] 3, 1
+  905   905 000F1                ??bf_R_INTC7_SetRisingEdge:
+  906   906                      ; line   256 :     if (1 == set_r_edge)
+  907   907                      $DGL    0,2
+  908   908 000F1  8B                    mov     a,[hl]  ; set_r_edge                            ;[INF] 1, 1
+  909   909 000F2  91                    dec     a                                               ;[INF] 1, 1
+  910   910 000F3  DF08                  bnz     $?L0033                                         ;[INF] 2, 4
+  911   911                      ; line   257 :     {
+  912   912 000F5                ??bb00_R_INTC7_SetRisingEdge:
+  913   913                      ; line   258 :         EGP0 |= _80_INTP7_EDGE_RISING_SEL;
+  914   914                      $DGL    0,4
+  915   915 000F5  8E38                  mov     a,EGP0                                          ;[INF] 2, 1
+  916   916 000F7  6C80                  or      a,#080H ; 128                                   ;[INF] 2, 1
+  917   917 000F9  9E38                  mov     EGP0,a                                          ;[INF] 2, 1
+  918   918 000FB                ??eb00_R_INTC7_SetRisingEdge:
+  919   919                      ; line   259 :     }
+  920   920                      ; line   260 :     else
+  921   921                      $DGL    0,6
+  922   922 000FB  EF06                  br      $?L0034                                         ;[INF] 2, 3
+  923   923 000FD                ?L0033:
+  924   924                      ; line   261 :     {
+  925   925 000FD                ??bb01_R_INTC7_SetRisingEdge:
+  926   926                      ; line   262 :         EGP0 &= (uint8_t) ~_80_INTP7_EDGE_RISING_SEL;
+  927   927                      $DGL    0,8
+  928   928 000FD  8E38                  mov     a,EGP0                                          ;[INF] 2, 1
+  929   929 000FF  5C7F                  and     a,#07FH ; 127                                   ;[INF] 2, 1
+  930   930 00101  9E38                  mov     EGP0,a                                          ;[INF] 2, 1
+  931   931 00103                ??eb01_R_INTC7_SetRisingEdge:
+  932   932                      ; line   263 :     }
+  933   933 00103                ?L0034:
+  934   934                      ; line   264 : }
+  935   935                      $DGL    0,10
+  936   936 00103                ??ef_R_INTC7_SetRisingEdge:
+  937   937 00103  C0                    pop     ax                                              ;[INF] 1, 1
+  938   938 00104  C6                    pop     hl                                              ;[INF] 1, 1
+  939   939 00105  D7                    ret                                                     ;[INF] 1, 6
+  940   940 00106                ??ee_R_INTC7_SetRisingEdge:
+  941   941                      
+  942   942 -----                @@CODE  CSEG    BASE
+  943   943                      
+  944   944 -----                @@BASE  CSEG    BASE
+  945   945                              END
+  946   946                      
+  947   947                      
+  948   948                      ; *** Code Information ***
+  949   949                      ;
+  950   950                      ; $FILE C:\Users\nguye\Downloads\dtmf_reader_rl78\RSK_Module_test\RSKRL78L13\AD
+  951   951                      ;       C_Repeat\cg_src\r_cg_intp.c
+  952   952                      ;
+  953   953                      ; $FUNC R_INTC_Create(62)
+  954   954                      ;       void=(void)
+  955   955                      ;       CODE SIZE= 78 bytes, CLOCK_SIZE= 53 clocks, STACK_SIZE= 0 bytes
+  956   956                      ;
+  957   957                      ; $FUNC R_INTC0_Start(98)
+  958   958                      ;       void=(void)
+  959   959                      ;       CODE SIZE= 7 bytes, CLOCK_SIZE= 10 clocks, STACK_SIZE= 0 bytes
+  960   960                      ;
+  961   961                      ; $FUNC R_INTC0_Stop(109)
+  962   962                      ;       void=(void)
+  963   963                      ;       CODE SIZE= 7 bytes, CLOCK_SIZE= 10 clocks, STACK_SIZE= 0 bytes
+  964   964                      ;
+  965   965                      ; $FUNC R_INTC7_Start(120)
+  966   966                      ;       void=(void)
+  967   967                      ;       CODE SIZE= 7 bytes, CLOCK_SIZE= 10 clocks, STACK_SIZE= 0 bytes
+  968   968                      ;
+  969   969                      ; $FUNC R_INTC7_Stop(131)
+  970   970                      ;       void=(void)
+  971   971                      ;       CODE SIZE= 7 bytes, CLOCK_SIZE= 10 clocks, STACK_SIZE= 0 bytes
+  972   972                      ;
+  973   973                      ; $FUNC R_INTC0_IsFallingEdge(145)
+  974   974                      ;       bc=(void)
+  975   975                      ;       CODE SIZE= 26 bytes, CLOCK_SIZE= 20 clocks, STACK_SIZE= 4 bytes
+  976   976                      ;
+  977   977                      ; $FUNC R_INTC0_SetFallingEdge(168)
+  978   978                      ;       void=(unsigned char set_f_edge:x)
+  979   979                      ;       CODE SIZE= 26 bytes, CLOCK_SIZE= 26 clocks, STACK_SIZE= 4 bytes
+  980   980                      ;
+  981   981                      ; $FUNC R_INTC0_SetRisingEdge(190)
+  982   982                      ;       void=(unsigned char set_r_edge:x)
+  983   983                      ;       CODE SIZE= 26 bytes, CLOCK_SIZE= 26 clocks, STACK_SIZE= 4 bytes
+  984   984                      ;
+  985   985                      ; $FUNC R_INTC7_IsFallingEdge(212)
+  986   986                      ;       bc=(void)
+  987   987                      ;       CODE SIZE= 26 bytes, CLOCK_SIZE= 20 clocks, STACK_SIZE= 4 bytes
+  988   988                      ;
+  989   989                      ; $FUNC R_INTC7_SetFallingEdge(234)
+  990   990                      ;       void=(unsigned char set_f_edge:x)
+  991   991                      ;       CODE SIZE= 26 bytes, CLOCK_SIZE= 26 clocks, STACK_SIZE= 4 bytes
+  992   992                      ;
+  993   993                      ; $FUNC R_INTC7_SetRisingEdge(255)
+  994   994                      ;       void=(unsigned char set_r_edge:x)
+  995   995                      ;       CODE SIZE= 26 bytes, CLOCK_SIZE= 26 clocks, STACK_SIZE= 4 bytes
+  996   996                      
+  997   997                      ; Target chip : R5F10WMG
+  998   998                      ; Device file : V1.00 
+
+Segment informations:
+
+ADRS  LEN      NAME
+
+00000 00000H.0 @@BITS
+00000 00000H   @@CNST
+00000 00000H   @@R_INIT
+00000 00000H   @@INIT
+00000 00000H   @@DATA
+00000 00000H   @@R_INIS
+00000 00000H   @@INIS
+00000 00000H   @@DATS
+00000 00000H   @@CNSTL
+00000 00000H   @@RLINIT
+00000 00000H   @@INITL
+00000 00000H   @@DATAL
+00000 00000H   @@CALT
+00000 00106H   @@CODEL
+00000 00000H   @@CODE
+00000 00000H   @@BASE
+
+ Target chip : R5F10WMG
+ Device file : V1.00
+Assembly complete,     0 error(s) and     0 warning(s) found. (    0)
+

@@ -1,0 +1,660 @@
+
+
+
+78K0R Assembler V1.80                                                                                    Date: 5 Jun 2021 Page:   1
+
+
+
+Command:  -cf10wmg -yC:\Program Files (x86)\Renesas Electronics\CubeSuite+\Device\RL78\Devicefile Debug\r_cg_cgc_user.asm -_msgoff -
+          pDebug -oDebug -zs
+Para-file:
+In-file:  Debug\r_cg_cgc_user.asm
+Obj-file: Debug\r_cg_cgc_user.rel
+Prn-file: Debug\r_cg_cgc_user.prn
+
+      Assemble list
+
+ ALNO  STNO ADRS   OBJECT   M I  SOURCE STATEMENT
+
+    1     1                      ; 78K0R C Compiler V2.60 Assembler Source        Date: 5 Jun 2021 Time:10:38:21
+    2     2                      
+    3     3                      ; Command   : -cf10wmg -yC:\Program Files (x86)\Renesas Electronics\CubeSuite+\
+    4     4                      ;             Device\RL78\Devicefile ..\RSKRL78L13\ADC_Repeat\cg_src\r_cg_cgc_u
+    5     5                      ;             ser.c -oDebug -_msgoff -nq -i..\RSKRL78L13\ADC_Repeat\cg_src -v -
+    6     6                      ;             w2 -zps -mm -mi0 -saDebug -li -no -g2
+    7     7                      ; In-file   : ..\RSKRL78L13\ADC_Repeat\cg_src\r_cg_cgc_user.c
+    8     8                      ; Asm-file  : Debug\r_cg_cgc_user.asm
+    9     9                      ; Para-file : 
+   10    10                      
+   11    11                      $PROCESSOR(F10WMG)
+   12    12                      $DEBUG
+   13    13                      $NODEBUGA
+   14    14                      $KANJICODE SJIS
+   15    15                      $TOL_INF        03FH, 0260H, 02H, 04000H, 00H, 00H, 00H
+   16    16                      
+   17    17                      $DGS    FIL_NAM, .file,         01BH,   0FFFEH, 03FH,   067H,   01H,    00H
+   18    18                      $DGS    AUX_FIL, r_cg_cgc_user.c
+   19    19                      $DGS    MOD_NAM, r_cg_cgc_user, 00H,    0FFFEH, 00H,    077H,   00H,    00H
+   20    20                      $DGS    SEC_NAM, @@BITS,        U,      U,      00H,    078H,   00H,    00H
+   21    21                      $DGS    SEC_NAM, @@CNST,        U,      U,      00H,    078H,   00H,    00H
+   22    22                      $DGS    SEC_NAM, @@R_INIT,      U,      U,      00H,    078H,   00H,    00H
+   23    23                      $DGS    SEC_NAM, @@INIT,        U,      U,      00H,    078H,   00H,    00H
+   24    24                      $DGS    SEC_NAM, @@DATA,        U,      U,      00H,    078H,   00H,    00H
+   25    25                      $DGS    SEC_NAM, @@R_INIS,      U,      U,      00H,    078H,   00H,    00H
+   26    26                      $DGS    SEC_NAM, @@INIS,        U,      U,      00H,    078H,   00H,    00H
+   27    27                      $DGS    SEC_NAM, @@DATS,        U,      U,      00H,    078H,   00H,    00H
+   28    28                      $DGS    SEC_NAM, @@CNSTL,       U,      U,      00H,    078H,   00H,    00H
+   29    29                      $DGS    SEC_NAM, @@RLINIT,      U,      U,      00H,    078H,   00H,    00H
+   30    30                      $DGS    SEC_NAM, @@INITL,       U,      U,      00H,    078H,   00H,    00H
+   31    31                      $DGS    SEC_NAM, @@DATAL,       U,      U,      00H,    078H,   00H,    00H
+   32    32                      $DGS    SEC_NAM, @@CALT,        U,      U,      00H,    078H,   00H,    00H
+   33    33                      $DGS    SEC_NAM, @@CODE,        U,      U,      00H,    078H,   00H,    00H
+   34    34                      $DGS    SEC_NAM, @@CODEL,       U,      U,      00H,    078H,   00H,    00H
+   35    35                      $DGS    SEC_NAM, @@BASE,        U,      U,      00H,    078H,   00H,    00H
+   36    36                      $DGS    GLV_SYM, _R_CGC_Get_ResetSource,        U,      U,      01H,    026H,   01H,    02H
+   37    37                      $DGS    AUX_FUN, 00H,           U,      U,      01BH,   01H,    00H
+   38    38                      $DGS    BEG_FUN, ??bf_R_CGC_Get_ResetSource,    U,      U,      00H,    065H,   01H,    00H
+   39    39                      $DGS    AUX_BEG, 042H,          02H,    01BH
+   40    40                      $DGS    AUT_VAR, _reset_flag,   01H,    0FFFFH, 0CH,    01H,    00H,    00H
+   41    41                      $DGS    AUT_VAR, _porsr_flag,   00H,    0FFFFH, 0CH,    01H,    00H,    00H
+   42    42                      $DGS    END_FUN, ??ef_R_CGC_Get_ResetSource,    U,      U,      00H,    065H,   01H,    00H
+   43    43                      $DGS    AUX_END, 06H
+   44    44                      
+   45    45                              PUBLIC  _R_CGC_Get_ResetSource
+   46    46                      
+   47    47 -----                @@BITS  BSEG
+   48    48                      
+   49    49 -----                @@CNST  CSEG    MIRRORP
+   50    50                      
+   51    51 -----                @@R_INIT        CSEG    UNIT64KP
+   52    52                      
+   53    53 -----                @@INIT  DSEG    BASEP
+   54    54                      
+   55    55 -----                @@DATA  DSEG    BASEP
+   56    56                      
+   57    57 -----                @@R_INIS        CSEG    UNIT64KP
+   58    58                      
+   59    59 -----                @@INIS  DSEG    SADDRP
+   60    60                      
+   61    61 -----                @@DATS  DSEG    SADDRP
+   62    62                      
+   63    63 -----                @@CNSTL CSEG    PAGE64KP
+   64    64                      
+   65    65 -----                @@RLINIT        CSEG    UNIT64KP
+   66    66                      
+   67    67 -----                @@INITL DSEG    UNIT64KP
+   68    68                      
+   69    69 -----                @@DATAL DSEG    UNIT64KP
+   70    70                      
+   71    71 -----                @@CALT  CSEG    CALLT0
+   72    72                      
+   73    73                      ; line     1 : /***************************************************************
+   74    74                      ;              ********************************************************
+   75    75                      ; line     2 : * DISCLAIMER
+   76    76                      ; line     3 : * This software is supplied by Renesas Electronics Corporation a
+   77    77                      ;              nd is only 
+   78    78                      ; line     4 : * intended for use with Renesas products. No other uses are auth
+   79    79                      ;              orized. This 
+   80    80                      ; line     5 : * software is owned by Renesas Electronics Corporation and is pr
+   81    81                      ;              otected under 
+   82    82                      ; line     6 : * all applicable laws, including copyright laws.
+   83    83                      ; line     7 : * THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANT
+   84    84                      ;              IES REGARDING 
+   85    85                      ; line     8 : * THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDIN
+   86    86                      ;              G BUT NOT 
+   87    87                      ; line     9 : * LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTIC
+   88    88                      ;              ULAR PURPOSE 
+   89    89                      ; line    10 : * AND NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCL
+   90    90                      ;              AIMED.
+   91    91                      ; line    11 : * TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER
+   92    92                      ;               RENESAS 
+   93    93                      ; line    12 : * ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SH
+   94    94                      ;              ALL BE LIABLE 
+   95    95                      ; line    13 : * FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL
+   96    96                      ;               DAMAGES FOR 
+   97    97                      ; line    14 : * ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AF
+   98    98                      ;              FILIATES HAVE 
+   99    99                      ; line    15 : * BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+  100   100                      ; line    16 : * Renesas reserves the right, without notice, to make changes to
+  101   101                      ;               this software 
+  102   102                      ; line    17 : * and to discontinue the availability of this software.  By usin
+  103   103                      ;              g this software, 
+  104   104                      ; line    18 : * you agree to the additional terms and conditions found by acce
+  105   105                      ;              ssing the 
+  106   106                      ; line    19 : * following link:
+  107   107                      ; line    20 : * http://www.renesas.com/disclaimer
+  108   108                      ; line    21 : *
+  109   109                      ; line    22 : * Copyright (C) 2013 Renesas Electronics Corporation. All rights
+  110   110                      ;               reserved.
+  111   111                      ; line    23 : ****************************************************************
+  112   112                      ;              *******************************************************/
+  113   113                      ; line    24 : 
+  114   114                      ; line    25 : /***************************************************************
+  115   115                      ;              ********************************************************
+  116   116                      ; line    26 : * File Name    : r_cg_macrodriver.h
+  117   117                      ; line    27 : * Version      : Applilet4 for RL78/L13 V1.00.00.02 [10 May 2013
+  118   118                      ;              ]
+  119   119                      ; line    28 : * Device(s)    : R5F10WMG
+  120   120                      ; line    29 : * Tool-Chain   : CA78K0R
+  121   121                      ; line    30 : * Description  : This file implements general head file.
+  122   122                      ; line    31 : * Creation Date: 05-Jun-21
+  123   123                      ; line    32 : ****************************************************************
+  124   124                      ;              *******************************************************/
+  125   125                      ; line    33 : #ifndef MODULEID_H
+  126   126                      ; line    34 : #define MODULEID_H
+  127   127                      ; line    35 : /***************************************************************
+  128   128                      ;              ********************************************************
+  129   129                      ; line    36 : Includes
+  130   130                      ; line    37 : ****************************************************************
+  131   131                      ;              *******************************************************/
+  132   132                      ; line    38 : #pragma sfr
+  133   133                      ; line    39 : #pragma DI
+  134   134                      ; line    40 : #pragma EI
+  135   135                      ; line    41 : #pragma NOP
+  136   136                      ; line    42 : #pragma HALT
+  137   137                      ; line    43 : #pragma STOP
+  138   138                      ; line    44 : 
+  139   139                      ; line    45 : /***************************************************************
+  140   140                      ;              ********************************************************
+  141   141                      ; line    46 : Macro definitions (Register bit)
+  142   142                      ; line    47 : ****************************************************************
+  143   143                      ;              *******************************************************/
+  144   144                      ; line    48 : 
+  145   145                      ; line    49 : /***************************************************************
+  146   146                      ;              ********************************************************
+  147   147                      ; line    50 : Macro definitions
+  148   148                      ; line    51 : ****************************************************************
+  149   149                      ;              *******************************************************/
+  150   150                      ; line    52 : #ifndef __TYPEDEF__
+  151   151                      ; line    53 : /* Status list definition */
+  152   152                      ; line    54 : #define MD_STATUSBASE        (0x00U)
+  153   153                      ; line    55 : #define MD_OK                (MD_STATUSBASE + 0x00U) /* register
+  154   154                      ;               setting OK */
+  155   155                      ; line    56 : #define MD_SPT               (MD_STATUSBASE + 0x01U) /* IIC stop
+  156   156                      ;               */
+  157   157                      ; line    57 : #define MD_NACK              (MD_STATUSBASE + 0x02U) /* IIC no A
+  158   158                      ;              CK */
+  159   159                      ; line    58 : #define MD_BUSY1             (MD_STATUSBASE + 0x03U) /* busy 1 *
+  160   160                      ;              /
+  161   161                      ; line    59 : #define MD_BUSY2             (MD_STATUSBASE + 0x04U) /* busy 2 *
+  162   162                      ;              /
+  163   163                      ; line    60 : 
+  164   164                      ; line    61 : /* Error list definition */
+  165   165                      ; line    62 : #define MD_ERRORBASE         (0x80U)
+  166   166                      ; line    63 : #define MD_ERROR             (MD_ERRORBASE + 0x00U)  /* error */
+  167   167                      ; line    64 : #define MD_ARGERROR          (MD_ERRORBASE + 0x01U)  /* error ag
+  168   168                      ;              rument input error */
+  169   169                      ; line    65 : #define MD_ERROR1            (MD_ERRORBASE + 0x02U)  /* error 1 
+  170   170                      ;              */
+  171   171                      ; line    66 : #define MD_ERROR2            (MD_ERRORBASE + 0x03U)  /* error 2 
+  172   172                      ;              */
+  173   173                      ; line    67 : #define MD_ERROR3            (MD_ERRORBASE + 0x04U)  /* error 3 
+  174   174                      ;              */
+  175   175                      ; line    68 : #define MD_ERROR4            (MD_ERRORBASE + 0x05U)  /* error 4 
+  176   176                      ;              */
+  177   177                      ; line    69 : #define MD_ERROR5            (MD_ERRORBASE + 0x06U)  /* error 5 
+  178   178                      ;              */
+  179   179                      ; line    70 : #endif
+  180   180                      ; line    71 : 
+  181   181                      ; line    72 : /***************************************************************
+  182   182                      ;              ********************************************************
+  183   183                      ; line    73 : Typedef definitions
+  184   184                      ; line    74 : ****************************************************************
+  185   185                      ;              *******************************************************/
+  186   186                      ; line    75 : #ifndef __TYPEDEF__
+  187   187                      ; line    76 : typedef signed char         int8_t;
+  188   188                      ; line    77 : typedef unsigned char       uint8_t;
+  189   189                      ; line    78 : typedef signed short        int16_t;
+  190   190                      ; line    79 : typedef unsigned short      uint16_t;
+  191   191                      ; line    80 : typedef signed long         int32_t;
+  192   192                      ; line    81 : typedef unsigned long       uint32_t;
+  193   193                      ; line    82 : typedef unsigned short      MD_STATUS;
+  194   194                      ; line     1 : /***************************************************************
+  195   195                      ;              ********************************************************
+  196   196                      ; line     2 : * DISCLAIMER
+  197   197                      ; line     3 : * This software is supplied by Renesas Electronics Corporation a
+  198   198                      ;              nd is only 
+  199   199                      ; line     4 : * intended for use with Renesas products. No other uses are auth
+  200   200                      ;              orized. This 
+  201   201                      ; line     5 : * software is owned by Renesas Electronics Corporation and is pr
+  202   202                      ;              otected under 
+  203   203                      ; line     6 : * all applicable laws, including copyright laws.
+  204   204                      ; line     7 : * THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANT
+  205   205                      ;              IES REGARDING 
+  206   206                      ; line     8 : * THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDIN
+  207   207                      ;              G BUT NOT 
+  208   208                      ; line     9 : * LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTIC
+  209   209                      ;              ULAR PURPOSE 
+  210   210                      ; line    10 : * AND NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCL
+  211   211                      ;              AIMED.
+  212   212                      ; line    11 : * TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER
+  213   213                      ;               RENESAS 
+  214   214                      ; line    12 : * ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SH
+  215   215                      ;              ALL BE LIABLE 
+  216   216                      ; line    13 : * FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL
+  217   217                      ;               DAMAGES FOR 
+  218   218                      ; line    14 : * ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AF
+  219   219                      ;              FILIATES HAVE 
+  220   220                      ; line    15 : * BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+  221   221                      ; line    16 : * Renesas reserves the right, without notice, to make changes to
+  222   222                      ;               this software 
+  223   223                      ; line    17 : * and to discontinue the availability of this software.  By usin
+  224   224                      ;              g this software, 
+  225   225                      ; line    18 : * you agree to the additional terms and conditions found by acce
+  226   226                      ;              ssing the 
+  227   227                      ; line    19 : * following link:
+  228   228                      ; line    20 : * http://www.renesas.com/disclaimer
+  229   229                      ; line    21 : *
+  230   230                      ; line    22 : * Copyright (C) 2013 Renesas Electronics Corporation. All rights
+  231   231                      ;               reserved.
+  232   232                      ; line    23 : ****************************************************************
+  233   233                      ;              *******************************************************/
+  234   234                      ; line    24 : 
+  235   235                      ; line    25 : /***************************************************************
+  236   236                      ;              ********************************************************
+  237   237                      ; line    26 : * File Name    : r_cg_cgc.h
+  238   238                      ; line    27 : * Version      : Applilet4 for RL78/L13 V1.00.00.02 [10 May 2013
+  239   239                      ;              ]
+  240   240                      ; line    28 : * Device(s)    : R5F10WMG
+  241   241                      ; line    29 : * Tool-Chain   : CA78K0R
+  242   242                      ; line    30 : * Description  : This file implements device driver for CGC modu
+  243   243                      ;              le.
+  244   244                      ; line    31 : * Creation Date: 05-Jun-21
+  245   245                      ; line    32 : ****************************************************************
+  246   246                      ;              *******************************************************/
+  247   247                      ; line    33 : #ifndef CGC_H
+  248   248                      ; line    34 : #define CGC_H
+  249   249                      ; line    35 : 
+  250   250                      ; line    36 : /***************************************************************
+  251   251                      ;              ********************************************************
+  252   252                      ; line    37 : Macro definitions (Register bit)
+  253   253                      ; line    38 : ****************************************************************
+  254   254                      ;              *******************************************************/
+  255   255                      ; line    39 : /*
+  256   256                      ; line    40 :     Clock operation mode control register (CMC)
+  257   257                      ; line    41 : */
+  258   258                      ; line    42 : /* High-speed system clock pin operation mode (EXCLK, OSCSEL) */
+  259   259                      ; line    43 : #define _C0_CGC_HISYS_PIN           (0xC0U)
+  260   260                      ; line    44 : #define _00_CGC_HISYS_PORT          (0x00U) /* X1, X2 as I/O por
+  261   261                      ;              t */
+  262   262                      ; line    45 : #define _40_CGC_HISYS_OSC           (0x40U) /* X1, X2 as crystal
+  263   263                      ;              /ceramic resonator connection */
+  264   264                      ; line    46 : #define _80_CGC_HISYS_PORT1         (0x80U) /* X1, X2 as I/O por
+  265   265                      ;              t */
+  266   266                      ; line    47 : #define _C0_CGC_HISYS_EXT           (0xC0U) /* X1 as I/O port, X
+  267   267                      ;              2 as external clock input */
+  268   268                      ; line    48 : /* Subsystem clock pin operation mode (EXCLKS, OSCSELS) */
+  269   269                      ; line    49 : #define _30_CGC_SUB_PIN             (0x30U)
+  270   270                      ; line    50 : #define _00_CGC_SUB_PORT            (0x00U) /* XT1, XT2 as I/O p
+  271   271                      ;              ort */
+  272   272                      ; line    51 : #define _10_CGC_SUB_OSC             (0x10U) /* XT1, XT2 as cryst
+  273   273                      ;              al connection */
+  274   274                      ; line    52 : #define _20_CGC_SUB_PORT1           (0x20U) /* XT1, XT2 as I/O p
+  275   275                      ;              ort */
+  276   276                      ; line    53 : #define _30_CGC_SUB_EXT             (0x30U) /* XT1 as I/O port, 
+  277   277                      ;              XT2 as external clock input */
+  278   278                      ; line    54 : /* XT1 oscillator oscillation mode selection (AMPHS1, AMPHS0) */
+  279   279                      ; line    55 : #define _00_CGC_SUBMODE_DEFAULT     (0x00U)
+  280   280                      ; line    56 : #define _00_CGC_SUBMODE_LOW         (0x00U) /* low power consump
+  281   281                      ;              tion oscillation */
+  282   282                      ; line    57 : #define _02_CGC_SUBMODE_NORMAL      (0x02U) /* normal oscillatio
+  283   283                      ;              n */
+  284   284                      ; line    58 : #define _04_CGC_SUBMODE_ULOW        (0x04U) /* ultra-low power c
+  285   285                      ;              onsumption oscillation */
+  286   286                      ; line    59 : /* Control of X1 high-speed system clock oscillation frequency (
+  287   287                      ;              AMPH) */
+  288   288                      ; line    60 : #define _00_CGC_SYSOSC_UNDER10M     (0x00U) /* fX <= 10MHz */
+  289   289                      ; line    61 : #define _01_CGC_SYSOSC_OVER10M      (0x01U) /* fX > 10MHz */
+  290   290                      ; line    62 : 
+  291   291                      ; line    63 : /*
+  292   292                      ; line    64 :     System clock control register (CKC)
+  293   293                      ; line    65 : */
+  294   294                      ; line    66 : /* Status of CPU/peripheral hardware clock fCLK (CLS) */
+  295   295                      ; line    67 : #define _00_CGC_CPUCLK_MAIN         (0x00U) /* main system clock
+  296   296                      ;               (fMAIN) */
+  297   297                      ; line    68 : #define _80_CGC_CPUCLK_SUB          (0x80U) /* subsystem clock (
+  298   298                      ;              fSUB) */
+  299   299                      ; line    69 : /* Selection of CPU/peripheral hardware clock fCLK (CSS) */
+  300   300                      ; line    70 : #define _00_CGC_CPUCLK_SELMAIN      (0x00U) /* main system clock
+  301   301                      ;               (fMAIN) */
+  302   302                      ; line    71 : #define _40_CGC_CPUCLK_SELSUB       (0x40U) /* subsystem clock (
+  303   303                      ;              fSUB) */
+  304   304                      ; line    72 : /* Status of Main system clock fMAIN (MCS) */
+  305   305                      ; line    73 : #define _00_CGC_MAINCLK_HIO         (0x00U) /* high-speed OCO cl
+  306   306                      ;              ock (fIH) */
+  307   307                      ; line    74 : #define _20_CGC_MAINCLK_HISYS       (0x20U) /* high-speed system
+  308   308                      ;               clock (fMX) */
+  309   309                      ; line    75 : /* Selection of Main system clock fMAIN (MCM0) */
+  310   310                      ; line    76 : #define _00_CGC_MAINCLK_SELHIO      (0x00U) /* high-speed OCO cl
+  311   311                      ;              ock (fIH) */
+  312   312                      ; line    77 : #define _10_CGC_MAINCLK_SELHISYS    (0x10U) /* high-speed system
+  313   313                      ;               clock (fMX) */
+  314   314                      ; line    78 : 
+  315   315                      ; line    79 : /*
+  316   316                      ; line    80 :     Clock operation status control register (CSC)
+  317   317                      ; line    81 : */
+  318   318                      ; line    82 : /* Control of high-speed system clock operation (MSTOP) */
+  319   319                      ; line    83 : #define _00_CGC_HISYS_OPER          (0x00U) /* X1 oscillator/ext
+  320   320                      ;              ernal clock operating */
+  321   321                      ; line    84 : #define _80_CGC_HISYS_STOP          (0x80U) /* X1 oscillator/ext
+  322   322                      ;              ernal clock stopped */
+  323   323                      ; line    85 : /* Subsystem clock operation (XTSTOP) */
+  324   324                      ; line    86 : #define _00_CGC_SUB_OPER            (0x00U) /* XT1 oscillator op
+  325   325                      ;              erating */
+  326   326                      ; line    87 : #define _40_CGC_SUB_STOP            (0x40U) /* XT1 oscillator st
+  327   327                      ;              opped */
+  328   328                      ; line    88 : /* High-speed OCO operation (HIOSTOP) */
+  329   329                      ; line    89 : #define _00_CGC_HIO_OPER            (0x00U) /* high-speed OCO op
+  330   330                      ;              erating */
+  331   331                      ; line    90 : #define _01_CGC_HIO_STOP            (0x01U) /* high-speed OCO st
+  332   332                      ;              opped */
+  333   333                      ; line    91 : 
+  334   334                      ; line    92 : /*
+  335   335                      ; line    93 :     Oscillation stabilization time counter status register (OSTC
+  336   336                      ;              )
+  337   337                      ; line    94 : */
+  338   338                      ; line    95 : /* Oscillation stabilization time status (MOST18 - MOST8) */
+  339   339                      ; line    96 : #define _00_CGC_OSCSTAB_STA0        (0x00U) /* < 2^8/fX */
+  340   340                      ; line    97 : #define _80_CGC_OSCSTAB_STA8        (0x80U) /* 2^8/fX */
+  341   341                      ; line    98 : #define _C0_CGC_OSCSTAB_STA9        (0xC0U) /* 2^9/fX */
+  342   342                      ; line    99 : #define _E0_CGC_OSCSTAB_STA10       (0xE0U) /* 2^10/fX */
+  343   343                      ; line   100 : #define _F0_CGC_OSCSTAB_STA11       (0xF0U) /* 2^11/fX */
+  344   344                      ; line   101 : #define _F8_CGC_OSCSTAB_STA13       (0xF8U) /* 2^13/fX */
+  345   345                      ; line   102 : #define _FC_CGC_OSCSTAB_STA15       (0xFCU) /* 2^15/fX */
+  346   346                      ; line   103 : #define _FE_CGC_OSCSTAB_STA17       (0xFEU) /* 2^17/fX */
+  347   347                      ; line   104 : #define _FF_CGC_OSCSTAB_STA18       (0xFFU) /* 2^18/fX */
+  348   348                      ; line   105 : 
+  349   349                      ; line   106 : /*
+  350   350                      ; line   107 :     Oscillation stabilization time select register (OSTS)
+  351   351                      ; line   108 : */
+  352   352                      ; line   109 : /* Oscillation stabilization time selection (OSTS2 - OSTS0) */
+  353   353                      ; line   110 : #define _00_CGC_OSCSTAB_SEL8        (0x00U) /* 2^8/fX */
+  354   354                      ; line   111 : #define _01_CGC_OSCSTAB_SEL9        (0x01U) /* 2^9/fX */
+  355   355                      ; line   112 : #define _02_CGC_OSCSTAB_SEL10       (0x02U) /* 2^10/fX */
+  356   356                      ; line   113 : #define _03_CGC_OSCSTAB_SEL11       (0x03U) /* 2^11/fX */
+  357   357                      ; line   114 : #define _04_CGC_OSCSTAB_SEL13       (0x04U) /* 2^13/fX */
+  358   358                      ; line   115 : #define _05_CGC_OSCSTAB_SEL15       (0x05U) /* 2^15/fX */
+  359   359                      ; line   116 : #define _06_CGC_OSCSTAB_SEL17       (0x06U) /* 2^17/fX */
+  360   360                      ; line   117 : #define _07_CGC_OSCSTAB_SEL18       (0x07U) /* 2^18/fX */
+  361   361                      ; line   118 : 
+  362   362                      ; line   119 : 
+  363   363                      ; line   120 : /*
+  364   364                      ; line   121 :     Operation speed mode control register (OSMC)
+  365   365                      ; line   122 : */
+  366   366                      ; line   123 : /* Setting in subsystem clock HALT mode (RTCLPC) */
+  367   367                      ; line   124 : #define _00_CGC_SUBINHALT_ON        (0x00U) /* enables supply of
+  368   368                      ;               subsystem clock to peripheral functions */
+  369   369                      ; line   125 : #define _80_CGC_SUBINHALT_OFF       (0x80U) /* stops supply to p
+  370   370                      ;              eripheral functions except RTC, interval timer, PCLBUZ and LCD *
+  371   371                      ;              /
+  372   372                      ; line   126 : /* Selection of operation clock for highaccuracy real-time clock
+  373   373                      ;              , 12-bit interval timer, and LCD (WUTMMCK0) */
+  374   374                      ; line   127 : #define _00_CGC_RTC_IT_LCD_CLK_FSUB (0x00U) /* Subsystem clock (
+  375   375                      ;              fSUB) */
+  376   376                      ; line   128 : #define _10_CGC_RTC_IT_LCD_CLK_FIL  (0x10U) /* Low-speed on-chip
+  377   377                      ;               oscillator clock (fIL) */
+  378   378                      ; line   129 : 
+  379   379                      ; line   130 : /*
+  380   380                      ; line   131 :     CRC control register (CRC0CTL)
+  381   381                      ; line   132 : */
+  382   382                      ; line   133 : /* CRC calculation operation (CRC0EN) */
+  383   383                      ; line   134 : #define _00_CGC_CRC_OPERATION_OFF   (0x00U) /* stops operation *
+  384   384                      ;              /
+  385   385                      ; line   135 : #define _80_CGC_CRC_OPERATION_ON    (0x80U) /* CRC calculation i
+  386   386                      ;              s performed after enter HALT mode */
+  387   387                      ; line   136 : /* CRC calculation range (FEA2 - FEA0) */
+  388   388                      ; line   137 : #define _00_CGC_CRC_AREA0           (0x00U) /* 0 to 3FFBH (16K t
+  389   389                      ;              o 4bytes) */
+  390   390                      ; line   138 : #define _01_CGC_CRC_AREA1           (0x01U) /* 0 to 7FFBH (32K t
+  391   391                      ;              o 4bytes) */
+  392   392                      ; line   139 : #define _02_CGC_CRC_AREA2           (0x02U) /* 0 to BFFBH (48K t
+  393   393                      ;              o 4bytes) */
+  394   394                      ; line   140 : #define _03_CGC_CRC_AREA3           (0x03U) /* 0 to FFFBH (64K t
+  395   395                      ;              o 4bytes) */
+  396   396                      ; line   141 : #define _04_CGC_CRC_AREA4           (0x04U) /* 0 to 13FFBH (80K 
+  397   397                      ;              to 4bytes) */
+  398   398                      ; line   142 : #define _05_CGC_CRC_AREA5           (0x05U) /* 0 to 17FFBH (96K 
+  399   399                      ;              to 4bytes) */
+  400   400                      ; line   143 : #define _06_CGC_CRC_AREA6           (0x06U) /* 0 to 1BFFBH (112K
+  401   401                      ;               to 4bytes) */
+  402   402                      ; line   144 : #define _07_CGC_CRC_AREA7           (0x07U) /* 0 to 1FFFBH (128K
+  403   403                      ;               to 4bytes) */
+  404   404                      ; line   145 : 
+  405   405                      ; line   146 : /*
+  406   406                      ; line   147 :     Illegal memory access detection control register (IAWCTL)
+  407   407                      ; line   148 : */
+  408   408                      ; line   149 : /* Illegal memory access detection control (IAWEN) */
+  409   409                      ; line   150 : #define _00_CGC_ILLEGAL_ACCESS_OFF  (0x00U) /* disables illegal 
+  410   410                      ;              memory access detection */
+  411   411                      ; line   151 : #define _80_CGC_ILLEGAL_ACCESS_ON   (0x80U) /* enables illegal m
+  412   412                      ;              emory access detection */
+  413   413                      ; line   152 : /* RAM guard area (GRAM1, GRAM0) */
+  414   414                      ; line   153 : #define _00_CGC_RAM_GUARD_OFF       (0x00U) /* invalid, it is po
+  415   415                      ;              ssible to write RAM */
+  416   416                      ; line   154 : #define _10_CGC_RAM_GUARD_ARAE0     (0x10U) /* 128 bytes from RA
+  417   417                      ;              M bottom address */
+  418   418                      ; line   155 : #define _20_CGC_RAM_GUARD_ARAE1     (0x20U) /* 256 bytes from RA
+  419   419                      ;              M bottom address */
+  420   420                      ; line   156 : #define _30_CGC_RAM_GUARD_ARAE2     (0x30U) /* 512 bytes from RA
+  421   421                      ;              M bottom address */
+  422   422                      ; line   157 : /* PORT register guard (GPORT) */
+  423   423                      ; line   158 : #define _00_CGC_PORT_GUARD_OFF      (0x00U) /* invalid, it is po
+  424   424                      ;              ssible to write PORT register */
+  425   425                      ; line   159 : #define _04_CGC_PORT_GUARD_ON       (0x04U) /* valid, it is impo
+  426   426                      ;              ssible to write PORT register, but possible for read */
+  427   427                      ; line   160 : /* Interrupt register guard (GINT) */
+  428   428                      ; line   161 : #define _00_CGC_INT_GUARD_OFF       (0x00U) /* invalid, it is po
+  429   429                      ;              ssible to write interrupt register */
+  430   430                      ; line   162 : #define _02_CGC_INT_GUARD_ON        (0x02U) /* valid, it is impo
+  431   431                      ;              ssible to write, but possible for read */
+  432   432                      ; line   163 : /* CSC register guard (GCSC) */
+  433   433                      ; line   164 : #define _00_CGC_CSC_GUARD_OFF       (0x00U) /* invalid, it is po
+  434   434                      ;              ssible to write CSC register */
+  435   435                      ; line   165 : #define _01_CGC_CSC_GUARD_ON        (0x01U) /* valid, it is impo
+  436   436                      ;              ssible to write CSC register, but possible for read */
+  437   437                      ; line   166 : 
+  438   438                      ; line   167 : /*
+  439   439                      ; line   168 :     Port mode select register (PMS)
+  440   440                      ; line   169 : */
+  441   441                      ; line   170 : /* Illegal memory access detection control (PMS0) */
+  442   442                      ; line   171 : #define _00_CGC_PORT_OUTPUT_PMN     (0x00U) /* when PMmn = 0 (ou
+  443   443                      ;              tput mode), Pmn value (port latch) is read */
+  444   444                      ; line   172 : #define _01_CGC_PORT_OUTPUT_LEVEL   (0x01U) /* when PMmn = 0 (ou
+  445   445                      ;              tput mode), digital output level of the pin is read. */
+  446   446                      ; line   173 : 
+  447   447                      ; line   174 : /***************************************************************
+  448   448                      ;              ********************************************************
+  449   449                      ; line   175 : Macro definitions
+  450   450                      ; line   176 : ****************************************************************
+  451   451                      ;              *******************************************************/
+  452   452                      ; line   177 : #define CGC_SUBWAITTIME             (30U)   /* change the waitin
+  453   453                      ;              g time according to the system */
+  454   454                      ; line   178 : 
+  455   455                      ; line   179 : /***************************************************************
+  456   456                      ;              ********************************************************
+  457   457                      ; line   180 : Typedef definitions
+  458   458                      ; line   181 : ****************************************************************
+  459   459                      ;              *******************************************************/
+  460   460                      ; line   182 : typedef enum
+  461   461                      ; line   183 : {
+  462   462                      ; line   184 :     HIOCLK, 
+  463   463                      ; line   185 :     SYSX1CLK, 
+  464   464                      ; line   186 :     SYSEXTCLK,
+  465   465                      ; line   187 :     SUBXT1CLK, 
+  466   466                      ; line   188 :     SUBEXTCLK
+  467   467                      ; line   189 : } clock_mode_t;
+  468   468                      ; line   190 : 
+  469   469                      ; line   191 : /***************************************************************
+  470   470                      ;              ********************************************************
+  471   471                      ; line   192 : Global functions
+  472   472                      ; line   193 : ****************************************************************
+  473   473                      ;              *******************************************************/
+  474   474                      ; line   194 : void R_CGC_Create(void);
+  475   475                      ; line     1 : /***************************************************************
+  476   476                      ;              ********************************************************
+  477   477                      ; line     2 : * DISCLAIMER
+  478   478                      ; line     3 : * This software is supplied by Renesas Electronics Corporation a
+  479   479                      ;              nd is only 
+  480   480                      ; line     4 : * intended for use with Renesas products. No other uses are auth
+  481   481                      ;              orized. This 
+  482   482                      ; line     5 : * software is owned by Renesas Electronics Corporation and is pr
+  483   483                      ;              otected under 
+  484   484                      ; line     6 : * all applicable laws, including copyright laws.
+  485   485                      ; line     7 : * THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANT
+  486   486                      ;              IES REGARDING 
+  487   487                      ; line     8 : * THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDIN
+  488   488                      ;              G BUT NOT 
+  489   489                      ; line     9 : * LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTIC
+  490   490                      ;              ULAR PURPOSE 
+  491   491                      ; line    10 : * AND NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCL
+  492   492                      ;              AIMED.
+  493   493                      ; line    11 : * TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER
+  494   494                      ;               RENESAS 
+  495   495                      ; line    12 : * ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SH
+  496   496                      ;              ALL BE LIABLE 
+  497   497                      ; line    13 : * FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL
+  498   498                      ;               DAMAGES FOR 
+  499   499                      ; line    14 : * ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AF
+  500   500                      ;              FILIATES HAVE 
+  501   501                      ; line    15 : * BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+  502   502                      ; line    16 : * Renesas reserves the right, without notice, to make changes to
+  503   503                      ;               this software 
+  504   504                      ; line    17 : * and to discontinue the availability of this software.  By usin
+  505   505                      ;              g this software, 
+  506   506                      ; line    18 : * you agree to the additional terms and conditions found by acce
+  507   507                      ;              ssing the 
+  508   508                      ; line    19 : * following link:
+  509   509                      ; line    20 : * http://www.renesas.com/disclaimer
+  510   510                      ; line    21 : *
+  511   511                      ; line    22 : * Copyright (C) 2013 Renesas Electronics Corporation. All rights
+  512   512                      ;               reserved.
+  513   513                      ; line    23 : ****************************************************************
+  514   514                      ;              *******************************************************/
+  515   515                      ; line    24 : 
+  516   516                      ; line    25 : /***************************************************************
+  517   517                      ;              ********************************************************
+  518   518                      ; line    26 : * File Name    : r_cg_cgc_user.c
+  519   519                      ; line    27 : * Version      : Applilet4 for RL78/L13 V1.00.00.02 [10 May 2013
+  520   520                      ;              ]
+  521   521                      ; line    28 : * Device(s)    : R5F10WMG
+  522   522                      ; line    29 : * Tool-Chain   : CA78K0R
+  523   523                      ; line    30 : * Description  : This file implements device driver for CGC modu
+  524   524                      ;              le.
+  525   525                      ; line    31 : * Creation Date: 05-Jun-21
+  526   526                      ; line    32 : ****************************************************************
+  527   527                      ;              *******************************************************/
+  528   528                      ; line    33 : 
+  529   529                      ; line    34 : /***************************************************************
+  530   530                      ;              ********************************************************
+  531   531                      ; line    35 : Pragma directive
+  532   532                      ; line    36 : ****************************************************************
+  533   533                      ;              *******************************************************/
+  534   534                      ; line    37 : /* Start user code for pragma. Do not edit comment generated her
+  535   535                      ;              e */
+  536   536                      ; line    38 : /* End user code. Do not edit comment generated here */
+  537   537                      ; line    39 : 
+  538   538                      ; line    40 : /***************************************************************
+  539   539                      ;              ********************************************************
+  540   540                      ; line    41 : Includes
+  541   541                      ; line    42 : ****************************************************************
+  542   542                      ;              *******************************************************/
+  543   543                      ; line    43 : #include "r_cg_macrodriver.h"
+  544   544                      ; line    44 : #include "r_cg_cgc.h"
+  545   545                      ; line    45 : /* Start user code for include. Do not edit comment generated he
+  546   546                      ;              re */
+  547   547                      ; line    46 : 
+  548   548                      ; line    47 : /* Some of the code in this file is generated using "Application
+  549   549                      ;               Leading Tool (Applilet)" */
+  550   550                      ; line    48 : /* Warnings exist in this module. */
+  551   551                      ; line    49 : 
+  552   552                      ; line    50 : /* End user code. Do not edit comment generated here */
+  553   553                      ; line    51 : #include "r_cg_userdefine.h"
+  554   554                      ; line    52 : 
+  555   555                      ; line    53 : /***************************************************************
+  556   556                      ;              ********************************************************
+  557   557                      ; line    54 : Global variables and functions
+  558   558                      ; line    55 : ****************************************************************
+  559   559                      ;              *******************************************************/
+  560   560                      ; line    56 : /* Start user code for global. Do not edit comment generated her
+  561   561                      ;              e */
+  562   562                      ; line    57 : /* End user code. Do not edit comment generated here */
+  563   563                      ; line    58 : 
+  564   564                      ; line    59 : /***************************************************************
+  565   565                      ;              ********************************************************
+  566   566                      ; line    60 : * Function Name: R_CGC_Get_ResetSource
+  567   567                      ; line    61 : * Description  : This function process of Reset.
+  568   568                      ; line    62 : * Arguments    : None
+  569   569                      ; line    63 : * Return Value : None
+  570   570                      ; line    64 : ****************************************************************
+  571   571                      ;              *******************************************************/
+  572   572                      ; line    65 : void R_CGC_Get_ResetSource(void)
+  573   573                      ; line    66 : {
+  574   574                      
+  575   575 -----                @@CODEL CSEG
+  576   576 00000                _R_CGC_Get_ResetSource:
+  577   577                      $DGL    1,19
+  578   578 00000  C7                    push    hl                                              ;[INF] 1, 1
+  579   579 00001  C1                    push    ax                                              ;[INF] 1, 1
+  580   580 00002  FBF8FF                movw    hl,sp                                           ;[INF] 3, 1
+  581   581 00005                ??bf_R_CGC_Get_ResetSource:
+  582   582                      ; line    67 :     uint8_t reset_flag = RESF;
+  583   583                      $DGL    0,2
+  584   584 00005  8EA8                  mov     a,RESF                                          ;[INF] 2, 1
+  585   585 00007  9C01                  mov     [hl+1],a        ; reset_flag                    ;[INF] 2, 1
+  586   586                      ; line    68 :     uint8_t porsr_flag = PORSR;
+  587   587                      $DGL    0,3
+  588   588 00009  8FF900                mov     a,!PORSR                                        ;[INF] 3, 1
+  589   589 0000C  9B                    mov     [hl],a  ; porsr_flag                            ;[INF] 1, 1
+  590   590                      ; line    69 :     /* Start user code. Do not edit comment generated here */
+  591   591                      ; line    70 :     /* End user code. Do not edit comment generated here */
+  592   592                      ; line    71 : }
+  593   593                      $DGL    0,6
+  594   594 0000D                ??ef_R_CGC_Get_ResetSource:
+  595   595 0000D  C0                    pop     ax                                              ;[INF] 1, 1
+  596   596 0000E  C6                    pop     hl                                              ;[INF] 1, 1
+  597   597 0000F  D7                    ret                                                     ;[INF] 1, 6
+  598   598 00010                ??ee_R_CGC_Get_ResetSource:
+  599   599                      
+  600   600 -----                @@CODE  CSEG    BASE
+  601   601                      
+  602   602 -----                @@BASE  CSEG    BASE
+  603   603                              END
+  604   604                      
+  605   605                      
+  606   606                      ; *** Code Information ***
+  607   607                      ;
+  608   608                      ; $FILE C:\Users\nguye\Downloads\dtmf_reader_rl78\RSK_Module_test\RSKRL78L13\AD
+  609   609                      ;       C_Repeat\cg_src\r_cg_cgc_user.c
+  610   610                      ;
+  611   611                      ; $FUNC R_CGC_Get_ResetSource(66)
+  612   612                      ;       void=(void)
+  613   613                      ;       CODE SIZE= 16 bytes, CLOCK_SIZE= 15 clocks, STACK_SIZE= 4 bytes
+  614   614                      
+  615   615                      ; Target chip : R5F10WMG
+  616   616                      ; Device file : V1.00 
+
+Segment informations:
+
+ADRS  LEN      NAME
+
+00000 00000H.0 @@BITS
+00000 00000H   @@CNST
+00000 00000H   @@R_INIT
+00000 00000H   @@INIT
+00000 00000H   @@DATA
+00000 00000H   @@R_INIS
+00000 00000H   @@INIS
+00000 00000H   @@DATS
+00000 00000H   @@CNSTL
+00000 00000H   @@RLINIT
+00000 00000H   @@INITL
+00000 00000H   @@DATAL
+00000 00000H   @@CALT
+00000 00010H   @@CODEL
+00000 00000H   @@CODE
+00000 00000H   @@BASE
+
+ Target chip : R5F10WMG
+ Device file : V1.00
+Assembly complete,     0 error(s) and     0 warning(s) found. (    0)
+
